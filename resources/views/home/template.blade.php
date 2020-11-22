@@ -1,0 +1,93 @@
+@extends('templates.app')
+
+        @section('content')
+        @include('home.header')
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main id="content" role="main">
+            <!--Slider goes here-->
+            @include('home.main.slider')
+
+
+
+            <div class="container">
+                <!-- Tab Prodcut Section -->
+                <div class="mb-6">
+                    <!-- Tab content & Nav Classic -->
+                    @include('home.main.tab-content')
+                    <!-- End Tab Content -->
+                </div>
+                <!-- End Tab Prodcut Section -->
+
+
+
+                <!-- Full banner -->
+                @include('home.main.full-banner')
+                <!-- End Full banner -->
+            </div>
+
+
+
+            <!-- Week Deals limited -->
+            @include('home.main.week-deals')
+            <!-- End Week Deals limited -->
+
+
+            <div class="container">
+                <!-- Smartphones & Tablets -->
+                @include('home.main.smartphones')
+                <!-- End Smartphones & Tablets -->
+
+
+
+                <!-- Music Headphones -->
+                @include('home.main.music-headphones')
+                <!-- End Music Headphones -->
+            </div>
+
+
+            <!-- Top Categories this Week -->
+            @include('home.main.categories-this-week')
+            <!-- End Top Categories this Week -->
+
+
+
+            <div class="container">
+                <!-- Laptops & Computers -->
+                @include('home.main.laptops')
+                <!-- End Laptops & Computers -->
+
+
+                <!-- Home Enternteinment -->
+                @include('home.main.home-entertainment')
+                <!-- End Home Enternteinment -->
+            </div>
+
+
+            <!-- Brand Carousel -->
+            @include('templates.brand-carousel')
+            <!-- End Brand Carousel -->
+
+
+        </main>
+        <!-- ========== END MAIN CONTENT ========== -->
+
+        @include('templates.footer')
+
+        <!-- ========== SECONDARY CONTENTS ========== -->
+        @include('home.secondary-content')
+        <!-- ========== END SECONDARY CONTENTS ========== -->
+
+        <!-- Go to Top -->
+        <a class="js-go-to u-go-to" href="#"
+            data-position='{"bottom": 15, "right": 15 }'
+            data-type="fixed"
+            data-offset-top="400"
+            data-compensation="#header"
+            data-show-effect="slideInUp"
+            data-hide-effect="slideOutDown">
+            <span class="fas fa-arrow-up u-go-to__inner"></span>
+        </a>
+        <!-- End Go to Top -->
+
+@endsection
