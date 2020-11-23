@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/cart', function () {
-    return view('cart.cart');
+    return view('cart.cart', ['rangeSlider' => true]);
 });
 
 Route::get('/account', function () {
@@ -26,11 +26,11 @@ Route::get('/account', function () {
 });
 
 Route::get('/checkout', function () {
-    return view('checkout.checkout');
+    return view('checkout.checkout', ['rangeSlider' => true]);
 });
 
 Route::get('/contact', function () {
-    return view('contact.contact');
+    return view('contact.contact', ['rangeSlider' => true]);
 });
 
 
@@ -40,10 +40,10 @@ Route::get('/shop', function () {
 
 
 Route::get('/single', function () {
-    return view('single.single');
+    return view('single.single', ['rangeSlider' => true]);
 });
 
 
 Route::get('/terms', function () {
-    return view('terms.terms');
+    return view('terms.terms', ['rangeSlider' => true]);
 });
