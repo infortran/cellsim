@@ -47,3 +47,7 @@ Route::get('/single', function () {
 Route::get('/terms', function () {
     return view('terms.terms', ['rangeSlider' => true]);
 });
+
+Route::get('/404', function () {
+    return view('404.404', ['rangeSlider' => true]);
+});
