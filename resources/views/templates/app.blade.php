@@ -55,6 +55,8 @@
 <script src="../../assets/vendor/slick-carousel/slick/slick.js"></script>
 <script src="../../assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
+@stack('script')
+
 <!-- JS Electro -->
 <script src="../../assets/js/hs.core.js"></script>
 <script src="../../assets/js/components/hs.countdown.js"></script>

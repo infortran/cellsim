@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home.template');
+    return view('home.template', ['rangeSlider' => false]);
 });
 
 Route::get('/cart', function () {
@@ -22,7 +22,7 @@ Route::get('/cart', function () {
 });
 
 Route::get('/account', function () {
-    return view('account.account');
+    return view('account.account', ['rangeSlider' => true]);
 });
 
 Route::get('/checkout', function () {

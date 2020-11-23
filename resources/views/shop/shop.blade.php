@@ -6,7 +6,7 @@
         <!-- ========== MAIN CONTENT ========== -->
         <main id="content" role="main">
             <!-- breadcrumb -->
-            @include('shop.breadcrumb')
+            @include('templates.breadcrumb')
             <!-- End breadcrumb -->
 
             <div class="container">
@@ -34,7 +34,7 @@
 
         <!-- ========== SECONDARY CONTENTS ========== -->
         <!-- Account Sidebar Navigation -->
-
+        @include('templates.account-sidebar')
         <!-- End Account Sidebar Navigation -->
         <!-- ========== END SECONDARY CONTENTS ========== -->
         <!-- Sidebar Navigation IS NOT NECESSARY!!! -->
@@ -42,7 +42,7 @@
         <!-- End Sidebar Navigation -->
 
         <!-- Go to Top -->
-
+        @include('templates.go-top')
         <!-- End Go to Top -->
 
 
