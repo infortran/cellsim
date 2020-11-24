@@ -10,6 +10,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+  --primary-color: #7A60EB;
+  --light-color: #9982FF;
+  --dark-color: #381FA3;
+  --accent-color: #A8991E;
+  --light-accent-color: #EBDB60;
   --blue: #0062bd;
   --indigo: #2d1582;
   --purple: #6f42c1;
