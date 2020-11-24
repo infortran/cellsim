@@ -1,7 +1,7 @@
 @extends('templates.app')
 
         @section('content')
-        @include('home.header')
+        @include('templates.header-full')
 
         <!-- ========== MAIN CONTENT ========== -->
         <main id="content" role="main">
