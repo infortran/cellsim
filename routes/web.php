@@ -19,6 +19,8 @@ Route::get('/productos', 'ProductoController@index');
 Route::get('/productos/{producto}', 'ProductoController@show');
 Route::resource('admin/productos', 'ProductoController');
 
+
+
 Route::get('/cart', function () {
     return view('cart.cart', ['rangeSlider' => true]);
 });
