@@ -38,11 +38,11 @@
                                 <div class="col-xl-7 col-6 d-flex align-items-center ml-auto ml-md-0"
                                      data-scs-animation-in="zoomIn"
                                      data-scs-animation-delay="500">
-                                    <img class="img-fluid" src="../../assets/img/500X380/img1.png" alt="Image Description">
+                                    <img class="img-fluid" src="{{asset('images/audifonos/audifono-principal-1.png')}}" alt="Image Description">
                                 </div>
                             </div>
                         </div>
-                        <div class="js-slide bg-img-hero-center">
+                        <!--div class="js-slide bg-img-hero-center">
                             <div class="row height-410-xl py-7 py-md-0 mx-0">
                                 <div class="d-none d-wd-block offset-1"></div>
                                 <div class="col-xl col-6 col-md-6 mt-md-8">
@@ -107,7 +107,7 @@
                                     <img class="img-fluid" src="../../assets/img/500X380/img3.png" alt="Image Description">
                                 </div>
                             </div>
-                        </div>
+                        </div-->
                     </div>
                 </div>
             </div>

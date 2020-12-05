@@ -15,6 +15,14 @@ class CreateProductosTable extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
+            $table->integer('category_id')->unsigned()->default(0);
+            $table->integer('brand_id')->unsigned()->default(0);
+            $table->string('name');
+            $table->string('description');
+            $table->integer('price');
+            $table->integer('oldprice')->nullable();
+            $table->boolean('enabled')->default(false);
+            $table->integer('stock')->default(0);
             $table->timestamps();
         });
     }

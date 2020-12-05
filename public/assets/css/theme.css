@@ -12,9 +12,12 @@
 :root {
   --primary-color: #7A60EB;
   --light-color: #9982FF;
+  --background-color: #decfff;
   --dark-color: #381FA3;
-  --accent-color: #A8991E;
-  --light-accent-color: #EBDB60;
+  --semi-dark-color: #4526c8;
+  --dark-accent-color: #A8991E;
+  --accent-color: #ffea38;
+  --light-accent-color: #fffd96;
   --blue: #0062bd;
   --indigo: #2d1582;
   --purple: #6f42c1;
@@ -91,7 +94,7 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #333e48;
+  color: var(--dark-color);
   text-align: left;
   background-color: #fff;
 }
@@ -3086,7 +3089,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 700;
-  color: #333e48;
+  color: var(--primary-color);
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -3127,16 +3130,26 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-primary {
+/*.btn-primary {
   color: #1e2022;
   background-color: #fed700;
   border-color: #fed700;
+}*/
+.btn-primary {
+  color: var(--light-accent-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.navbar-categorias{
+  color: #1e2022;
+  background-color: var(--light-accent-color);
+  border-color: var(--light-accent-color);
 }
 
 .btn-primary:hover {
-  color: #1e2022;
-  background-color: #d8b700;
-  border-color: #cbac00;
+  color: var(--dark-color);
+  background-color: var(--accent-color);/**********************************************************/
+  border-color: var(--dark-accent-color);
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -9664,7 +9677,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #fed700 !important;
+  background-color: var(--background-color) !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -25269,8 +25282,8 @@ button:focus {
 }
 
 .btn-primary:hover {
-  background-color: #fed700;
-  border-color: #fed700;
+  background-color: var(--accent-color);
+  border-color: var(--dark-accent-color);
 }
 
 /* secondary button :hover, :focus, :active effects */
@@ -29077,7 +29090,7 @@ label.btn {
 .u-hamburger__inner, .u-hamburger__inner::before, .u-hamburger__inner::after {
   width: 1.4rem;
   height: 0.125rem;
-  background-color: #000000;
+  background-color: var(--primary-color);
   position: absolute;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -33083,7 +33096,7 @@ blockquote:not(.blockquote) p {
 /* Topbar Nav Link */
 .u-header-topbar__nav-link {
   font-size: 0.813rem;
-  color: #334141;
+  color: var(--dark-color);
 }
 
 .u-header-topbar__nav-link i {
@@ -33097,7 +33110,7 @@ blockquote:not(.blockquote) p {
 /* Header-Menu */
 .u-header__navbar-nav .u-header__nav-link {
   font-weight: 700;
-  color: #333e48;
+  color: var(--dark-color);
 }
 
 .u-header__navbar-nav .u-header__sub-menu-nav-link {
@@ -33118,13 +33131,14 @@ blockquote:not(.blockquote) p {
 /* Navbar Brand */
 .u-header__navbar-brand,
 .u-header__navbar-brand > img {
-  width: 6.375rem;
+  width: 9.075rem;
+
 }
 
 @media (min-width: 1200px) {
   .u-header__navbar-brand,
   .u-header__navbar-brand > img {
-    width: 9.375rem;
+    width: 13.375rem;
   }
 }
 
@@ -35228,7 +35242,7 @@ blockquote:not(.blockquote) p {
 }
 
 .text-gray-90 {
-  color: #333e48;
+  color:  var(--dark-color);
 }
 
 .text-gray-90[href]:hover {
@@ -35240,7 +35254,7 @@ blockquote:not(.blockquote) p {
 }
 
 .text-gray-110 {
-  color: #7c7c7c;
+  color: var(--semi-dark-color);
 }
 
 .text-gray-111 {
@@ -36172,7 +36186,7 @@ blockquote:not(.blockquote) p {
 
 @media (max-width: 1199.98px) {
   .bg-primary-down-lg {
-    background-color: #fed700 !important;
+    background-color: var(--light-accent-color) !important;
   }
 }
 

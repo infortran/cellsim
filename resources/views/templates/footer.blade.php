@@ -3,7 +3,7 @@
     <!-- Footer-top-widget -->
     <div class="container d-none d-lg-block mb-3">
         <div class="row">
-            <div class="col-wd-3 col-lg-4">
+            <!--div class="col-wd-3 col-lg-4">
                 <div class="widget-column">
                     <div class="border-bottom border-color-1 mb-5">
                         <h3 class="section-title section-title__sm mb-0 pb-2 font-size-18">Featured Products</h3>
@@ -151,7 +151,7 @@
             </div>
             <div class="col-wd-3 d-none d-wd-block">
                 <a href="../shop/shop.html" class="d-block"><img class="img-fluid" src="../../assets/img/330X360/img1.jpg" alt="Image Description"></a>
-            </div>
+            </div-->
         </div>
     </div>
     <!-- End Footer-top-widget -->

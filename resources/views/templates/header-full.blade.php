@@ -6,19 +6,19 @@
             <div class="container">
                 <div class="d-flex align-items-center">
                     <div class="topbar-left">
-                        <a href="#" class="text-gray-110 font-size-13 u-header-topbar__nav-link">Welcome to Worldwide Electronics Store</a>
+                        <a href="#" class="text-gray-110 font-size-13 u-header-topbar__nav-link">Bienvenidos a CellSim Comunicaciones.</a>
                     </div>
                     <div class="topbar-right ml-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
-                                <a href="#" class="u-header-topbar__nav-link"><i class="ec ec-map-pointer mr-1"></i> Store Locator</a>
+                                <a href="#" class="u-header-topbar__nav-link"><i class="ec ec-map-pointer mr-1"></i> Nuestras tiendas</a>
                             </li>
-                            <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
+                            <!--li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
                                 <a href="../shop/track-your-order.html" class="u-header-topbar__nav-link"><i class="ec ec-transport mr-1"></i> Track Your Order</a>
-                            </li>
-                            <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border u-header-topbar__nav-item-no-border u-header-topbar__nav-item-border-single">
+                            </li-->
+                            <!--li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border u-header-topbar__nav-item-no-border u-header-topbar__nav-item-border-single">
                                 <div class="d-flex align-items-center">
-                                    <!-- Language -->
+                                    <!-- Language ->
                                     <div class="position-relative">
                                         <a id="languageDropdownInvoker" class="dropdown-nav-link dropdown-toggle d-flex align-items-center u-header-topbar__nav-link font-weight-normal" href="javascript:;" role="button"
                                            aria-controls="languageDropdown"
@@ -42,9 +42,9 @@
                                             <a class="dropdown-item" href="#">Español‎</a>
                                         </div>
                                     </div>
-                                    <!-- End Language -->
+                                    <!-- End Language ->
                                 </div>
-                            </li>
+                            </li-->
                             <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
                                 <!-- Account Sidebar Toggle Button -->
                                 <a id="sidebarNavToggler" href="javascript:;" role="button" class="u-header-topbar__nav-link"
@@ -58,7 +58,7 @@
                                    data-unfold-animation-in="fadeInRight"
                                    data-unfold-animation-out="fadeOutRight"
                                    data-unfold-duration="500">
-                                    <i class="ec ec-user mr-1"></i> Register <span class="text-gray-50">or</span> Sign in
+                                    <i class="ec ec-user mr-1"></i><!-- Registrate <span class="text-gray-50">ó</span>--> Ingresa
                                 </a>
                                 <!-- End Account Sidebar Toggle Button -->
                             </li>
@@ -76,10 +76,11 @@
                     <!-- Logo-offcanvas-menu -->
                     <div class="col-auto">
                         <!-- Nav -->
+
                         <nav class="navbar navbar-expand u-header__navbar py-0 justify-content-xl-between max-width-270 min-width-270">
                             <!-- Logo -->
-                            <a class="order-1 order-xl-0 navbar-brand u-header__navbar-brand u-header__navbar-brand-center" href="../home/index.html" aria-label="Electro">
-
+                            <a class="order-1 order-xl-0 navbar-brand u-header__navbar-brand u-header__navbar-brand-center" href="{{asset('/')}}" aria-label="Electro">
+                                <img src="{{asset('/assets/img/system/navbar.png')}}" alt="">
                             </a>
                             <!-- End Logo -->
 
@@ -95,7 +96,7 @@
                                     data-unfold-animation-in="fadeInLeft"
                                     data-unfold-animation-out="fadeOutLeft"
                                     data-unfold-duration="500">
-                                        <span id="hamburgerTriggerMenu" class="u-hamburger__box">
+                                        <span id="hamburgerTriggerMenu" class="u-hamburger__box d-md-none">
                                             <span class="u-hamburger__inner"></span>
                                         </span>
                             </button>
@@ -146,7 +147,7 @@
                                                         <div id="headerSidebarHomeCollapse" class="collapse" data-parent="#headerSidebarContent">
                                                             <ul id="headerSidebarHomeMenu" class="u-header-collapse__nav-list">
                                                                 <!-- Home - v1 -->
-                                                                <li><a class="u-header-collapse__submenu-nav-link" href="../home/index.html">Home v1</a></li>
+                                                                <li><a class="u-header-collapse__submenu-nav-link" href="../home/index.html">casa v1</a></li>
                                                                 <!-- End Home - v1 -->
                                                                 <!-- Home - v2 -->
                                                                 <li><a class="u-header-collapse__submenu-nav-link" href="../home/home-v2.html">Home v2</a></li>
@@ -414,9 +415,9 @@
                                         data-event="hover"
                                         data-animation-in="slideInUp"
                                         data-animation-out="fadeOut">
-                                        <a id="HomeMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="HomeSubMenu">Home</a>
+                                        <a id="HomeMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="HomeSubMenu">Inicio</a>
 
-                                        <!-- Home - Submenu -->
+                                        <!-- Home - Submenu ->
                                         <ul id="HomeSubMenu" class="hs-sub-menu u-header__sub-menu animated fadeOut" aria-labelledby="HomeMegaMenu" style="min-width: 230px; display: none;">
                                             <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/index.html">Home v1</a></li>
                                             <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/home-v2.html">Home v2</a></li>
@@ -436,9 +437,9 @@
                                         data-event="hover"
                                         data-animation-in="slideInUp"
                                         data-animation-out="fadeOut">
-                                        <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="javascript:;" aria-haspopup="true" aria-expanded="false">Tienda</a>
 
-                                        <!-- Home - Mega Menu -->
+                                        <!-- Home - Mega Menu ->
                                         <div class="hs-mega-menu w-100 u-header__sub-menu" aria-labelledby="pagesMegaMenu">
                                             <div class="row u-header__mega-menu-wrapper">
                                                 <div class="col-md-3">
@@ -526,9 +527,9 @@
                                         data-event="hover"
                                         data-animation-in="slideInUp"
                                         data-animation-out="fadeOut">
-                                        <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">Blog</a>
+                                        <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">Contacto</a>
 
-                                        <!-- Blog - Submenu -->
+                                        <!-- Blog - Submenu ->
                                         <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
                                             <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/blog-v1.html">Blog v1</a></li>
                                             <li><a class="nav-link u-header__sub-menu-nav-link" href="../blog/blog-v2.html">Blog v2</a></li>
@@ -540,19 +541,19 @@
                                     </li>
                                     <!-- End Blog -->
 
-                                    <!-- About us -->
+                                    <!-- About us ->
                                     <li class="nav-item u-header__nav-item">
                                         <a class="nav-link u-header__nav-link" href="../home/about.html">About us</a>
                                     </li>
                                     <!-- End About us -->
 
-                                    <!-- FAQs -->
+                                    <!-- FAQs ->
                                     <li class="nav-item u-header__nav-item">
                                         <a class="nav-link u-header__nav-link" href="../home/faq.html">FAQs</a>
                                     </li>
                                     <!-- End FAQs -->
 
-                                    <!-- Contact Us -->
+                                    <!-- Contact Us ->
                                     <li class="nav-item u-header__nav-item">
                                         <a class="nav-link u-header__nav-link" href="../home/contact-v1.html">Contact Us</a>
                                     </li>
@@ -570,10 +571,10 @@
                             <i class="ec ec-support font-size-50 text-primary"></i>
                             <div class="ml-2">
                                 <div class="phone">
-                                    <strong>Support</strong> <a href="tel:800856800604" class="text-gray-90">(+800) 856 800 604</a>
+                                    <strong>Llámanos</strong> <a href="tel:800856800604" class="text-gray-90">(+56) 9 1122 3344</a>
                                 </div>
                                 <div class="email">
-                                    E-mail: <a href="mailto:info@electro.com?subject=Help Need" class="text-gray-90">info@electro.com</a>
+                                    E-mail: <a href="mailto:info@electro.com?subject=Help Need" class="text-gray-90">cellsim.comunicaciones@gmail.com</a>
                                 </div>
                             </div>
                         </div>
@@ -616,7 +617,7 @@
                                 <!-- End Search -->
                                 <li class="col d-none d-xl-block"><a href="../shop/compare.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Compare"><i class="font-size-22 ec ec-compare"></i></a></li>
                                 <li class="col d-none d-xl-block"><a href="../shop/wishlist.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Favorites"><i class="font-size-22 ec ec-favorites"></i></a></li>
-                                <li class="col d-xl-none px-2 px-sm-3"><a href="../shop/my-account.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="My Account"><i class="font-size-22 ec ec-user"></i></a></li>
+                                <!--li class="col d-xl-none px-2 px-sm-3"><a href="../shop/my-account.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="My Account"><i class="font-size-22 ec ec-user"></i></a></li-->
                                 <li class="col pr-xl-0 px-2 px-sm-3">
                                     <a href="../shop/cart.html" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
                                         <i class="font-size-22 ec ec-shopping-bag"></i>
@@ -645,12 +646,12 @@
                                 <!-- Card -->
                                 <div class="card border-0 rounded-0">
                                     <div class="card-header bg-primary rounded-0 card-collapse border-0" id="basicsHeadingOne">
-                                        <button type="button" class="btn-link btn-remove-focus btn-block d-flex card-btn py-3 text-lh-1 px-4 shadow-none btn-primary rounded-top-lg border-0 font-weight-bold text-gray-90"
+                                        <button type="button" class="btn-lik btn-remove-focus btn-block d-flex py-3 text-lh-1 px-4 shadow-none btn-primary rounded-top-lg border-0 font-weight-bold"
                                                 data-toggle="collapse"
                                                 data-target="#basicsCollapseOne"
                                                 aria-expanded="true"
                                                 aria-controls="basicsCollapseOne">
-                                            <span class="pl-1 text-gray-90">Shop By Department</span>
+                                            <span class="pl-1">Categorías</span>
                                                     <span class="text-gray-90 ml-3">
                                                         <span class="ec ec-arrow-down-search"></span>
                                                     </span>
@@ -663,12 +664,17 @@
                                             <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space hs-menu-initialized">
                                                 <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
                                                     <ul class="navbar-nav u-header__navbar-nav border-primary border-top-0">
+
+
+                                                        <!--Foreach goes here-->
                                                         <li class="nav-item u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
-                                                            <a href="#" class="nav-link u-header__nav-link font-weight-bold">Value of the Day</a>
+                                                            <a href="#" class="nav-link u-header__nav-link font-weight-bold">Valor</a>
                                                         </li>
-                                                        <li class="nav-item u-header__nav-item"
+
+
+                                                        <!--li class="nav-item u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
                                                             <a href="#" class="nav-link u-header__nav-link font-weight-bold">Top 100 Offers</a>
@@ -677,8 +683,8 @@
                                                             data-event="hover"
                                                             data-position="left">
                                                             <a href="#" class="nav-link u-header__nav-link font-weight-bold">New Arrivals</a>
-                                                        </li>
-                                                        <!-- Nav Item MegaMenu -->
+                                                        </li-->
+                                                        <!-- Nav Item MegaMenu ->
                                                         <li class="nav-item hs-has-mega-menu u-header__nav-item"
                                                             data-event="hover"
                                                             data-animation-in="slideInUp"
@@ -686,7 +692,7 @@
                                                             data-position="left">
                                                             <a id="basicMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Computers & Accessories</a>
 
-                                                            <!-- Nav Item - Mega Menu -->
+                                                            <!-- Nav Item - Mega Menu ->
                                                             <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu">
                                                                 <div class="vmm-bg">
                                                                     <img class="img-fluid" src="../../assets/img/500X400/img1.png" alt="Image Description">
@@ -718,16 +724,16 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- End Nav Item - Mega Menu -->
+                                                            <!-- End Nav Item - Mega Menu ->
                                                         </li>
                                                         <!-- End Nav Item MegaMenu-->
-                                                        <!-- Nav Item MegaMenu -->
+                                                        <!-- Nav Item MegaMenu ->
                                                         <li class="nav-item hs-has-mega-menu u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
                                                             <a id="basicMegaMenu1" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Cameras, Audio & Video</a>
 
-                                                            <!-- Nav Item - Mega Menu -->
+                                                            <!-- Nav Item - Mega Menu ->
                                                             <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu1">
                                                                 <div class="vmm-bg">
                                                                     <img class="img-fluid" src="../../assets/img/500X400/img4.png" alt="Image Description">
@@ -760,16 +766,16 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- End Nav Item - Mega Menu -->
+                                                            <!-- End Nav Item - Mega Menu ->
                                                         </li>
                                                         <!-- End Nav Item MegaMenu-->
-                                                        <!-- Nav Item MegaMenu -->
+                                                        <!-- Nav Item MegaMenu ->
                                                         <li class="nav-item hs-has-mega-menu u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
                                                             <a id="basicMegaMenu2" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Mobiles & Tablets</a>
 
-                                                            <!-- Nav Item - Mega Menu -->
+                                                            <!-- Nav Item - Mega Menu ->
                                                             <div class="hs-mega-menu vmm-tfw u-header__sub-menu vmm-bg-extended" aria-labelledby="basicMegaMenu2">
                                                                 <div class="vmm-bg">
                                                                     <img class="img-fluid" src="../../assets/img/500X400/img3.png" alt="Image Description">
@@ -800,16 +806,16 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- End Nav Item - Mega Menu -->
+                                                            <!-- End Nav Item - Mega Menu ->
                                                         </li>
                                                         <!-- End Nav Item MegaMenu-->
-                                                        <!-- Nav Item MegaMenu -->
+                                                        <!-- Nav Item MegaMenu ->
                                                         <li class="nav-item hs-has-mega-menu u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
                                                             <a id="basicMegaMenu3" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Movies, Music & Video</a>
 
-                                                            <!-- Nav Item - Mega Menu -->
+                                                            <!-- Nav Item - Mega Menu ->
                                                             <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu3">
                                                                 <div class="vmm-bg">
                                                                     <img class="img-fluid" src="../../assets/img/500X400/img2.png" alt="Image Description">
@@ -840,16 +846,16 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- End Nav Item - Mega Menu -->
+                                                            <!-- End Nav Item - Mega Menu ->
                                                         </li>
                                                         <!-- End Nav Item MegaMenu-->
-                                                        <!-- Nav Item MegaMenu -->
+                                                        <!-- Nav Item MegaMenu ->
                                                         <li class="nav-item hs-has-mega-menu u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
                                                             <a id="basicMegaMenu4" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">TV & Audio</a>
 
-                                                            <!-- Nav Item - Mega Menu -->
+                                                            <!-- Nav Item - Mega Menu ->
                                                             <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu4">
                                                                 <div class="vmm-bg">
                                                                     <img class="img-fluid" src="../../assets/img/500X400/img5.png" alt="Image Description">
@@ -881,16 +887,16 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- End Nav Item - Mega Menu -->
+                                                            <!-- End Nav Item - Mega Menu ->
                                                         </li>
                                                         <!-- End Nav Item MegaMenu-->
-                                                        <!-- Nav Item MegaMenu -->
+                                                        <!-- Nav Item MegaMenu ->
                                                         <li class="nav-item hs-has-mega-menu u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
                                                             <a id="basicMegaMenu5" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Watches & Eyewear</a>
 
-                                                            <!-- Nav Item - Mega Menu -->
+                                                            <!-- Nav Item - Mega Menu ->
                                                             <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu5">
                                                                 <div class="vmm-bg">
                                                                     <img class="img-fluid" src="../../assets/img/500X400/img6.png" alt="Image Description">
@@ -915,16 +921,16 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- End Nav Item - Mega Menu -->
+                                                            <!-- End Nav Item - Mega Menu ->
                                                         </li>
                                                         <!-- End Nav Item MegaMenu-->
-                                                        <!-- Nav Item MegaMenu -->
+                                                        <!-- Nav Item MegaMenu ->
                                                         <li class="nav-item hs-has-mega-menu u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
                                                             <a id="basicMegaMenu3" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Car, Motorbike & Industrial</a>
 
-                                                            <!-- Nav Item - Mega Menu -->
+                                                            <!-- Nav Item - Mega Menu ->
                                                             <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu3">
                                                                 <div class="vmm-bg">
                                                                     <img class="img-fluid" src="../../assets/img/500X400/img7.png" alt="Image Description">
@@ -953,10 +959,10 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- End Nav Item - Mega Menu -->
+                                                            <!-- End Nav Item - Mega Menu ->
                                                         </li>
                                                         <!-- End Nav Item MegaMenu-->
-                                                        <!-- Nav Item -->
+                                                        <!-- Nav Item ->
                                                         <li class="nav-item hs-has-sub-menu u-header__nav-item"
                                                             data-event="click"
                                                             data-animation-in="slideInUp"
@@ -964,33 +970,33 @@
                                                             data-position="left">
                                                             <a id="homeMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="homeSubMenu">Accessories</a>
 
-                                                            <!-- Home - Submenu -->
+                                                            <!-- Home - Submenu ->
                                                             <ul id="homeSubMenu" class="hs-sub-menu u-header__sub-menu animated hs-position-left fadeOut" aria-labelledby="homeMegaMenu" style="min-width: 230px; display: none;">
-                                                                <!-- Home-v1 -->
+                                                                <!-- Home-v1 ->
                                                                 <li class="hs-has-sub-menu">
                                                                     <a class="nav-link u-header__sub-menu-nav-link " href="index.html">Home-v1</a>
                                                                 </li>
                                                                 <!-- End Home-v1 -->
 
-                                                                <!-- Home-v2 -->
+                                                                <!-- Home-v2 ->
                                                                 <li class="hs-has-sub-menu">
                                                                     <a class="nav-link u-header__sub-menu-nav-link " href="home-v2.html">Home-v2</a>
                                                                 </li>
                                                                 <!-- End Home-v2 -->
 
-                                                                <!-- Home-v3 -->
+                                                                <!-- Home-v3 ->
                                                                 <li class="hs-has-sub-menu">
                                                                     <a class="nav-link u-header__sub-menu-nav-link " href="home-v3.html">Home-v3</a>
                                                                 </li>
                                                                 <!-- End Home-v3 -->
 
-                                                                <!-- Home-v4 -->
+                                                                <!-- Home-v4 ->
                                                                 <li class="hs-has-sub-menu">
-                                                                    <a class="nav-link u-header__sub-menu-nav-link " href="home-v4.html">Home-v4</a>
+                                                                    <a class="nav-link u-header__sub-menu-nav-link " href="home-v4.html">CASA-v4</a>
                                                                 </li>
-                                                                <!-- End Home-v4 -->
+                                                                <!-- End Home-v4 ->
                                                             </ul>
-                                                            <!-- End Home - Submenu -->
+                                                            <!-- End Home - Submenu ->
                                                         </li>
                                                         <!-- End Nav Item -->
                                                     </ul>
@@ -1011,10 +1017,10 @@
                         <form class="js-focus-state">
                             <label class="sr-only" for="searchProduct">Search</label>
                             <div class="input-group">
-                                <input type="email" class="form-control py-2 pl-5 font-size-15 border-0 height-40 rounded-left-pill" name="email" id="searchProduct" placeholder="Search for Products" aria-label="Search for Products" aria-describedby="searchProduct1" required>
+                                <input type="email" class="form-control py-2 pl-5 font-size-15 border-0 height-40 rounded-left-pill" name="email" id="searchProduct" placeholder="Buscar productos" aria-label="Busca productos" aria-describedby="searchProduct1" required>
                                 <div class="input-group-append">
                                     <!-- Select -->
-                                    <select class="js-select selectpicker dropdown-select custom-search-categories-select"
+                                    <!--select class="js-select selectpicker dropdown-select custom-search-categories-select"
                                             data-style="btn height-40 text-gray-60 font-weight-normal border-0 rounded-0 bg-white px-5 py-2">
                                         <option value="one" selected>All Categories</option>
                                         <option value="two">Two</option>
@@ -1030,13 +1036,14 @@
                         </form>
                         <!-- End Search-Form -->
                     </div>
+                    <div style="width:50px"></div>
                     <!-- End Search bar -->
-                    <!-- Header Icons -->
+                    <!-- Header Icons ->
                     <div class="col-md-auto align-self-center">
                         <div class="d-flex">
                             <ul class="d-flex list-unstyled mb-0">
-                                <li class="col"><a href="../shop/compare.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Compare"><i class="font-size-22 ec ec-compare"></i></a></li>
-                                <li class="col"><a href="../shop/wishlist.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Favorites"><i class="font-size-22 ec ec-favorites"></i></a></li>
+                                <!--li class="col"><a href="../shop/compare.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Compare"><i class="font-size-22 ec ec-compare"></i></a></li-->
+                                <!--li class="col"><a href="../shop/wishlist.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Favorites"><i class="font-size-22 ec ec-favorites"></i></a></li->
                                 <li class="col pr-0">
                                     <a href="../shop/cart.html" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
                                         <i class="font-size-22 ec ec-shopping-bag"></i>

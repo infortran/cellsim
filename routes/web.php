@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.template', ['rangeSlider' => false]);
-});
+Route::get('/', 'IndexController@index');
+
+Route::get('/productos', 'ProductoController@index');
+Route::get('/productos/{producto}', 'ProductoController@show');
+Route::resource('admin/productos', 'ProductoController');
 
 Route::get('/cart', function () {
     return view('cart.cart', ['rangeSlider' => true]);
