@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/tienda', 'ProductoController@home');
+Route::get('/tienda', 'ProductoController@shop');
 Route::get('/productos/{producto}', 'ProductoController@single');
 Route::resource('admin/productos', 'ProductoController');
+Route::resource('admin/categorias', 'CategoriaController');
 
 
 

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ProductoController extends Controller
 {
     //FRONTEND HOME PRODUCTS
-    public function home(){
+    public function shop(){
         $productos = Producto::all();
         return view('shop.main-shop', ['productos' => $productos]);
     }
