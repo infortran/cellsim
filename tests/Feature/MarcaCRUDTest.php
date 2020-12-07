@@ -2,12 +2,14 @@
 
 namespace Tests\Feature;
 
+use App\Models\Marca;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class MarcaCRUDTest extends TestCase
 {
+    use RefreshDatabase;
     /** @test */
     public function list_of_brands_can_be_retrieved_by_admin(){
 
@@ -17,23 +19,10 @@ class MarcaCRUDTest extends TestCase
 
         $response->assertOk();
         $marcas = Marca::all();
-        $response->assertViewIs('admin.marcas');
+        $response->assertViewIs('admin.marcas.index');
         $response->assertViewHas('marcas', $marcas);
     }
 
-    /** @test */
-    public function a_brand_can_be_retrieved_by_admin(){
-        $this->withoutExceptionHandling();
-
-        $marca = Marca::factory()->create();
-
-        $response = $this->get('admin/marcas/' . $marca->id);
-
-        $response->assertOk();
-        $marca = Marca::first();
-        $response->assertViewIs('admin.marca');
-        $response->assertViewHas('marca', $marca);
-    }
 
     /** @test */
     public function a_brand_can_be_created()
@@ -72,9 +61,8 @@ class MarcaCRUDTest extends TestCase
 
         ]);
 
-        $response->assertOk();
 
-        $this->assertCount(1, Categoria::all());
+        $this->assertCount(1, Marca::all());
 
         $marca= $marca->fresh();
 
@@ -96,6 +84,6 @@ class MarcaCRUDTest extends TestCase
 
         $this->assertCount(0, Marca::all());
 
-        $response->assertRedirect('admin/categorias/');
+        $response->assertRedirect('admin/marcas/');
     }
 }

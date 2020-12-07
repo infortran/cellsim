@@ -19,6 +19,7 @@ Route::get('/tienda', 'ProductoController@shop');
 Route::get('/productos/{producto}', 'ProductoController@single');
 Route::resource('admin/productos', 'ProductoController');
 Route::resource('admin/categorias', 'CategoriaController');
+Route::resource('admin/marcas', 'MarcaController');
 
 
 

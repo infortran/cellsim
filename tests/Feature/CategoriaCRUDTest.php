@@ -15,6 +15,8 @@ class CategoriaCRUDTest extends TestCase
     public function list_of_categories_can_be_retrieved_on_index(){
 
         $this->withoutExceptionHandling();
+
+
         Categoria::factory()->count(5)->create();
         $response = $this->get('/');
 
