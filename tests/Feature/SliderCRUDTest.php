@@ -11,8 +11,8 @@ class SliderCRUDTest extends TestCase
 {
     use RefreshDatabase;
     /** @test */
-    public function list_of_sliders_can_be_retrieved_by_admin(){
-
+    public function list_of_sliders_can_be_retrieved_by_admin()
+    {
         $this->withoutExceptionHandling();
         Slider::factory()->count(5)->create();
         $response = $this->get('admin/sliders');

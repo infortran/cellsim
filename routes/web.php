@@ -21,6 +21,7 @@ Route::resource('admin/productos', 'ProductoController');
 Route::resource('admin/categorias', 'CategoriaController');
 Route::resource('admin/marcas', 'MarcaController');
 Route::resource('admin/sliders', 'SliderController');
+Route::resource('admin/socials', 'SocialController');
 
 
 
