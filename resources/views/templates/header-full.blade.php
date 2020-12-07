@@ -418,16 +418,7 @@
                                         <a id="HomeMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="HomeSubMenu">Inicio</a>
 
                                         <!-- Home - Submenu ->
-                                        <ul id="HomeSubMenu" class="hs-sub-menu u-header__sub-menu animated fadeOut" aria-labelledby="HomeMegaMenu" style="min-width: 230px; display: none;">
-                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/index.html">Home v1</a></li>
-                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/home-v2.html">Home v2</a></li>
-                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/home-v3.html">Home v3</a></li>
-                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/home-v3-full-color-bg.html">Home v3.1</a></li>
-                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/home-v4.html">Home v4</a></li>
-                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/home-v5.html">Home v5</a></li>
-                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/home-v6.html">Home v6</a></li>
-                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="../home/home-v7.html">Home v7</a></li>
-                                        </ul>
+
                                         <!-- End Home - Submenu -->
                                     </li>
                                     <!-- End Home -->
@@ -440,84 +431,7 @@
                                         <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="javascript:;" aria-haspopup="true" aria-expanded="false">Tienda</a>
 
                                         <!-- Home - Mega Menu ->
-                                        <div class="hs-mega-menu w-100 u-header__sub-menu" aria-labelledby="pagesMegaMenu">
-                                            <div class="row u-header__mega-menu-wrapper">
-                                                <div class="col-md-3">
-                                                    <span class="u-header__sub-menu-title">Home & Static Pages</span>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="../home/index.html" class="nav-link u-header__sub-menu-nav-link">Home v1</a></li>
-                                                        <li><a href="../home/home-v2.html" class="nav-link u-header__sub-menu-nav-link">Home v2</a></li>
-                                                        <li><a href="../home/home-v3.html" class="nav-link u-header__sub-menu-nav-link">Home v3</a></li>
-                                                        <li><a href="../home/home-v3-full-color-bg.html" class="nav-link u-header__sub-menu-nav-link">Home v3.1</a></li>
-                                                        <li><a href="../home/home-v4.html" class="nav-link u-header__sub-menu-nav-link">Home v4</a></li>
-                                                        <li><a href="../home/home-v5.html" class="nav-link u-header__sub-menu-nav-link">Home v5</a></li>
-                                                        <li><a href="../home/home-v6.html" class="nav-link u-header__sub-menu-nav-link">Home v6</a></li>
-                                                        <li><a href="../home/home-v7.html" class="nav-link u-header__sub-menu-nav-link">Home v7</a></li>
-                                                        <li><a href="../home/about.html" class="nav-link u-header__sub-menu-nav-link">About</a></li>
-                                                        <li><a href="../home/contact-v1.html" class="nav-link u-header__sub-menu-nav-link">Contact v1</a></li>
-                                                        <li><a href="../home/contact-v2.html" class="nav-link u-header__sub-menu-nav-link">Contact v2</a></li>
-                                                        <li><a href="../home/faq.html" class="nav-link u-header__sub-menu-nav-link">FAQ</a></li>
-                                                        <li><a href="../home/store-directory.html" class="nav-link u-header__sub-menu-nav-link">Store Directory</a></li>
-                                                        <li><a href="../home/terms-and-conditions.html" class="nav-link u-header__sub-menu-nav-link">Terms and Conditions</a></li>
-                                                        <li><a href="../home/404.html" class="nav-link u-header__sub-menu-nav-link">404</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <span class="u-header__sub-menu-title">Shop Pages</span>
-                                                    <ul class="u-header__sub-menu-nav-group mb-3">
-                                                        <li><a href="../shop/shop-grid.html" class="nav-link u-header__sub-menu-nav-link">Shop Grid</a></li>
-                                                        <li><a href="../shop/shop-grid-extended.html" class="nav-link u-header__sub-menu-nav-link">Shop Grid Extended</a></li>
-                                                        <li><a href="../shop/shop-list-view.html" class="nav-link u-header__sub-menu-nav-link">Shop List View</a></li>
-                                                        <li><a href="../shop/shop-list-view-small.html" class="nav-link u-header__sub-menu-nav-link">Shop List View Small</a></li>
-                                                        <li><a href="../shop/shop-left-sidebar.html" class="nav-link u-header__sub-menu-nav-link">Shop Left Sidebar</a></li>
-                                                        <li><a href="../shop/shop-full-width.html" class="nav-link u-header__sub-menu-nav-link">Shop Full width</a></li>
-                                                        <li><a href="../shop/shop-right-sidebar.html" class="nav-link u-header__sub-menu-nav-link">Shop Right Sidebar</a></li>
-                                                    </ul>
-                                                    <span class="u-header__sub-menu-title">Product Categories</span>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="../shop/product-categories-4-column-sidebar.html" class="nav-link u-header__sub-menu-nav-link">4 Column Sidebar</a></li>
-                                                        <li><a href="../shop/product-categories-5-column-sidebar.html" class="nav-link u-header__sub-menu-nav-link">5 Column Sidebar</a></li>
-                                                        <li><a href="../shop/product-categories-6-column-full-width.html" class="nav-link u-header__sub-menu-nav-link">6 Column Full width</a></li>
-                                                        <li><a href="../shop/product-categories-7-column-full-width.html" class="nav-link u-header__sub-menu-nav-link">7 Column Full width</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <span class="u-header__sub-menu-title">Single Product Pages</span>
-                                                    <ul class="u-header__sub-menu-nav-group mb-3">
-                                                        <li><a href="../shop/single-product-extended.html" class="nav-link u-header__sub-menu-nav-link">Single Product Extended</a></li>
-                                                        <li><a href="../shop/single-product-fullwidth.html" class="nav-link u-header__sub-menu-nav-link">Single Product Fullwidth</a></li>
-                                                        <li><a href="../shop/single-product-sidebar.html" class="nav-link u-header__sub-menu-nav-link">Single Product Sidebar</a></li>
-                                                    </ul>
-                                                    <span class="u-header__sub-menu-title">Ecommerce Pages</span>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="../shop/shop.html" class="nav-link u-header__sub-menu-nav-link">Shop</a></li>
-                                                        <li><a href="../shop/cart.html" class="nav-link u-header__sub-menu-nav-link">Cart</a></li>
-                                                        <li><a href="../shop/checkout.html" class="nav-link u-header__sub-menu-nav-link">Checkout</a></li>
-                                                        <li><a href="../shop/my-account.html" class="nav-link u-header__sub-menu-nav-link">My Account</a></li>
-                                                        <li><a href="../shop/track-your-order.html" class="nav-link u-header__sub-menu-nav-link">Track your Order</a></li>
-                                                        <li><a href="../shop/compare.html" class="nav-link u-header__sub-menu-nav-link">Compare</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <span class="u-header__sub-menu-title">Blog Pages</span>
-                                                    <ul class="u-header__sub-menu-nav-group mb-3">
-                                                        <li><a href="../blog/blog-v1.html" class="nav-link u-header__sub-menu-nav-link">Blog v1</a></li>
-                                                        <li><a href="../blog/blog-v2.html" class="nav-link u-header__sub-menu-nav-link">Blog v2</a></li>
-                                                        <li><a href="../blog/blog-v3.html" class="nav-link u-header__sub-menu-nav-link">Blog v3</a></li>
-                                                        <li><a href="../blog/blog-full-width.html" class="nav-link u-header__sub-menu-nav-link">Blog Full Width</a></li>
-                                                        <li><a href="../blog/single-blog-post.html" class="nav-link u-header__sub-menu-nav-link">Single Blog Post</a></li>
-                                                    </ul>
-                                                    <span class="u-header__sub-menu-title">Shop Columns</span>
-                                                    <ul class="u-header__sub-menu-nav-group">
-                                                        <li><a href="../shop/shop-7-columns-full-width.html" class="nav-link u-header__sub-menu-nav-link">7 Column Full width</a></li>
-                                                        <li><a href="../shop/shop-6-columns-full-width.html" class="nav-link u-header__sub-menu-nav-link">6 Column Full width</a></li>
-                                                        <li><a href="../shop/shop-5-columns-sidebar.html" class="nav-link u-header__sub-menu-nav-link">5 Column Sidebar</a></li>
-                                                        <li><a href="../shop/shop-4-columns-sidebar.html" class="nav-link u-header__sub-menu-nav-link">4 Column Sidebar</a></li>
-                                                        <li><a href="../shop/shop-3-columns-sidebar.html" class="nav-link u-header__sub-menu-nav-link">3 Column Sidebar</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <!-- End Home - Mega Menu -->
                                     </li>
                                     <!-- End Pages -->

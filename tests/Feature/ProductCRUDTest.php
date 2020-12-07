@@ -10,8 +10,10 @@ use Tests\TestCase;
 class ProductCRUDTest extends TestCase
 {
     use RefreshDatabase;
+
+
     /** @test */
-    public function list_of_products_can_be_retrieved(){
+    public function list_of_products_can_be_retrieved_by_admin(){
 
         $this->withoutExceptionHandling();
         Producto::factory()->count(5)->create();
@@ -19,21 +21,22 @@ class ProductCRUDTest extends TestCase
 
         $response->assertOk();
         $productos = Producto::all();
-        $response->assertViewIs('shop.main-shop');
+        $response->assertViewIs('admin.productos.index');
         $response->assertViewHas('productos', $productos);
     }
 
     /** @test */
-    public function a_product_can_be_retrieved(){
+    public function a_product_can_be_retrieved_by_admin()
+    {
         $this->withoutExceptionHandling();
 
         $producto = Producto::factory()->create();
 
-        $response = $this->get('/productos/' . $producto->id);
+        $response = $this->get('/admin/productos/' . $producto->id);
 
         $response->assertOk();
         $producto = Producto::first();
-        $response->assertViewIs('single.single');
+        $response->assertViewIs('admin.productos.single');
         $response->assertViewHas('producto', $producto);
     }
 
@@ -52,14 +55,16 @@ class ProductCRUDTest extends TestCase
             'enabled' => true
         ]);
 
-        //$response->assertOk();
+        $response->assertOk();
+
         $this->assertCount(1, Producto::all());
 
-        $product = Producto::first();
+        $producto = Producto::first();
 
-        $this->assertEquals($product->name, 'Product 1');
+        $this->assertEquals($producto->name, 'Product 1');
+        $this->assertEquals($producto->description, 'Product description');
 
-        $response->assertRedirect('/productos/' . $product->id);
+        $response->assertRedirect('admin/productos/' . $producto->id);
     }
 
     /** @test */
@@ -86,8 +91,9 @@ class ProductCRUDTest extends TestCase
         $producto = $producto->fresh();
 
         $this->assertEquals($producto->name, 'Product 1');
+        $this->assertEquals($producto->description, 'Product description');
 
-        $response->assertRedirect('admin/productos/');
+        $response->assertRedirect('/admin/productos/');
     }
 
     /** @test */
@@ -101,6 +107,34 @@ class ProductCRUDTest extends TestCase
 
         $this->assertCount(0, Producto::all());
 
-        $response->assertRedirect('admin/productos/');
+        $response->assertRedirect('/admin/productos/');
+    }
+
+    /** @test */
+    public function list_of_products_can_be_retrieved_on_shop(){
+
+        $this->withoutExceptionHandling();
+        Producto::factory()->count(5)->create();
+        $response = $this->get('/productos');
+
+        $response->assertOk();
+        $productos = Producto::all();
+        $response->assertViewIs('shop.main-shop');
+        $response->assertViewHas('productos', $productos);
+    }
+
+    /** @test */
+    public function a_product_can_be_retrieved_on_single()
+    {
+        $this->withoutExceptionHandling();
+
+        $producto = Producto::factory()->create();
+
+        $response = $this->get('/productos/' . $producto->id);
+
+        $response->assertOk();
+        $producto = Producto::first();
+        $response->assertViewIs('single.single');
+        $response->assertViewHas('producto', $producto);
     }
 }

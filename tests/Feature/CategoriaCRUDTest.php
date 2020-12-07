@@ -10,21 +10,22 @@ use Tests\TestCase;
 class CategoriaCRUDTest extends TestCase
 {
     use RefreshDatabase;
+
     /** @test */
-    public function list_of_categories_can_be_retrieved(){
+    public function list_of_categories_can_be_retrieved_on_index(){
 
         $this->withoutExceptionHandling();
         Categoria::factory()->count(5)->create();
-        $response = $this->get('admin/productos');
+        $response = $this->get('/');
 
         $response->assertOk();
         $categorias = Categoria::all();
-        //$response->assertViewIs('');
-        //$response->assertViewHas('categorias', $categorias);
+        $response->assertViewIs('home.template');
+        $response->assertViewHas('categorias', $categorias);
     }
 
-    /** @test */
-    public function a_category_can_be_retrieved(){
+    /** @test /
+    public function a_category_can_be_retrieved_by_user(){
         $this->withoutExceptionHandling();
 
         $categoria = Categoria::factory()->create();
@@ -33,21 +34,49 @@ class CategoriaCRUDTest extends TestCase
 
         $response->assertOk();
         $categoria = Categoria::first();
-        //$response->assertViewIs('single.single');
-        //$response->assertViewHas('producto', $producto);
+        $response->assertViewIs('single.single');
+        $response->assertViewHas('categoria', $categoria);
+    }*/
+
+    /** @test */
+    public function list_of_categories_can_be_retrieved_by_admin(){
+
+        $this->withoutExceptionHandling();
+        Categoria::factory()->count(5)->create();
+        $response = $this->get('/admin/categorias');
+
+        $response->assertOk();
+        $categorias = Categoria::all();
+        $response->assertViewIs('admin.categorias');
+        $response->assertViewHas('categorias', $categorias);
     }
+
+    /** @test /
+     * NOT NECESSARY FUNCTION
+    public function a_category_can_be_retrieved_by_admin(){
+        $this->withoutExceptionHandling();
+
+        $categoria = Categoria::factory()->create();
+
+        $response = $this->get('admin/categorias/' . $categoria->id);
+
+        $response->assertOk();
+        $categoria = Categoria::first();
+        $response->assertViewIs('single.single');
+        //$response->assertViewHas('producto', $producto);
+    }*/
 
     /** @test */
     public function a_category_can_be_created()
     {
         $this->withoutExceptionHandling();
 
-        $response = $this->post('/admin/productos', [
+        $response = $this->post('/admin/categorias', [
             'name' => 'category 1',
             'text' => 'This is a category',
         ]);
 
-        //$response->assertOk();
+        $response->assertOk();
         $this->assertCount(1, Categoria::all());
 
         $categoria = Categoria::first();
@@ -55,7 +84,7 @@ class CategoriaCRUDTest extends TestCase
         $this->assertEquals($categoria->name, 'category 1');
         $this->assertEquals($categoria->text, 'This is a category');
 
-        $response->assertRedirect('admin/categorias/' . $categoria->id);
+        $response->assertRedirect('/admin/categorias');
     }
 
     /** @test */
@@ -71,7 +100,8 @@ class CategoriaCRUDTest extends TestCase
 
         ]);
 
-        //$response->assertOk();
+        $response->assertOk();
+
         $this->assertCount(1, Categoria::all());
 
         $categoria = $categoria->fresh();
@@ -79,7 +109,7 @@ class CategoriaCRUDTest extends TestCase
         $this->assertEquals($categoria->name, 'Cat 1');
         $this->assertEquals($categoria->text, 'Update cat');
 
-        $response->assertRedirect('admin/categorias/');
+        $response->assertRedirect('/admin/categorias');
     }
 
     /** @test */
@@ -93,6 +123,6 @@ class CategoriaCRUDTest extends TestCase
 
         $this->assertCount(0, Categoria::all());
 
-        $response->assertRedirect('admin/categorias/');
+        $response->assertRedirect('/admin/categorias');
     }
 }
