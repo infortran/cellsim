@@ -7,12 +7,20 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
-
-    public function index()
-    {
+    //FRONTEND HOME PRODUCTS
+    public function home(){
         $productos = Producto::all();
         return view('shop.main-shop', ['productos' => $productos]);
     }
+
+    //BACKEND INDEX OF PRODUCTS
+    public function index()
+    {
+        $productos = Producto::all();
+        return view('admin.productos.index', ['productos' => $productos]);
+    }
+
+
 
 
     public function create()
@@ -31,11 +39,16 @@ class ProductoController extends Controller
             'stock' => 'numeric'
         ]);
         $product = Producto::create($data);
-        return redirect('/productos/'. $product->id);
+        return redirect('/admin/productos/'. $product->id);
     }
 
 
     public function show(Producto $producto)
+    {
+        return view('admin.productos.single', ['producto' => $producto]);
+    }
+
+    public function single(Producto $producto)
     {
         return view('single.single', ['producto' => $producto]);
     }

@@ -11,13 +11,12 @@ class ProductCRUDTest extends TestCase
 {
     use RefreshDatabase;
 
-
     /** @test */
-    public function list_of_products_can_be_retrieved_by_admin(){
-
+    public function list_of_products_can_be_retrieved_by_admin()
+    {
         $this->withoutExceptionHandling();
         Producto::factory()->count(5)->create();
-        $response = $this->get('/productos');
+        $response = $this->get('/admin/productos');
 
         $response->assertOk();
         $productos = Producto::all();
@@ -41,21 +40,20 @@ class ProductCRUDTest extends TestCase
     }
 
     /** @test */
-    public function a_product_can_be_created(){
+    public function a_product_can_be_created()
+    {
         $this->withoutExceptionHandling();
 
         $response = $this->post('/admin/productos', [
             'name' => 'Product 1',
-            'stock' => 0,
+            'stock' => 1,
             'description' => 'Product description',
             'price' => 1000,
             'oldprice' => 2000,
             'category_id' => null,
             'brand_id' => null,
-            'enabled' => true
+            'enabled' => false
         ]);
-
-        $response->assertOk();
 
         $this->assertCount(1, Producto::all());
 
@@ -85,7 +83,6 @@ class ProductCRUDTest extends TestCase
             'enabled' => true
         ]);
 
-        //$response->assertOk();
         $this->assertCount(1, Producto::all());
 
         $producto = $producto->fresh();
@@ -111,11 +108,13 @@ class ProductCRUDTest extends TestCase
     }
 
     /** @test */
-    public function list_of_products_can_be_retrieved_on_shop(){
-
+    public function list_of_products_can_be_retrieved_on_shop()
+    {
         $this->withoutExceptionHandling();
+
         Producto::factory()->count(5)->create();
-        $response = $this->get('/productos');
+
+        $response = $this->get('/tienda');
 
         $response->assertOk();
         $productos = Producto::all();
