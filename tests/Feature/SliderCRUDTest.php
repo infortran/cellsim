@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Slider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -50,13 +51,13 @@ class SliderCRUDTest extends TestCase
     }
 
     /** @test */
-    public function a_brand_can_be_updated()
+    public function a_slider_can_be_updated()
     {
         $this->withoutExceptionHandling();
 
         $slider = Slider::factory()->create();
 
-        $response = $this->put('/admin/sliders', [
+        $response = $this->put('/admin/sliders/' . $slider->id, [
             'title' => 'Slider',
             'subtitle' => 'Some slider text',
             'text' => 'from',
@@ -74,11 +75,11 @@ class SliderCRUDTest extends TestCase
         $this->assertEquals($slider->text, 'from');
         $this->assertEquals($slider->img, 'img.png');
 
-        $response->assertRedirect('/admin/marcas');
+        $response->assertRedirect('/admin/sliders');
     }
 
     /** @test */
-    public function a_brand_can_be_deleted()
+    public function a_slider_can_be_deleted()
     {
         $this->withoutExceptionHandling();
 
