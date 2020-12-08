@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@index');
+//Route::get('/login', 'IndexController@login');
 
 Route::get('/tienda', 'ProductoController@shop');
 Route::get('/productos/{producto}', 'ProductoController@single');
+
 Route::resource('admin/productos', 'ProductoController');
 Route::resource('admin/categorias', 'CategoriaController');
 Route::resource('admin/marcas', 'MarcaController');
@@ -24,7 +26,7 @@ Route::resource('admin/sliders', 'SliderController');
 Route::resource('admin/socials', 'SocialController');
 
 
-
+/*
 Route::get('/cart', function () {
     return view('cart.cart', ['rangeSlider' => true]);
 });
@@ -59,3 +61,7 @@ Route::get('/terms', function () {
 Route::get('/404', function () {
     return view('404.404', ['rangeSlider' => true]);
 });
+*/
+//Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

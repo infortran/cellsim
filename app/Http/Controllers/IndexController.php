@@ -14,4 +14,9 @@ class IndexController extends Controller
         ];
         return view('home.template', $data);
     }
+
+    public function login()
+    {
+        return view('account.account');
+    }
 }
