@@ -16,20 +16,20 @@
 
             <div class="container">
                 <div class="mb-4">
-                    <h1 class="text-center">Hola, ya tienes una cuenta?</h1>
+                    <h1 class="text-center">Administración CellSim</h1>
                 </div>
                 <div class="my-4 my-xl-8">
                     <div class="row">
                         <!--Login goes here-->
                         @include('account.login')
-                        <div class="col-md-1 d-none d-md-block">
+                        <!--div class="col-md-1 d-none d-md-block">
                             <div class="flex-content-center h-100">
                                 <div class="width-1 bg-1 h-100"></div>
                                 <div class="width-50 height-50 border border-color-1 rounded-circle flex-content-center font-italic bg-white position-absolute">or</div>
                             </div>
                         </div>
                         <!--Register goes here-->
-                        @include('account.register')
+
                     </div>
                 </div>
             </div>
