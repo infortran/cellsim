@@ -67,6 +67,8 @@ $(document).ready(function() {
     $(".selectpicker").selectpicker();
   }
 
+  $(".selectpicker").selectpicker();
+
   //  Activate the tooltips
   $('[rel="tooltip"]').tooltip();
 

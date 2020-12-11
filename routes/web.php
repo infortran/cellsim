@@ -14,14 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@index');
-//Route::get('/login', 'IndexController@login');
 
 Route::get('/tienda', 'ProductoController@shop');
 Route::get('/productos/{producto}', 'ProductoController@single');
 
-Route::resource('admin/productos', 'ProductoController');
-Route::resource('admin/categorias', 'CategoriaController');
-Route::resource('admin/marcas', 'MarcaController');
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/cuenta', 'AdminController@account');
+
+
+Route::resource('/admin/productos', 'ProductoController');
+Route::resource('/admin/categorias', 'CategoriaController');
+Route::resource('/admin/marcas', 'MarcaController');
 Route::resource('admin/sliders', 'SliderController');
 Route::resource('admin/socials', 'SocialController');
 
@@ -64,4 +67,4 @@ Route::get('/404', function () {
 */
 //Auth::routes();
 
-Route::get('/admin', 'AdminController@index');
+

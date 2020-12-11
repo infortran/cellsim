@@ -16,8 +16,7 @@ class ProductoController extends Controller
     //BACKEND INDEX OF PRODUCTS
     public function index()
     {
-        $productos = Producto::all();
-        return view('admin.productos.index', ['productos' => $productos]);
+        return view('admin.productos.index', ['productos' => Producto::all()]);
     }
 
 
@@ -25,7 +24,7 @@ class ProductoController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.productos.create');
     }
 
 

@@ -21,4 +21,9 @@ class AdminController extends Controller
     {
         return view('admin.home.index');
     }
+
+    public function account()
+    {
+        return view('admin.account.index');
+    }
 }

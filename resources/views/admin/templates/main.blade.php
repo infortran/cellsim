@@ -15,8 +15,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="{{asset('css/material-dashboard.css?v=2.1.2')}}" rel="stylesheet" />
+    <!--link rel="stylesheet" href="{{asset('css/material-dashboard.css')}}"-->
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{asset('js/demo.js')}}" rel="stylesheet" />
+    <link href="{{asset('css/demo.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('css/select-bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/switch.css')}}">
 </head>
 
 <body class="">
@@ -66,7 +69,7 @@
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{asset('js/material-dashboard.js?v=2.1.2')}}" type="text/javascript"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="{{asset('js/demo.js')}}"></script>
+
 <script>
     $(document).ready(function() {
         $().ready(function() {

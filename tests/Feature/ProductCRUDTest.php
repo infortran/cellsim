@@ -20,6 +20,7 @@ class ProductCRUDTest extends TestCase
 
         $response->assertOk();
         $productos = Producto::all();
+        //dd($productos);
         $response->assertViewIs('admin.productos.index');
         $response->assertViewHas('productos', $productos);
     }
@@ -30,11 +31,13 @@ class ProductCRUDTest extends TestCase
         $this->withoutExceptionHandling();
 
         $producto = Producto::factory()->create();
+        //dd($producto);
 
         $response = $this->get('/admin/productos/' . $producto->id);
 
         $response->assertOk();
         $producto = Producto::first();
+        //dd($producto);
         $response->assertViewIs('admin.productos.single');
         $response->assertViewHas('producto', $producto);
     }
@@ -72,7 +75,7 @@ class ProductCRUDTest extends TestCase
 
         $producto = Producto::factory()->create();
 
-        $response = $this->put('/admin/productos/'.$producto->id, [
+        $response = $this->put('admin/productos/'.$producto->id, [
             'name' => 'Product 1',
             'stock' => 0,
             'description' => 'Product description',
@@ -90,7 +93,7 @@ class ProductCRUDTest extends TestCase
         $this->assertEquals($producto->name, 'Product 1');
         $this->assertEquals($producto->description, 'Product description');
 
-        $response->assertRedirect('/admin/productos/');
+        $response->assertRedirect('admin/productos/');
     }
 
     /** @test */
@@ -100,7 +103,7 @@ class ProductCRUDTest extends TestCase
 
         $producto = Producto::factory()->create();
 
-        $response = $this->delete('/admin/productos/'.$producto->id);
+        $response = $this->delete('admin/productos/'.$producto->id);
 
         $this->assertCount(0, Producto::all());
 
