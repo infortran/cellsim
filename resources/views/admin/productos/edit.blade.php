@@ -4,16 +4,13 @@
     <div class="wrapper ">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
-        <form action="{{url('/admin/productos')}}" method="POST" enctype="multipart/form-data"  class="main-panel">
+        <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
                         <h4>Productos</h4>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">
-                        <i class="material-icons">save</i>
-                        Guardar</button>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="navbar-toggler-icon icon-bar"></span>
@@ -27,7 +24,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card" >
+                            <form class="card" action="{{url('/admin/productos')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 @if ($errors->any())
                                     <div class="alert alert-danger">
@@ -39,10 +36,10 @@
                                     </div>
                                 @endif
                                 <div class="card-header card-header-primary" style="display: flex;">
-                                    <h4 class="card-title">Agregar nuevo producto</h4>
+                                    <h4 class="card-title">Editar producto</h4>
                                     <div style="margin-left: auto">
                                         <label class="switch" >
-                                            <input name="enabled" type="checkbox" checked>
+                                            <input type="checkbox" {{$producto->enabled ? 'checked':''}}>
                                             <span class="slider round"></span>
                                         </label>
                                         <div>En stock</div>
@@ -58,13 +55,13 @@
                                                     <div class="col-md-10">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">Nombre</label>
-                                                            <input name="name" type="text" class="form-control" value="{{old('name')}}">
+                                                            <input name="name" type="text" class="form-control" value="{{$producto->name}}">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">Cantidad</label>
-                                                            <input name="stock" type="text" class="form-control" value="{{old('stock')}}">
+                                                            <input name="stock" type="text" class="form-control" value="{{$producto->stock}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -73,7 +70,7 @@
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">Descripcion</label>
-                                                            <input name="description" type="text" class="form-control" value="{{old('description')}}">
+                                                            <input name="description" type="text" class="form-control" value="{{$producto->description}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -82,14 +79,14 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">Precio</label>
-                                                            <input name="price" type="text" class="form-control" value="{{old('price')}}">
+                                                            <input name="price" type="text" class="form-control" value="{{$producto->price}}">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">Precio Anterior</label>
-                                                            <input name="oldprice" type="text" class="form-control" value="{{old('oldprice')}}">
+                                                            <input name="oldprice" type="text" class="form-control"  value="{{$producto->oldprice}}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -120,7 +117,7 @@
                                             <div class="col-md-4">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <img id="img-input-producto" src="{{asset('images/placeholder.jpg')}}" alt="" class="img-fluid">
+                                                        <img style="max-width: 200px; display: block; margin:0 auto" src="{{asset('uploads/productos/300x300').'/'.$producto->img}}" alt="" class="img-fluid">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -134,11 +131,13 @@
                                         </div>
 
 
-
+                                        <button type="submit" class="btn btn-primary pull-right">
+                                            <i class="material-icons">save</i>
+                                            Guardar</button>
                                         <div class="clearfix"></div>
 
                                 </div>
-                            </div>
+                            </form>
                         </div>
 
                     </div>
@@ -146,7 +145,7 @@
             </div>
             <!--Footer Goes Here-->
             @include('admin.templates.footer')
-        </form>
+        </div>
     </div>
 
 

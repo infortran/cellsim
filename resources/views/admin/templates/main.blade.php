@@ -20,6 +20,7 @@
     <link href="{{asset('css/demo.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('css/select-bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/switch.css')}}">
+    <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 </head>
 
 <body class="">
@@ -248,6 +249,7 @@
 
     });
 </script>
+<script src="{{asset('js/admin.js')}}"></script>
 </body>
 
 </html>

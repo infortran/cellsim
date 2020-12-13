@@ -12,6 +12,10 @@
                     <div class="navbar-wrapper">
                         <h4>Marcas</h4>
                     </div>
+                    <a href="{{url('/admin/marcas/create')}}" class="btn btn-primary">
+                        <i class="material-icons">add</i>
+                        <span>Agregar Marcas</span>
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="navbar-toggler-icon icon-bar"></span>
@@ -28,10 +32,52 @@
                             <div class="card">
                                 <div class="card-header card-header-primary">
                                     <h4 class="card-title">Marcas</h4>
-                                    <p class="card-category">0</p>
+                                    <p class="card-category">{{$marcas->count()}}</p>
                                 </div>
                                 <div class="card-body">
+                                    @if($marcas->count() > 0)
+                                        @foreach($marcas as $marca)
+                                            <div class="product-row">
+                                                <div class="img-container">
+                                                    <img src="{{asset('uploads/marcas/72x72').'/'. $marca->img}}" alt="">
+                                                </div>
+                                                <div class="name">
+                                                    {{$marca->name}}
+                                                </div>
+                                                <div class="btn-container">
+                                                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                                        <a href="{{route('marcas.edit', $marca->id)}}" class="btn btn-secondary">
+                                                            <i class="material-icons">edit</i>
+                                                            Editar
+                                                        </a>
 
+                                                        <div class="btn-group" role="group">
+                                                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                            </button>
+                                                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                                                <a class="dropdown-item" href="#">Eliminar</a>
+                                                                <a class="dropdown-item" href="#">Desactivar</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                                        @else
+                                    <div class="no-products">
+                                        <div class="icon-container">
+                                            <div class="icon"></div>
+                                            <i class="material-icons">assignment_late</i>
+                                        </div>
+                                        <div class="title">No hay marcas</div>
+                                        <div class="text">Puedes agregar marcas pulsando</div>
+                                        <a href="{{url('/admin/marcas/create')}}" class="btn btn-primary">
+                                            <i class="material-icons">add</i>
+                                            <span>Agregar Marcas</span>
+                                        </a>
+                                    </div>
+                                        @endif
                                 </div>
                             </div>
                         </div>

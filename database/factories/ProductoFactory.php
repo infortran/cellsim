@@ -30,6 +30,7 @@ class ProductoFactory extends Factory
             'category_id' => 0,
             'brand_id' => 0,
             'stock' => 1,
+            'img' => 'image.png',
             'created_at' => now(),
             'updated_at' => now()
         ];

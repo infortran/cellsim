@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
+use App\Tools;
 use Illuminate\Http\Request;
+use Image;
 
 class ProductoController extends Controller
 {
     //FRONTEND HOME PRODUCTS
     public function shop(){
-        $productos = Producto::all();
-        return view('shop.main-shop', ['productos' => $productos]);
+        return view('shop.main-shop', ['productos' => Producto::all()]);
     }
 
     //BACKEND INDEX OF PRODUCTS
@@ -19,26 +20,32 @@ class ProductoController extends Controller
         return view('admin.productos.index', ['productos' => Producto::all()]);
     }
 
-
-
-
     public function create()
     {
         return view('admin.productos.create');
     }
 
-
     public function store(Request $request)
     {
+        //dd($request->enabled);
         $data = $request->validate([
             'name' => 'required|max:100',
             'description' => 'required|max:100',
             'price' => 'required|numeric',
             'oldprice' => 'numeric',
-            'stock' => 'numeric'
+            'stock' => 'numeric',
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=600'
         ]);
-        $product = Producto::create($data);
-        return redirect('/admin/productos/'. $product->id);
+        $img = $request->file('img');
+        $imageName = time().'.'.$img->extension();
+        $imgResize = Image::make($img->path());
+
+        Tools::processImage($imgResize, $imageName);
+        $data['enabled'] = $request->enabled === 'on' ? true : false;
+        $data['img'] = $imageName;
+        Producto::create($data);
+
+        return redirect('/admin/productos/');
     }
 
 
@@ -55,7 +62,7 @@ class ProductoController extends Controller
 
     public function edit(Producto $producto)
     {
-        //
+        return view('admin.productos.edit', ['producto' => $producto]);
     }
 
 

@@ -5,6 +5,8 @@ namespace Tests\Feature;
 use App\Models\Producto;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
 class ProductCRUDTest extends TestCase
@@ -46,6 +48,8 @@ class ProductCRUDTest extends TestCase
     public function a_product_can_be_created()
     {
         $this->withoutExceptionHandling();
+
+        Storage::fake('public');
 
         $response = $this->post('/admin/productos', [
             'name' => 'Product 1',

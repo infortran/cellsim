@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 class MarcaController extends Controller
 {
 
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
@@ -19,7 +22,7 @@ class MarcaController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.marcas.create');
     }
 
 
@@ -28,7 +31,7 @@ class MarcaController extends Controller
         $request->validate([
             'name' => 'required|max:100',
             'text' => 'required|max:100',
-            'img' => 'required|max:100'
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=600'
         ]);
 
         Marca::create($request->all());
