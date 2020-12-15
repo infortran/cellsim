@@ -11,7 +11,7 @@
                     <div class="navbar-wrapper">
                         <h4>Productos</h4>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">
+                    <button type="submit" class="btn btn-contrast pull-right">
                         <i class="material-icons">save</i>
                         Guardar</button>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">

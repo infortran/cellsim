@@ -10,4 +10,8 @@ class Slider extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function producto(){
+        return $this->belongsTo('App\Models\Producto');
+    }
 }

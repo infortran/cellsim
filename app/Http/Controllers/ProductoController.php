@@ -11,7 +11,7 @@ class ProductoController extends Controller
 {
     //FRONTEND HOME PRODUCTS
     public function shop(){
-        return view('shop.main-shop', ['productos' => Producto::all()]);
+        return view('shop.shop', ['productos' => Producto::all()]);
     }
 
     //BACKEND INDEX OF PRODUCTS
@@ -34,15 +34,16 @@ class ProductoController extends Controller
             'price' => 'required|numeric',
             'oldprice' => 'numeric',
             'stock' => 'numeric',
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=600'
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=800'
         ]);
         $img = $request->file('img');
         $imageName = time().'.'.$img->extension();
         $imgResize = Image::make($img->path());
-
-        Tools::processImage($imgResize, $imageName);
-        $data['enabled'] = $request->enabled === 'on' ? true : false;
+        $path = 'uploads/productos';
+        Tools::processImage($imgResize, $imageName, $path, true);
         $data['img'] = $imageName;
+
+        $data['enabled'] = $request->enabled === 'on' ? true : false;
         Producto::create($data);
 
         return redirect('/admin/productos/');
@@ -68,13 +69,26 @@ class ProductoController extends Controller
 
     public function update(Request $request, Producto $producto)
     {
+        //$producto = Producto::find($producto);
         $data = $request->validate([
             'name' => 'required|max:100',
             'description' => 'required|max:100',
             'price' => 'required|numeric',
             'oldprice' => 'numeric',
-            'stock' => 'numeric'
+            'stock' => 'numeric',
+            'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=800'
         ]);
+        if($request->img){
+            $img = $request->file('img');
+            $imageName = time().'.'.$img->extension();
+            $imgResize = Image::make($img->path());
+            $path = 'uploads/productos';
+            Tools::processImage($imgResize, $imageName, $path, true);
+            $data['img'] = $imageName;
+
+            Tools::deleteImage($producto->img, $path);
+        }
+
         $producto->update($data);
         return redirect('admin/productos/');
     }

@@ -22,7 +22,7 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/admin/cuenta', 'AdminController@account');
 
 
-Route::resource('/admin/productos', 'ProductoController');
+Route::resource('/admin/productos', 'ProductoController')->middleware('auth');
 Route::resource('/admin/categorias', 'CategoriaController');
 Route::resource('/admin/marcas', 'MarcaController');
 Route::resource('admin/sliders', 'SliderController');

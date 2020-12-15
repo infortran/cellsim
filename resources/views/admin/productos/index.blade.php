@@ -11,7 +11,7 @@
                     <div class="navbar-wrapper">
                         <h4>Productos</h4>
                     </div>
-                    <a href="{{route('productos.create')}}" class="btn btn-primary">
+                    <a href="{{route('productos.create')}}" class="btn btn-contrast">
                         <i class="material-icons">add</i>
                         Nuevo
                     </a>
@@ -34,7 +34,7 @@
                                     <p class="card-category">{{$productos->count()}}</p>
                                 </div>
                                 <div class="card-body">
-                                    @if($productos)
+                                    @if($productos->count() > 0)
                                     @foreach($productos as $producto)
                                         <div class="product-row">
                                             <div class="img-container">
@@ -55,13 +55,15 @@
 
                                                         </button>
                                                         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                                            <a class="dropdown-item" href="#">Eliminar</a>
+                                                            <a class="dropdown-item" href="#modal-eliminar-producto-{{$producto->id}}" data-toggle="modal">Eliminar</a>
                                                             <a class="dropdown-item" href="#">Desactivar</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        @include('admin.productos.modal-delete')
                                         @endforeach
 
                                     @else

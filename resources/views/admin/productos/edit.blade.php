@@ -4,7 +4,7 @@
     <div class="wrapper ">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
-        <div class="main-panel">
+        <form action="{{route('productos.update', $producto->id)}}" method="POST" enctype="multipart/form-data" class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                 <div class="container-fluid">
@@ -24,8 +24,9 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <form class="card" action="{{url('/admin/productos')}}" method="POST" enctype="multipart/form-data">
+                            <div class="card">
                                 @csrf
+                                @method('put')
                                 @if ($errors->any())
                                     <div class="alert alert-danger">
                                         <ul>
@@ -137,7 +138,7 @@
                                         <div class="clearfix"></div>
 
                                 </div>
-                            </form>
+                            </div>
                         </div>
 
                     </div>
@@ -145,7 +146,7 @@
             </div>
             <!--Footer Goes Here-->
             @include('admin.templates.footer')
-        </div>
+        </form>
     </div>
 
 

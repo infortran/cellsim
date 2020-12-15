@@ -9,105 +9,45 @@
                          data-autoplay="true"
                          data-speed="7000"
                          data-pagi-classes="text-center position-absolute right-0 bottom-0 left-0 u-slick__pagination u-slick__pagination--long justify-content-start ml-9 mb-3 mb-md-5">
+
+
+                        @foreach($sliders as $slider)
                         <div class="js-slide bg-img-hero-center">
                             <div class="row height-410-xl py-7 py-md-0 mx-0">
                                 <div class="d-none d-wd-block offset-1"></div>
                                 <div class="col-xl col-6 col-md-6 mt-md-8">
                                     <h1 class="font-size-64 text-lh-57 font-weight-light"
                                         data-scs-animation-in="fadeInUp">
-                                        THE NEW <span class="d-block font-size-55">STANDARD</span>
+                                        {{$slider->title}} <span class="d-block font-size-55"></span>
                                     </h1>
                                     <h6 class="font-size-15 font-weight-bold mb-3"
                                         data-scs-animation-in="fadeInUp"
-                                        data-scs-animation-delay="200">UNDER FAVORABLE SMARTWATCHES
+                                        data-scs-animation-delay="200">{{$slider->subtitle}}
                                     </h6>
                                     <div class="mb-4"
                                          data-scs-animation-in="fadeInUp"
                                          data-scs-animation-delay="300">
-                                        <span class="font-size-13">FROM</span>
+                                        <span class="font-size-13">{{$slider->text}}</span>
                                         <div class="font-size-50 font-weight-bold text-lh-45">
-                                            <sup class="">$</sup>749<sup class="">99</sup>
+                                            <sup class="">$</sup> {{number_format($slider->price,0,'','.')}}
                                         </div>
                                     </div>
-                                    <a href="../shop/single-product-fullwidth.html" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
+                                    <a href="{{url('/productos').'/'. $slider->producto->id}}" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
                                        data-scs-animation-in="fadeInUp"
                                        data-scs-animation-delay="400">
-                                        Start Buying
+                                        Ver detalles
                                     </a>
                                 </div>
                                 <div class="col-xl-7 col-6 d-flex align-items-center ml-auto ml-md-0"
                                      data-scs-animation-in="zoomIn"
                                      data-scs-animation-delay="500">
-                                    <img class="img-fluid" src="{{asset('images/audifonos/audifono-principal-1.png')}}" alt="Image Description">
+                                    <img class="img-fluid" src="{{asset('uploads/sliders/600x600').'/'.$slider->img}}" alt="{{$slider->title}}">
                                 </div>
                             </div>
                         </div>
-                        <!--div class="js-slide bg-img-hero-center">
-                            <div class="row height-410-xl py-7 py-md-0 mx-0">
-                                <div class="d-none d-wd-block offset-1"></div>
-                                <div class="col-xl col-6 col-md-6 mt-md-8">
-                                    <h1 class="font-size-64 text-lh-57 font-weight-light"
-                                        data-scs-animation-in="slideInLeft">
-                                        THE NEW <span class="d-block font-size-55">STANDARD</span>
-                                    </h1>
-                                    <h6 class="font-size-15 font-weight-bold mb-3"
-                                        data-scs-animation-in="slideInLeft"
-                                        data-scs-animation-delay="200">UNDER FAVORABLE SMARTWATCHES
-                                    </h6>
-                                    <div class="mb-4"
-                                         data-scs-animation-in="slideInLeft"
-                                         data-scs-animation-delay="400">
-                                        <span class="font-size-13">FROM</span>
-                                        <div class="font-size-50 font-weight-bold text-lh-45">
-                                            <sup class="">$</sup>749<sup class="">99</sup>
-                                        </div>
-                                    </div>
-                                    <a href="../shop/single-product-fullwidth.html" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
-                                       data-scs-animation-in="fadeInUp"
-                                       data-scs-animation-delay="400">
-                                        Start Buying
-                                    </a>
-                                </div>
-                                <div class="col-xl-7 col-6 d-flex align-items-center ml-auto ml-md-0"
-                                     data-scs-animation-in="slideInRight"
-                                     data-scs-animation-delay="800">
-                                    <img class="img-fluid" src="../../assets/img/500X380/img2.png" alt="Image Description">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="js-slide bg-img-hero-center">
-                            <div class="row height-410-xl py-7 py-md-0 mx-0">
-                                <div class="d-none d-wd-block offset-1"></div>
-                                <div class="col-xl col-6 col-md-6 mt-md-8">
-                                    <h1 class="font-size-64 text-lh-57 font-weight-light"
-                                        data-scs-animation-in="fadeInUp">
-                                        THE NEW <span class="d-block font-size-55">STANDARD</span>
-                                    </h1>
-                                    <h6 class="font-size-15 font-weight-bold mb-3"
-                                        data-scs-animation-in="fadeInUp"
-                                        data-scs-animation-delay="200">UNDER FAVORABLE SMARTWATCHES
-                                    </h6>
-                                    <div class="mb-4"
-                                         data-scs-animation-in="fadeInUp"
-                                         data-scs-animation-delay="300">
-                                        <span class="font-size-13">FROM</span>
-                                        <div class="font-size-50 font-weight-bold text-lh-45">
-                                            <sup class="">$</sup>749<sup class="">99</sup>
-                                        </div>
-                                    </div>
-                                    <a href="../shop/single-product-fullwidth.html" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
-                                       data-scs-animation-in="fadeInUp"
-                                       data-scs-animation-delay="400">
-                                        Start Buying
-                                    </a>
-                                </div>
-                                <div class="col-xl-7 col-6 d-flex align-items-center ml-auto ml-md-0"
-                                     data-scs-animation-in="zoomIn"
-                                     data-scs-animation-delay="500">
-                                    <img class="img-fluid" src="../../assets/img/500X380/img3.png" alt="Image Description">
-                                </div>
-                            </div>
-                        </div-->
+
+                        @endforeach
+
                     </div>
                 </div>
             </div>
@@ -123,10 +63,10 @@
                                 </div>
                                 <div class="col col-lg-6 col-xl-7 col-wd-6 pr-xl-4 pr-wd-3">
                                     <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
-                                        CATCH BIG <strong>DEALS</strong> ON THE CAMERAS
+                                        <strong>PROTECTORES</strong> MICAS SILICONAS
                                     </div>
                                     <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
-                                        Shop now
+                                        Ver productos
                                                     <span class="link__icon ml-1">
                                                         <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
                                                     </span>
@@ -141,10 +81,10 @@
                                 </div>
                                 <div class="col col-lg-6 col-xl-7 col-wd-6 pr-xl-4 pr-wd-3">
                                     <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
-                                        THE NEW <strong>360 CAMERAS</strong>
+                                        <strong>CARGADORES</strong> BATERIAS <br> CABLES USB
                                     </div>
                                     <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
-                                        Shop now
+                                        Ver productos
                                                     <span class="link__icon ml-1">
                                                         <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
                                                     </span>
@@ -159,10 +99,10 @@
                                 </div>
                                 <div class="col col-lg-6 col-xl-7 col-wd-6 pr-xl-4 pr-wd-3">
                                     <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
-                                        CATCH BIG <strong>DEALS</strong> ON THE CAMERAS
+                                        <strong>AUDIFONOS</strong> <br>CON CABLE <br> BLUETOOTH
                                     </div>
                                     <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
-                                        Shop now
+                                        Ver Productos
                                                     <span class="link__icon ml-1">
                                                         <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
                                                     </span>

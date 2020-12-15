@@ -19,6 +19,7 @@ class CreateSlidersTable extends Migration
             $table->string('subtitle');
             $table->string('text');
             $table->string('img');
+            $table->integer('price');
             $table->integer('producto_id')->unsigned();
             $table->timestamps();
         });

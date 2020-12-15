@@ -405,7 +405,7 @@
                                         data-event="hover"
                                         data-animation-in="slideInUp"
                                         data-animation-out="fadeOut">
-                                        <a id="HomeMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="HomeSubMenu">Inicio</a>
+                                        <a id="HomeMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="{{url('/')}}" aria-haspopup="true" aria-expanded="false" aria-labelledby="HomeSubMenu">Inicio</a>
 
                                         <!-- Home - Submenu ->
 
@@ -418,7 +418,7 @@
                                         data-event="hover"
                                         data-animation-in="slideInUp"
                                         data-animation-out="fadeOut">
-                                        <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="javascript:;" aria-haspopup="true" aria-expanded="false">Tienda</a>
+                                        <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="{{url('/tienda')}}" aria-haspopup="true" aria-expanded="false">Tienda</a>
 
                                         <!-- Home - Mega Menu ->
 
@@ -431,7 +431,7 @@
                                         data-event="hover"
                                         data-animation-in="slideInUp"
                                         data-animation-out="fadeOut">
-                                        <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">Contacto</a>
+                                        <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="{{url('/contacto')}}" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">Contacto</a>
 
                                         <!-- Blog - Submenu ->
                                         <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">

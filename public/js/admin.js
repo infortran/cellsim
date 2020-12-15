@@ -14,3 +14,4 @@ const readURL = (input, selector) => {
         reader.readAsDataURL(input.files[0]);
     }
 }
+

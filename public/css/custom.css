@@ -69,3 +69,6 @@
     margin-left: auto;
 }
 
+.btn-contrast{
+    background: linear-gradient(to right, #9265bc, #ffacfc);
+}

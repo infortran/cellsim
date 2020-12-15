@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
+use App\Models\Marca;
+use App\Models\Producto;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -19,7 +23,13 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.home.index');
+        $data = [
+            'productos' => Producto::all(),
+            'categorias' => Categoria::all(),
+            'marcas' => Marca::all(),
+            'sliders' => Slider::all()
+        ];
+        return view('admin.home.index', $data);
     }
 
     public function account()

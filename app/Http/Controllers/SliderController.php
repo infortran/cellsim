@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Producto;
 use App\Models\Slider;
+use App\Tools;
 use Illuminate\Http\Request;
+use Image;
 
 class SliderController extends Controller
 {
@@ -16,18 +19,26 @@ class SliderController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.sliders.create', ['productos' => Producto::all()]);
     }
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'title' => 'required|max:100',
             'subtitle' => 'required|max:100',
             'text' => 'required|max:50',
-            'img' => 'required'
+            'price' => 'required|numeric',
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=600',
+            'producto_id' => 'required'
         ]);
-        Slider::create($request->all());
-        return redirect('/admin/sliders');
+        $img = $request->file('img');
+        $imageName = time().'.'.$img->extension();
+        $imgResize = Image::make($img->path());
+        $path = 'uploads/sliders';
+        Tools::processImage($imgResize, $imageName, $path, false);
+        $data['img'] = $imageName;
+        Slider::create($data);
+        return redirect('/admin');
     }
 
 
@@ -59,6 +70,6 @@ class SliderController extends Controller
     public function destroy(Slider $slider)
     {
         $slider->delete();
-        return redirect('admin/sliders');
+        return redirect('/admin');
     }
 }

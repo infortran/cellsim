@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -10,7 +11,8 @@ class IndexController extends Controller
     public function index()
     {
         $data = [
-            'categorias' => Categoria::all()
+            'categorias' => Categoria::all(),
+            'sliders' => Slider::all()
         ];
         return view('home.template', $data);
     }
