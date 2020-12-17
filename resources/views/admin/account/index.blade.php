@@ -23,7 +23,7 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header card-header-primary">
                                     <h4 class="card-title">Editar Perfil</h4>
@@ -104,7 +104,7 @@
                                                 </div>
                                             </div>
                                         </div-->
-                                        <button type="submit" class="btn btn-primary pull-right">Modificar Perfil</button>
+                                        <button type="submit" class="btn btn-contrast pull-right">Modificar Perfil</button>
                                         <div class="clearfix"></div>
                                     </form>
                                 </div>

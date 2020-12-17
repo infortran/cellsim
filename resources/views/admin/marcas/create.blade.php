@@ -4,14 +4,14 @@
     <div class="wrapper ">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
-        <form action="{{url('/admin/marcas')}}" method="POST" enctype="multipart/form-data" class="main-panel">
+        <form action="{{route('marcas.store')}}" method="POST" enctype="multipart/form-data" class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
                         <h4>Marcas</h4>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">
+                    <button type="submit" class="btn btn-contrast pull-right">
                         <i class="material-icons">save</i>
                         Guardar</button>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">

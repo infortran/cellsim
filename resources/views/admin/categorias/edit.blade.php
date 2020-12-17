@@ -4,7 +4,8 @@
     <div class="wrapper ">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
-        <form action="{{route('categorias.store')}}" method="POST" class="main-panel">
+        <form action="{{route('categorias.update', $categoria->id)}}" method="POST" class="main-panel">
+            @method('put')
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                 <div class="container-fluid">
@@ -39,46 +40,31 @@
                                     </div>
                                 @endif
                                 <div class="card-header card-header-primary" style="display: flex;">
-                                    <h4 class="card-title">Agregar nueva categoría</h4>
-
-
-
+                                    <h4 class="card-title">Editar categoría</h4>
                                 </div>
                                 <div class="card-body" style="margin-top: 20px">
-
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="row">
                                                 <div class="col-md-10">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">Nombre</label>
-                                                        <input name="name" type="text" class="form-control" value="{{old('name')}}">
+                                                        <input name="name" type="text" class="form-control" value="{{$categoria->name}}">
                                                     </div>
                                                 </div>
 
                                             </div>
-
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">Descripcion</label>
-                                                        <input name="text" type="text" class="form-control" value="{{old('description')}}">
+                                                        <input name="text" type="text" class="form-control" value="{{$categoria->text}}">
                                                     </div>
                                                 </div>
                                             </div>
-
-
-
-
-
                                         </div>
-
                                     </div>
-
-
-
                                     <div class="clearfix"></div>
-
                                 </div>
                             </div>
                         </div>

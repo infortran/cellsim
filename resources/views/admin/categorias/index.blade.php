@@ -12,7 +12,7 @@
                     <div class="navbar-wrapper">
                         <h4>Categorías</h4>
                     </div>
-                    <a href="{{url('/admin/categorias/create')}}" class="btn btn-primary">
+                    <a href="{{url('/admin/categorias/create')}}" class="btn btn-contrast">
                         <i class="material-icons">add</i>
                         <span>Agregar Categorías</span>
                     </a>
@@ -39,9 +39,7 @@
                                     @if($categorias->count() > 0)
                                         @foreach($categorias as $categoria)
                                             <div class="product-row">
-                                                <div class="img-container">
-                                                    <img src="{{asset('uploads/categorias/72x72').'/'. $categoria->img}}" alt="">
-                                                </div>
+
                                                 <div class="name">
                                                     {{$categoria->name}}
                                                 </div>
@@ -57,13 +55,15 @@
 
                                                             </button>
                                                             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                                                <a class="dropdown-item" href="#">Eliminar</a>
-                                                                <a class="dropdown-item" href="#">Desactivar</a>
+                                                                <a class="dropdown-item" href="#modal-eliminar-categoria-{{$categoria->id}}" data-toggle="modal">Eliminar</a>
+
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            @include('admin.categorias.modal-delete')
                                         @endforeach
                                     @else
                                         <div class="no-products">
@@ -73,7 +73,7 @@
                                             </div>
                                             <div class="title">No hay categorías</div>
                                             <div class="text">Puedes agregar categorías pulsando</div>
-                                            <a href="{{url('/admin/categorias/create')}}" class="btn btn-primary">
+                                            <a href="{{url('/admin/categorias/create')}}" class="btn btn-contrast">
                                                 <i class="material-icons">add</i>
                                                 <span>Agregar Categorías</span>
                                             </a>

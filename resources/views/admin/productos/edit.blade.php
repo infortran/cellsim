@@ -11,6 +11,9 @@
                     <div class="navbar-wrapper">
                         <h4>Productos</h4>
                     </div>
+                    <button type="submit" class="btn btn-contrast pull-right">
+                        <i class="material-icons">save</i>
+                        Guardar</button>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="navbar-toggler-icon icon-bar"></span>
@@ -132,9 +135,7 @@
                                         </div>
 
 
-                                        <button type="submit" class="btn btn-primary pull-right">
-                                            <i class="material-icons">save</i>
-                                            Guardar</button>
+
                                         <div class="clearfix"></div>
 
                                 </div>

@@ -42,17 +42,16 @@ class CategoriaController extends Controller
 
     public function edit(Categoria $categoria)
     {
-        //
+        return view('admin.categorias.edit', ['categoria' => $categoria]);
     }
 
     public function update(Request $request, Categoria $categoria)
     {
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required|max:100',
             'text' => 'required|max:100'
         ]);
-
-        $categoria->update($request->all());
+        $categoria->update($data);
         return redirect('/admin/categorias');
     }
 

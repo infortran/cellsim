@@ -10,7 +10,8 @@ use Image;
 class ProductoController extends Controller
 {
     //FRONTEND HOME PRODUCTS
-    public function shop(){
+    public function shop()
+    {
         return view('shop.shop', ['productos' => Producto::all()]);
     }
 
@@ -27,7 +28,6 @@ class ProductoController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->enabled);
         $data = $request->validate([
             'name' => 'required|max:100',
             'description' => 'required|max:100',
@@ -69,7 +69,6 @@ class ProductoController extends Controller
 
     public function update(Request $request, Producto $producto)
     {
-        //$producto = Producto::find($producto);
         $data = $request->validate([
             'name' => 'required|max:100',
             'description' => 'required|max:100',
@@ -90,13 +89,13 @@ class ProductoController extends Controller
         }
 
         $producto->update($data);
-        return redirect('admin/productos/');
+        return redirect('admin/productos');
     }
 
 
     public function destroy(Producto $producto)
     {
         $producto->delete();
-        return redirect('/admin/productos');
+        return redirect('admin/productos');
     }
 }

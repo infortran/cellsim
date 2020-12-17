@@ -12,7 +12,7 @@
                     <div class="navbar-wrapper">
                         <h4>Marcas</h4>
                     </div>
-                    <a href="{{url('/admin/marcas/create')}}" class="btn btn-primary">
+                    <a href="{{url('/admin/marcas/create')}}" class="btn btn-contrast">
                         <i class="material-icons">add</i>
                         <span>Agregar Marcas</span>
                     </a>
@@ -72,7 +72,7 @@
                                         </div>
                                         <div class="title">No hay marcas</div>
                                         <div class="text">Puedes agregar marcas pulsando</div>
-                                        <a href="{{url('/admin/marcas/create')}}" class="btn btn-primary">
+                                        <a href="{{url('/admin/marcas/create')}}" class="btn btn-contrast">
                                             <i class="material-icons">add</i>
                                             <span>Agregar Marcas</span>
                                         </a>
