@@ -72,3 +72,16 @@
 .btn-contrast{
     background: linear-gradient(to right, #9265bc, #ffacfc);
 }
+.btn-nav-mobile{
+    display:none;
+}
+
+@media(max-width:425px){
+    .btn-nav-desktop{
+        display:none;
+    }
+
+    .btn-nav-mobile{
+        display: inline;
+    }
+}

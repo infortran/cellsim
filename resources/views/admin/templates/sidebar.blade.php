@@ -1,9 +1,5 @@
 <div class="sidebar" data-color="purple" data-background-color="white" data-image="/images/sidebar-1.jpg">
-    <!--
-      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
-      Tip 2: you can also add an image using data-image tag
-  -->
     <div class="logo"><a href="https://cellsim.cl" class="simple-text logo-normal">
             CellSIM
         </a></div>
@@ -43,5 +39,20 @@
             </li>
 
         </ul>
+
+        <div style="display:flex;flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top:15px">
+            <a href="{{url('/')}}" class="btn btn-primary btn-nav-mobile">
+                <i class="material-icons">store</i>
+                Ir a la tienda</a>
+            <form action="{{route('logout')}}" method="post" style="display:none" id="form-logout">
+                @csrf
+            </form>
+            <button onclick="getElementById('form-logout').submit()" class="btn btn-contrast btn-nav-mobile">
+                <i class="material-icons">logout</i>
+                Salir</button>
+        </div>
     </div>
 </div>
