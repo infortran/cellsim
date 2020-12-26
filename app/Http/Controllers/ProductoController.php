@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Producto;
 use App\Tools;
 use Illuminate\Http\Request;
@@ -9,6 +10,7 @@ use Image;
 
 class ProductoController extends Controller
 {
+    private $resolutions_for_main_images = [[1000, 1000],[600,600], [300,300], [150,150], [72,72]];
     //FRONTEND HOME PRODUCTS
     public function shop()
     {
@@ -34,13 +36,15 @@ class ProductoController extends Controller
             'price' => 'required|numeric',
             'oldprice' => 'numeric',
             'stock' => 'numeric',
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=800'
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=1000,min_height=1000',
+            'category_id' => 'numeric',
+            'brand_id' => 'numeric'
         ]);
         $img = $request->file('img');
         $imageName = time().'.'.$img->extension();
         $imgResize = Image::make($img->path());
         $path = 'uploads/productos';
-        Tools::processImage($imgResize, $imageName, $path, true);
+        Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
         $data['img'] = $imageName;
 
         $data['enabled'] = $request->enabled === 'on' ? true : false;
@@ -63,7 +67,7 @@ class ProductoController extends Controller
 
     public function edit(Producto $producto)
     {
-        return view('admin.productos.edit', ['producto' => $producto]);
+        return view('admin.productos.edit', ['producto' => $producto, 'categorias' => Categoria::all()]);
     }
 
 
@@ -75,17 +79,19 @@ class ProductoController extends Controller
             'price' => 'required|numeric',
             'oldprice' => 'numeric',
             'stock' => 'numeric',
-            'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=800'
+            'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=1000,min_height=1000',
+            'category_id' => '',
+            'brand_id' => ''
         ]);
         if($request->img){
             $img = $request->file('img');
             $imageName = time().'.'.$img->extension();
             $imgResize = Image::make($img->path());
             $path = 'uploads/productos';
-            Tools::processImage($imgResize, $imageName, $path, true);
+            Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
             $data['img'] = $imageName;
 
-            Tools::deleteImage($producto->img, $path);
+            Tools::deleteImage($producto->img, $path, $this->resolutions_for_main_images);
         }
 
         $producto->update($data);

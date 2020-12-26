@@ -48,7 +48,7 @@
                             <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
                                 <!-- Account Sidebar Toggle Button -->
                                 <a id="sidebarNavToggler" href="{{url('/login')}}" role="button" class="u-header-topbar__nav-link">
-                                    <i class="ec ec-user mr-1"></i> Ingresa
+                                    <i class="ec ec-user mr-1"></i> {{Auth::check() ? 'Volver al Administrador':'Ingresar'}}
                                 </a>
                                 <!-- End Account Sidebar Toggle Button -->
                             </li>

@@ -15,8 +15,8 @@ class CreateProductosTable extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id')->unsigned()->default(0);
-            $table->integer('brand_id')->unsigned()->default(0);
+            $table->integer('categoria_id')->unsigned()->default(0);
+            $table->integer('marca_id')->unsigned()->default(0);
             $table->string('name');
             $table->string('description');
             $table->integer('price');

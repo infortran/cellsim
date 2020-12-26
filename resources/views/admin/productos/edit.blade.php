@@ -89,7 +89,7 @@
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label class="bmd-label-floating">Precio Anterior</label>
+                                                            <label class="bmd-label-floating">Precio Anterior <em>(opcional)</em></label>
                                                             <input name="oldprice" type="text" class="form-control"  value="{{$producto->oldprice}}">
                                                         </div>
                                                     </div>
@@ -100,8 +100,14 @@
                                                         <div class="form-group">
                                                             <label>Categoría</label>
                                                             <select name="category_id" class="form-control selectpicker" data-style="btn btn-link" id="">
-                                                                <option value="0" selected disabled>Selecciona una categoría</option>
-                                                                <option></option>
+                                                                <option value="0" {{!$producto->categoria ?? 'selected'}}disabled>Selecciona una categoría</option>
+                                                                @foreach($categorias as $categoria)
+                                                                    @if($producto->categoria)
+                                                                        <option value="{{$categoria->id}}" {{$categoria->id === $producto->categoria->id ?? 'selected'}}>{{$categoria->name}}</option>
+                                                                    @else
+                                                                        <option value="{{$categoria->id}}">{{$categoria->name}}</option>
+                                                                    @endif
+                                                                @endforeach
                                                             </select>
                                                         </div>
                                                     </div>

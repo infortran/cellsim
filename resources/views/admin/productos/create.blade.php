@@ -100,7 +100,10 @@
                                                             <label>Categoría</label>
                                                             <select name="category_id" class="form-control selectpicker" data-style="btn btn-link" id="">
                                                                 <option value="0" selected disabled>Selecciona una categoría</option>
-                                                                <option></option>
+
+                                                                @foreach($categorias as $categoria)
+                                                                <option value="{{$categoria->ids}}" >{{$categoria->name}}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
                                                     </div>
