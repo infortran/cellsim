@@ -68,9 +68,9 @@
                                     </div>
                                     <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
                                         Ver productos
-                                                    <span class="link__icon ml-1">
-                                                        <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
-                                                    </span>
+                                        <span class="link__icon ml-1">
+                                            <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
+                                        </span>
                                     </div>
                                 </div>
                             </a>
@@ -86,9 +86,9 @@
                                     </div>
                                     <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
                                         Ver productos
-                                                    <span class="link__icon ml-1">
-                                                        <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
-                                                    </span>
+                                        <span class="link__icon ml-1">
+                                            <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
+                                        </span>
                                     </div>
                                 </div>
                             </a>
@@ -104,9 +104,9 @@
                                     </div>
                                     <div class="link text-gray-90 font-weight-bold font-size-15" href="#">
                                         Ver Productos
-                                                    <span class="link__icon ml-1">
-                                                        <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
-                                                    </span>
+                                        <span class="link__icon ml-1">
+                                            <span class="link__icon-inner"><i class="ec ec-arrow-right-categproes"></i></span>
+                                        </span>
                                     </div>
                                 </div>
                             </a>
