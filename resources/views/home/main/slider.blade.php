@@ -10,7 +10,7 @@
                          data-speed="7000"
                          data-pagi-classes="text-center position-absolute right-0 bottom-0 left-0 u-slick__pagination u-slick__pagination--long justify-content-start ml-9 mb-3 mb-md-5">
 
-
+                        @if($sliders->count() > 0)
                         @foreach($sliders as $slider)
                         <div class="js-slide bg-img-hero-center">
                             <div class="row height-410-xl py-7 py-md-0 mx-0">
@@ -47,6 +47,7 @@
                         </div>
 
                         @endforeach
+                            @endif
 
                     </div>
                 </div>
