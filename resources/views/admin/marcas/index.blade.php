@@ -39,7 +39,7 @@
                                         @foreach($marcas as $marca)
                                             <div class="product-row">
                                                 <div class="img-container">
-                                                    <img src="{{asset('uploads/marcas/72x72').'/'. $marca->img}}" alt="">
+                                                    <img src="{{asset('uploads/marcas/500x300').'/'. $marca->img}}" alt="" style="width:72px;height:40px;object-fit: cover">
                                                 </div>
                                                 <div class="name">
                                                     {{$marca->name}}

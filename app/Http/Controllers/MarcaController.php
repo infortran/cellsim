@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Marca;
+use App\Tools;
 use Illuminate\Http\Request;
+use Image;
 
 class MarcaController extends Controller
 {
+    private $resolutions_for_main_images = [[500,300]];
 
     public function __construct()
     {
@@ -28,13 +31,20 @@ class MarcaController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required|max:100',
             'text' => 'required|max:100',
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=600'
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=500,min_height=300'
         ]);
 
-        Marca::create($request->all());
+        $img = $request->file('img');
+        $imageName = time().'.'.$img->extension();
+        $imgResize = Image::make($img->path());
+        $path = 'uploads/marcas';
+        Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
+        $data['img'] = $imageName;
+
+        Marca::create($data);
         return redirect('admin/marcas');
     }
 

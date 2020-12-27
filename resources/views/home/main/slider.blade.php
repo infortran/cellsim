@@ -59,7 +59,7 @@
                         <li class="px-2 px-xl-0 flex-shrink-0 flex-xl-shrink-1 mb-3">
                             <a href="../shop/shop.html" class="min-height-126 max-width-320 py-1 py-xl-2 py-wd-1 banner-bg d-flex align-items-center text-gray-90">
                                 <div class="col col-lg-6 col-xl-5 col-wd-6 mb-3 mb-lg-0 pr-lg-0">
-                                    <img class="img-fluid" src="../../assets/img/246X176/img1.jpg" alt="Image Description">
+                                    <img class="img-fluid" src="{{asset('images/funda.png')}}" alt="Image Description">
                                 </div>
                                 <div class="col col-lg-6 col-xl-7 col-wd-6 pr-xl-4 pr-wd-3">
                                     <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
@@ -77,7 +77,7 @@
                         <li class="px-2 px-xl-0 flex-shrink-0 flex-xl-shrink-1 mb-3">
                             <a href="../shop/shop.html" class="min-height-126 max-width-320 py-1 py-xl-2 py-wd-1 banner-bg d-flex align-items-center text-gray-90">
                                 <div class="col col-lg-6 col-xl-5 col-wd-6 mb-3 mb-lg-0 pr-lg-0">
-                                    <img class="img-fluid" src="../../assets/img/246X176/img2.jpg" alt="Image Description">
+                                    <img class="img-fluid" src="{{asset('images/charger.png')}}" alt="Image Description">
                                 </div>
                                 <div class="col col-lg-6 col-xl-7 col-wd-6 pr-xl-4 pr-wd-3">
                                     <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
@@ -95,7 +95,7 @@
                         <li class="px-2 px-xl-0 flex-shrink-0 flex-xl-shrink-1 mb-0">
                             <a href="../shop/shop.html" class="min-height-126 max-width-320 py-1 py-xl-2 py-wd-1 banner-bg d-flex align-items-center text-gray-90">
                                 <div class="col col-lg-6 col-xl-5 col-wd-6 mb-3 mb-lg-0 pr-lg-0">
-                                    <img class="img-fluid" src="../../assets/img/246X176/img3.jpg" alt="Image Description">
+                                    <img class="img-fluid" src="{{asset('images/audifono.png')}}" alt="Image Description">
                                 </div>
                                 <div class="col col-lg-6 col-xl-7 col-wd-6 pr-xl-4 pr-wd-3">
                                     <div class="mb-2 pb-1 font-size-18 font-weight-light text-ls-n1 text-lh-23">
