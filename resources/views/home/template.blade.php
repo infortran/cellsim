@@ -29,7 +29,8 @@
 
 
             <!-- Week Deals limited -->
-            @include('home.main.week-deals')
+
+            
             <!-- End Week Deals limited -->
 
 
