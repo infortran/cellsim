@@ -571,11 +571,13 @@
 
 
                                                         <!--Foreach goes here-->
+                                                        @foreach($categorias as $categoria)
                                                         <li class="nav-item u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
-                                                            <a href="#" class="nav-link u-header__nav-link font-weight-bold">Valor</a>
+                                                            <a href="{{url('categorias/').'/'.strtolower($categoria->name)}}" class="nav-link u-header__nav-link font-weight-bold">{{$categoria->name}}</a>
                                                         </li>
+                                                        @endforeach
 
 
                                                         <!--li class="nav-item u-header__nav-item"
