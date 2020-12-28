@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use App\Models\Marca;
 use App\Models\Producto;
 use App\Tools;
 use Illuminate\Http\Request;
@@ -25,7 +26,7 @@ class ProductoController extends Controller
 
     public function create()
     {
-        return view('admin.productos.create');
+        return view('admin.productos.create', ['categorias' => Categoria::all(), 'marcas' => Marca::all()]);
     }
 
     public function store(Request $request)
@@ -67,7 +68,10 @@ class ProductoController extends Controller
 
     public function edit(Producto $producto)
     {
-        return view('admin.productos.edit', ['producto' => $producto, 'categorias' => Categoria::all()]);
+        return view('admin.productos.edit', [
+            'producto' => $producto,
+            'categorias' => Categoria::all(),
+            'marcas' => Marca::all()]);
     }
 
 
@@ -80,8 +84,8 @@ class ProductoController extends Controller
             'oldprice' => 'numeric',
             'stock' => 'numeric',
             'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=1000,min_height=1000',
-            'category_id' => '',
-            'brand_id' => ''
+            'categoria_id' => '',
+            'marca_id' => ''
         ]);
         if($request->img){
             $img = $request->file('img');

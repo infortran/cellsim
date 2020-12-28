@@ -102,7 +102,7 @@
                                                                 <option value="0" selected disabled>Selecciona una categoría</option>
 
                                                                 @foreach($categorias as $categoria)
-                                                                <option value="{{$categoria->ids}}" >{{$categoria->name}}</option>
+                                                                <option value="{{$categoria->id}}" >{{$categoria->name}}</option>
                                                                 @endforeach
                                                             </select>
                                                         </div>
@@ -112,7 +112,9 @@
                                                             <label>Marca</label>
                                                             <select name="brand_id" class="form-control selectpicker" data-style="btn btn-link" id="">
                                                                 <option value="0" selected disabled>Selecciona una marca</option>
-                                                                <option></option>
+                                                                @foreach($marcas as $marca)
+                                                                <option value="{{$marca->id}}">{{$marca->name}}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
                                                     </div>

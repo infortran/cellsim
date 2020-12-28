@@ -99,13 +99,14 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label>Categoría</label>
-                                                            <select name="category_id" class="form-control selectpicker" data-style="btn btn-link" id="">
-                                                                <option value="0" {{!$producto->categoria ?? 'selected'}}disabled>Selecciona una categoría</option>
+                                                            <select name="categoria_id" class="form-control selectpicker" data-style="btn btn-link" id="">
+                                                                <option value="0" {{!$producto->categoria ? 'selected':''}} disabled>Selecciona una categoría</option>
                                                                 @foreach($categorias as $categoria)
-                                                                    @if($producto->categoria)
-                                                                        <option value="{{$categoria->id}}" {{$categoria->id === $producto->categoria->id ?? 'selected'}}>{{$categoria->name}}</option>
-                                                                    @else
+                                                                    @if(! $producto->categoria)
                                                                         <option value="{{$categoria->id}}">{{$categoria->name}}</option>
+                                                                    @else
+
+                                                                        <option value="{{$categoria->id}}" {{$categoria->id === $producto->categoria->id ? 'selected':''}}>{{$categoria->name}}</option>
                                                                     @endif
                                                                 @endforeach
                                                             </select>
@@ -114,9 +115,17 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label>Marca</label>
-                                                            <select name="brand_id" class="form-control selectpicker" data-style="btn btn-link" id="">
-                                                                <option value="0" selected disabled>Selecciona una marca</option>
-                                                                <option></option>
+                                                            <select name="marca_id" class="form-control selectpicker" data-style="btn btn-link" id="">
+                                                                <option value="0" {{!$producto->marca ? 'selected':''}} disabled>Selecciona una marca</option>
+
+                                                                @foreach($marcas as $marca)
+                                                                    @if($producto->marca)
+                                                                        <option value="{{$marca->id}}" {{$marca->id === $producto->marca->id ?? 'selected'}}>{{$marca->name}}</option>
+                                                                        @else
+                                                                        <option value="{{$marca->id}}">{{$marca->name}}</option>
+                                                                        @endif
+
+                                                                    @endforeach
                                                             </select>
                                                         </div>
                                                     </div>

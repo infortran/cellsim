@@ -12,19 +12,19 @@
                 </a>
             </li>
 
-            <li class="nav-item {{request()->path() === 'admin/productos' || request()->path() === 'admin/productos/create' ? 'active' : ''}}">
+            <li class="nav-item {{request()->path() === 'admin/productos' || request()->path() === 'admin/productos/create' || request()->is('admin/productos/*/edit') ? 'active' : ''}}">
                 <a class="nav-link" href="{{url('/admin/productos')}}">
                     <i class="material-icons">store</i>
                     <p>Productos</p>
                 </a>
             </li>
-            <li class="nav-item {{request()->path() === 'admin/categorias' ? 'active' : ''}}">
+            <li class="nav-item {{request()->path() === 'admin/categorias' || request()->is('admin/categorias/create') || request()->is('admin/categorias/*/edit') ? 'active' : ''}}">
                 <a class="nav-link" href="{{url('/admin/categorias')}}">
                     <i class="material-icons">list</i>
                     <p>Categorias</p>
                 </a>
             </li>
-            <li class="nav-item {{request()->path() === 'admin/marcas' ? 'active' : ''}}">
+            <li class="nav-item {{request()->path() === 'admin/marcas' || request()->is('admin/marcas/create') || request()->is('admin/marcas/*/edit')? 'active' : ''}}">
                 <a class="nav-link" href="{{url('/admin/marcas')}}">
                     <i class="material-icons">copyright</i>
                     <p>Marcas</p>
