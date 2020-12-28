@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc1de6da-0752-420d-b631-bfc8fedb8b89" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/templates/header-full.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/header-full.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" />
     </list>
     <ignored path="cellsim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,10 +24,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header-full.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductoController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41532975">
+              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header-full.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/templates/header-full.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54545456">
+            <state vertical-scroll-proportion="-11.769231">
               <caret line="577" column="121" selection-start-line="577" selection-start-column="121" selection-end-line="577" selection-end-column="121" />
               <folding />
             </state>
@@ -89,10 +99,10 @@
         <option value="$PROJECT_DIR$/resources/views/home/template.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/productos/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Producto.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/productos/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/templates/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/templates/header-full.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProductoController.php" />
       </list>
     </option>
   </component>
@@ -784,20 +794,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductoController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/header-full.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42424244">
-          <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
-          <folding>
-            <element signature="e#40#65#0#PHP" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="577" column="121" selection-start-line="577" selection-start-column="121" selection-end-line="577" selection-end-column="121" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/templates/header-full.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456">
-          <caret line="577" column="121" selection-start-line="577" selection-start-column="121" selection-end-line="577" selection-end-column="121" />
+        <state vertical-scroll-proportion="0.41532975">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding />
         </state>
       </provider>
