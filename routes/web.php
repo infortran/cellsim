@@ -21,6 +21,8 @@ Route::get('/productos/{producto}', 'ProductoController@single');
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/cuenta', 'AdminController@account');
 
+Route::get('/categorias/{categoria}', 'IndexController@categoriaSingle')->name('categoria.single');
+
 
 Route::resource('/admin/productos', 'ProductoController')->middleware('auth');
 Route::resource('/admin/categorias', 'CategoriaController');
