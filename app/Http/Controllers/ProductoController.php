@@ -57,12 +57,22 @@ class ProductoController extends Controller
 
     public function show(Producto $producto)
     {
-        return view('admin.productos.single', ['producto' => $producto]);
+        $data = [
+            'categorias' => Categoria::all(),
+            'marcas' => Marca::all(),
+            'producto' => $producto
+        ];
+        return view('admin.productos.single', $data);
     }
 
     public function single(Producto $producto)
     {
-        return view('single.single', ['producto' => $producto]);
+        $data = [
+            'categorias' => Categoria::all(),
+            'marcas' => Marca::all(),
+            'producto' => $producto
+        ];
+        return view('single.single', $data);
     }
 
 
