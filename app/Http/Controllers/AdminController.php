@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BannerHome;
 use App\Models\Categoria;
 use App\Models\Marca;
 use App\Models\Producto;
@@ -27,7 +28,8 @@ class AdminController extends Controller
             'productos' => Producto::all(),
             'categorias' => Categoria::all(),
             'marcas' => Marca::all(),
-            'sliders' => Slider::all()
+            'sliders' => Slider::all(),
+            'mainbanner' => BannerHome::first()
         ];
         return view('admin.home.index', $data);
     }

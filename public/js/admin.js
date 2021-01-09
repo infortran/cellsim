@@ -3,6 +3,18 @@ $(document).ready(function(){
        const selector = $('#img-input-producto')
        readURL(this, selector)
    })
+
+   $('#input-title').click(function(){
+       $('.alert-danger').hide()
+   })
+
+   $('#input-text').click(function(){
+        $('.alert-danger').hide()
+    })
+
+    $('#input-price').click(function(){
+        $('.alert-danger').hide()
+    })
 });
 
 const readURL = (input, selector) => {

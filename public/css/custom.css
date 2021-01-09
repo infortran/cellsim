@@ -76,9 +76,27 @@
     display:none;
 }
 
+.price-row{
+    margin-top: 20px;
+    text-align: right;
+}
+
 @media(max-width:425px){
     .btn-nav-desktop{
         display:none;
+    }
+
+    .price-row{
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .price-row button{
+        margin-top: 20px;
+    }
+
+    .form-main-banner input{
+        margin-top: 10px;
     }
 
     .btn-nav-mobile{

@@ -154,6 +154,57 @@
 
                     </div>
                 </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header card-header-primary" style="display:flex;">
+                                    <div>
+                                        <h4 class="card-title">Datos Banner Principal</h4>
+                                    </div>
+
+                                </div>
+                                <div class="card-body">
+                                    <form action="{{route('mainbanner.update', $mainbanner->id)}}" class="form-main-banner" method="post">
+                                        @method('put')
+                                        @csrf
+                                        <div class="container">
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control" id="input-title" placeholder="Titulo" name="title" value="{{$mainbanner->title}}">
+                                                    @error('title')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" id="input-text" class="form-control" placeholder="Texto" name="text" value="{{$mainbanner->text}}">
+                                                    @error('text')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+
+                                            <div class="row price-row">
+                                                <div class="col-md-6">
+                                                    <input type="text" id="input-price" class="form-control" placeholder="Precio" name="price" value="{{$mainbanner->price}}">
+                                                    @error('price')
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button class="btn btn-primary" type="submit">Listo</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
             <!--Footer Goes Here-->
         </div>

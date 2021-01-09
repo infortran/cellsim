@@ -23,6 +23,8 @@ Route::get('/admin/cuenta', 'AdminController@account');
 
 Route::get('/categorias/{categoria}', 'IndexController@categoriaSingle')->name('categoria.single');
 
+Route::put('/admin/mainbanner/{banner}', 'BannerHomeController@update')->name('mainbanner.update');
+
 
 Route::resource('/admin/productos', 'ProductoController')->middleware('auth');
 Route::resource('/admin/categorias', 'CategoriaController');
