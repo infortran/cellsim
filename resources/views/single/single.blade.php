@@ -21,9 +21,11 @@
                                 data-arrow-right-classes="fas fa-arrow-right u-slick__arrow-classic-inner u-slick__arrow-classic-inner--right mr-lg-2 mr-xl-4"
                                 data-nav-for="#sliderSyncingThumb">
                                 <div class="js-slide">
-                                    <img class="img-fluid" src="../../assets/img/720X660/img1.jpg" alt="Image Description">
+
+
+                                    <img style="cursor: pointer" data-toggle="modal" data-target="#imgModal" class="img-fluid" src="{{ asset('uploads/productos/600x600') . '/' . $producto->img}}" alt="Image Description">
                                 </div>
-                                <div class="js-slide">
+                                {{-- <div class="js-slide">
                                     <img class="img-fluid" src="../../assets/img/720X660/img2.jpg" alt="Image Description">
                                 </div>
                                 <div class="js-slide">
@@ -34,10 +36,10 @@
                                 </div>
                                 <div class="js-slide">
                                     <img class="img-fluid" src="../../assets/img/720X660/img5.jpg" alt="Image Description">
-                                </div>
+                                </div> --}}
                             </div>
 
-                            <div id="sliderSyncingThumb" class="js-slick-carousel u-slick u-slick--slider-syncing u-slick--slider-syncing-size u-slick--gutters-1 u-slick--transform-off"
+                            {{-- <div id="sliderSyncingThumb" class="js-slick-carousel u-slick u-slick--slider-syncing u-slick--slider-syncing-size u-slick--gutters-1 u-slick--transform-off"
                                 data-infinite="true"
                                 data-slides-show="5"
                                 data-is-thumbs="true"
@@ -57,15 +59,15 @@
                                 <div class="js-slide" style="cursor: pointer;">
                                     <img class="img-fluid" src="../../assets/img/720X660/img5.jpg" alt="Image Description">
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-md-7 mb-md-6 mb-lg-0">
                             <div class="mb-2">
                                 <div class="border-bottom mb-3 pb-md-1 pb-3">
-                                    <a href="#" class="font-size-12 text-gray-5 mb-2 d-inline-block">Headphones</a>
-                                    <h2 class="font-size-25 text-lh-1dot2">Ultra Wireless S50 Headphones S50 with Bluetooth</h2>
+                                    <a href="#" class="font-size-12 text-gray-5 mb-2 d-inline-block">{{ $producto->categoria_id != 0 ? $producto->categoria->name : '' }}</a>
+                                    <h2 class="font-size-25 text-lh-1dot2">{{ $producto->name }}</h2>
                                     <div class="mb-2">
-                                        <a class="d-inline-flex align-items-center small font-size-15 text-lh-1" href="#">
+                                        {{-- <a class="d-inline-flex align-items-center small font-size-15 text-lh-1" href="#">
                                             <div class="text-warning mr-2">
                                                 <small class="fas fa-star"></small>
                                                 <small class="fas fa-star"></small>
@@ -74,34 +76,50 @@
                                                 <small class="far fa-star text-muted"></small>
                                             </div>
                                             <span class="text-secondary font-size-13">(3 customer reviews)</span>
-                                        </a>
+                                        </a> --}}
                                     </div>
                                     <div class="d-md-flex align-items-center">
-                                        <a href="#" class="max-width-150 ml-n2 mb-2 mb-md-0 d-block"><img class="img-fluid" src="../../assets/img/200X60/img1.png" alt="Image Description"></a>
-                                        <div class="ml-md-3 text-gray-9 font-size-14">Availability: <span class="text-green font-weight-bold">26 in stock</span></div>
+                                        @if ($producto->marca)
+                                        <a href="#" class="max-width-150 ml-n2 mb-2 mb-md-0 d-block"><img class="img-fluid" src="{{ asset('uploads/marcas/500x300') . '/' . $producto->marca->img }}" alt="Image Description"></a>
+                                        @endif
+                                        <div class="ml-md-3 text-gray-9 font-size-14">Stock: <span class="text-green font-weight-bold">{{ $producto->stock }}</span></div>
                                     </div>
                                 </div>
-                                <div class="flex-horizontal-center flex-wrap mb-4">
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <button style="margin-left: auto; margin-right: 20px; margin-top: 20px" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    <div class="modal-body">
+                                        <img class="img-fluid" src="{{ asset('uploads/productos/1000x1000') . '/' . $producto->img}}" alt="Image Description">
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                                {{-- <div class="flex-horizontal-center flex-wrap mb-4">
                                     <a href="#" class="text-gray-6 font-size-13 mr-2"><i class="ec ec-favorites mr-1 font-size-15"></i> Wishlist</a>
                                     <a href="#" class="text-gray-6 font-size-13 ml-2"><i class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                </div>
-                                <div class="mb-2">
+                                </div> --}}
+                                {{-- <div class="mb-2">
                                     <ul class="font-size-14 pl-3 ml-1 text-gray-110">
                                         <li>4.5 inch HD Touch Screen (1280 x 720)</li>
                                         <li>Android 4.4 KitKat OS</li>
                                         <li>1.4 GHz Quad Core™ Processor</li>
                                         <li>20 MP Electro and 28 megapixel CMOS rear camera</li>
                                     </ul>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                                <p><strong>SKU</strong>: FW511948218</p>
+                                </div> --}}
+                                <p>{{ $producto->description }}</p>
+                                {{-- <p><strong>SKU</strong>: FW511948218</p> --}}
                                 <div class="mb-4">
                                     <div class="d-flex align-items-baseline">
-                                        <ins class="font-size-36 text-decoration-none">$1,999.00</ins>
-                                        <del class="font-size-20 ml-2 text-gray-6">$2,299.00</del>
+                                        <ins class="font-size-36 text-decoration-none">${{ number_format($producto->price, 0, '', '.') }}</ins>
+                                        <del class="font-size-20 ml-2 text-gray-6">${{ number_format($producto->oldprice, 0, '', '.') ?? '' }}</del>
                                     </div>
                                 </div>
-                                <div class="border-top border-bottom py-3 mb-4">
+                                {{-- <div class="border-top border-bottom py-3 mb-4">
                                     <div class="d-flex align-items-center">
                                         <h6 class="font-size-14 mb-0">Color</h6>
                                         <!-- Select -->
@@ -114,8 +132,8 @@
                                         </select>
                                         <!-- End Select -->
                                     </div>
-                                </div>
-                                <div class="d-md-flex align-items-end mb-3">
+                                </div> --}}
+                                {{-- <div class="d-md-flex align-items-end mb-3">
                                     <div class="max-width-150 mb-4 mb-md-0">
                                         <h6 class="font-size-14">Quantity</h6>
                                         <!-- Quantity -->
@@ -140,7 +158,7 @@
                                         <a href="#" class="btn px-5 btn-primary-dark transition-3d-hover"><i class="ec ec-add-to-cart mr-2 font-size-20"></i> Add to Cart</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,9 @@ use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
 use Illuminate\Support\ServiceProvider;
+use App\Models\Categoria;
+use App\Models\Producto;
+use App\Models\Marca;
 use Laravel\Fortify\Fortify;
 
 class FortifyServiceProvider extends ServiceProvider
@@ -34,7 +37,12 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
 
         Fortify::loginView(function () {
-            return view('account.account');
+            $data = [
+                'categorias' => Categoria::all(),
+                'marcas' => Marca::all(),
+                'producto' => Producto::all()
+            ];
+            return view('account.account', $data);
         });
 
         Fortify::registerView(function () {
