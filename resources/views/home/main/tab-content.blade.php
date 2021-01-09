@@ -48,9 +48,9 @@
                                  <a href="{{route('categoria.single', ['categoria' => strtolower($producto->categoria->name)])}}" class="font-size-12 text-gray-5">{{$producto->categoria->name}}</a>
                                 @endif
                             </div>
-                            <h5 class="mb-1 product-item__title"><a href="{{route('productos.show', $producto->id)}}" class="text-blue font-weight-bold">{{$producto->name}}</a></h5>
+                            <h5 class="mb-1 product-item__title"><a href="{{route('producto.single', $producto->id)}}" class="text-blue font-weight-bold">{{$producto->name}}</a></h5>
                             <div class="mb-2">
-                                <a href="{{route('productos.show', $producto->id)}}" class="d-block text-center">
+                                <a href="{{route('producto.single', $producto->id)}}" class="d-block text-center">
                                     <img class="img-fluid" src="{{asset('uploads/productos/150x150').'/'.$producto->img}}" alt="{{$producto->name}}">
                                 </a>
                             </div>
@@ -72,8 +72,8 @@
                         </div>
                         <div class="product-item__footer">
                             <div class="border-top pt-2 flex-center-between flex-wrap">
-                                <a href="../shop/compare.html" class="text-gray-6 font-size-13"><i class="ec ec-compare mr-1 font-size-15"></i> Compare</a>
-                                <a href="../shop/wishlist.html" class="text-gray-6 font-size-13"><i class="ec ec-favorites mr-1 font-size-15"></i> Wishlist</a>
+                                <a href="{{route('producto.single', $producto->id)}}" class="text-gray-6 font-size-13"><i class="fa fa-link mr-1 font-size-15"></i> Ver producto</a>
+
                             </div>
                         </div>
                     </div>
