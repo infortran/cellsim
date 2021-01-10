@@ -42,7 +42,7 @@
 
 
                 <!-- Music Headphones -->
-                @include('home.main.music-headphones')
+
                 <!-- End Music Headphones -->
             </div>
 
@@ -55,12 +55,12 @@
 
             <div class="container">
                 <!-- Laptops & Computers -->
-                @include('home.main.laptops')
+
                 <!-- End Laptops & Computers -->
 
 
                 <!-- Home Enternteinment -->
-                @include('home.main.home-entertainment')
+
                 <!-- End Home Enternteinment -->
             </div>
 

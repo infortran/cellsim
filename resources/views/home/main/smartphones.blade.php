@@ -4,7 +4,7 @@
         <div class=" d-flex justify-content-between border-bottom border-color-1 flex-lg-nowrap flex-wrap border-md-down-top-0 border-md-down-bottom-0">
             <h3 class="section-title mb-0 pb-2 font-size-22">Smartphones & Tablets</h3>
 
-            <ul class="w-100 w-lg-auto nav nav-pills nav-tab-pill mb-2 pt-3 pt-lg-0 mb-0 border-top border-color-1 border-lg-top-0 align-items-center font-size-15 font-size-15-lg flex-nowrap flex-lg-wrap overflow-auto overflow-lg-visble pr-0" id="pills-tab-3" role="tablist">
+            <!--ul class="w-100 w-lg-auto nav nav-pills nav-tab-pill mb-2 pt-3 pt-lg-0 mb-0 border-top border-color-1 border-lg-top-0 align-items-center font-size-15 font-size-15-lg flex-nowrap flex-lg-wrap overflow-auto overflow-lg-visble pr-0" id="pills-tab-3" role="tablist">
                 <li class="nav-item flex-shrink-0 flex-lg-shrink-1">
                     <a class="nav-link rounded-pill active" id="Bpills-one-example1-tab" data-toggle="pill" href="#Bpills-one-example1" role="tab" aria-controls="Bpills-one-example1" aria-selected="true">Bestsellers</a>
                 </li>
@@ -17,12 +17,12 @@
                 <li class="nav-item flex-shrink-0 flex-lg-shrink-1">
                     <a class="nav-link rounded-pill" id="Bpills-four-example1-tab" data-toggle="pill" href="#Bpills-four-example1" role="tab" aria-controls="Bpills-four-example1" aria-selected="false">12.3 inch</a>
                 </li>
-            </ul>
+            </ul-->
         </div>
     </div>
     <!-- End Nav Pills -->
     <div class="row">
-        <div class="col-12 col-xl-auto pr-lg-2">
+        <!--div class="col-12 col-xl-auto pr-lg-2">
             <div class="min-width-200 mt-xl-5">
                 <ul class="list-group list-group-flush flex-nowrap flex-xl-wrap flex-row flex-xl-column overflow-auto overflow-xl-visble mb-3 mb-xl-0">
                     <li class="border-color-1 list-group-item border-lg-down-0 flex-shrink-0 flex-xl-shrink-1"><a class="hover-on-bold py-1 px-3 text-gray-90 d-block" href="../shop/product-categories-7-column-full-width.html">Featured Phones</a></li>
@@ -35,7 +35,7 @@
                     <li class="border-color-1 list-group-item border-lg-down-0 flex-shrink-0 flex-xl-shrink-1"><a class="hover-on-bold py-1 px-3 text-gray-90 d-block" href="../shop/product-categories-7-column-full-width.html">Mobiles Accesories</a></li>
                 </ul>
             </div>
-        </div>
+        </div-->
         <div class="col-md-6 col-lg-auto">
             <a href="../shop/shop.html" class="d-block"><img class="img-fluid" src="../../assets/img/360X616/img1.jpg" alt="Image Description"></a>
         </div>
