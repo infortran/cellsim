@@ -116,7 +116,11 @@
                                 <div class="mb-4">
                                     <div class="d-flex align-items-baseline">
                                         <ins class="font-size-36 text-decoration-none">${{ number_format($producto->price, 0, '', '.') }}</ins>
-                                        <del class="font-size-20 ml-2 text-gray-6">${{ number_format($producto->oldprice, 0, '', '.') ?? '' }}</del>
+                                        <del class="font-size-20 ml-2 text-gray-6">
+                                            @if($producto->oldprice != 0)
+                                            ${{ number_format($producto->oldprice, 0, '', '.') ?? '' }}
+                                            @endif
+                                        </del>
                                     </div>
                                 </div>
                                 {{-- <div class="border-top border-bottom py-3 mb-4">
