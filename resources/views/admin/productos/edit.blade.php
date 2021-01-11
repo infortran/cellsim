@@ -83,14 +83,14 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">Precio</label>
-                                                            <input name="price" type="text" class="form-control" value="{{$producto->price}}">
+                                                            <input name="price" type="number" class="form-control" value="{{$producto->price}}">
                                                         </div>
                                                     </div>
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">Precio Anterior <em>(opcional)</em></label>
-                                                            <input name="oldprice" type="text" class="form-control"  value="{{$producto->oldprice}}">
+                                                            <input name="oldprice" type="number" class="form-control"  value="{{$producto->oldprice}}">
                                                         </div>
                                                     </div>
                                                 </div>
