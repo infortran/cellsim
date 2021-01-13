@@ -22,7 +22,7 @@ $(document).ready(function(){
     if(fileImg != 'placeholder.jpg'){
         $('.selected').removeClass('selected');
         let srcImg = $('.img-categoria').attr('src');
-        
+
         let imgSelectedParent = $('.image_picker_image[src="'+srcImg+'"]')[0].parentElement;
         imgSelectedParent.classList.add('selected');
 
