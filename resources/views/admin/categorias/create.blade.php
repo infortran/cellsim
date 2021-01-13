@@ -40,13 +40,12 @@
                                 @endif
                                 <div class="card-header card-header-primary" style="display: flex;">
                                     <h4 class="card-title">Agregar nueva categoría</h4>
-
-
-
                                 </div>
-                                <div class="card-body" style="margin-top: 20px">
-
+                                <div class="card-body" style="margin-top: 20px; margin-left: 20px">
                                     <div class="row">
+                                        <div>
+                                            <img class="img-categoria" data-toggle="modal" data-target="#imagePickerModal" src="{{asset('images/placeholder.jpg')}}" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;" alt="">
+                                        </div>
                                         <div class="col-md-8">
                                             <div class="row">
                                                 <div class="col-md-10">
@@ -67,16 +66,12 @@
                                                 </div>
                                             </div>
 
+                                                <!-- Modal -->
+                                                @include('admin.categorias.modal-imagepicker')
 
-
-
-
+                                            </div>
                                         </div>
-
                                     </div>
-
-
-
                                     <div class="clearfix"></div>
 
                                 </div>

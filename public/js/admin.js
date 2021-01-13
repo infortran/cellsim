@@ -1,20 +1,44 @@
 $(document).ready(function(){
-   $('#img-file').change(function(){
-       const selector = $('#img-input-producto')
-       readURL(this, selector)
-   })
+    $('#img-file').change(function(){
+        const selector = $('#img-input-producto')
+        readURL(this, selector)
+    })
 
-   $('#input-title').click(function(){
-       $('.alert-danger').hide()
-   })
+    $('#input-title').click(function(){
+        $('.alert-danger').hide()
+    })
 
-   $('#input-text').click(function(){
+    $('#input-text').click(function(){
         $('.alert-danger').hide()
     })
 
     $('#input-price').click(function(){
         $('.alert-danger').hide()
     })
+
+    let fileImg = $('.img-categoria').attr('src').replace(/.*(\/|\\)/, '');
+    $(".image-picker").imagepicker();
+
+    if(fileImg != 'placeholder.jpg'){
+        $('.selected').removeClass('selected');
+        let srcImg = $('.img-categoria').attr('src');
+        
+        let imgSelectedParent = $('.image_picker_image[src="'+srcImg+'"]')[0].parentElement;
+        imgSelectedParent.classList.add('selected');
+
+        let selectedImgRoute = $('.selected img').attr('src');
+        $('.img-categoria').attr('src', selectedImgRoute);
+
+
+        $(".image-picker").val(fileImg);
+    }
+
+
+    $("#imagePickerModal").on("hidden.bs.modal", function () {
+        let selectedImgRoute = $('.selected img').attr('src');
+        $('.img-categoria').attr('src', selectedImgRoute);
+    });
+
 });
 
 const readURL = (input, selector) => {

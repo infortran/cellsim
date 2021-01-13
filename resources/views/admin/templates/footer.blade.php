@@ -14,7 +14,7 @@
             CellSim Comunicaciones
             &copy;
             <script>
-                document.write(new Date().getFullYear())
+                document.write(new Date().getFullYear());
             </script>
         </div>
     </div>

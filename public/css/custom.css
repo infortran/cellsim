@@ -81,6 +81,12 @@
     text-align: right;
 }
 
+.image-picker img{
+    max-width: 100px;
+    max-height:100px;
+    object-fit: cover;
+}
+
 @media(max-width:425px){
     .btn-nav-desktop{
         display:none;

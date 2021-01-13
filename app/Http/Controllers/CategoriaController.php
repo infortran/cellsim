@@ -26,12 +26,13 @@ class CategoriaController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required|max:100',
-            'text' => 'required|max:100'
+            'text' => 'required|max:100',
+            'img' => 'required'
         ]);
 
-        Categoria::create($request->all());
+        Categoria::create($data);
         return redirect('/admin/categorias');
     }
 
@@ -49,8 +50,10 @@ class CategoriaController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|max:100',
-            'text' => 'required|max:100'
+            'text' => 'required|max:100',
+            'img' => 'required'
         ]);
+
         $categoria->update($data);
         return redirect('/admin/categorias');
     }
