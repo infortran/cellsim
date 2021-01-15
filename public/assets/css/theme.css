@@ -33952,7 +33952,7 @@ blockquote:not(.blockquote) p {
   .product-item:hover .product-item__inner:not(.remove-prodcut-hover) {
     position: absolute;
     width: 100%;
-    height: auto;
+    left:0;
     min-height: 100%;
     box-shadow: 0px 0px 6px 0px rgba(1, 1, 1, 0.3);
     background-color: #fff;

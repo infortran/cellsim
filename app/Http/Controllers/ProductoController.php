@@ -35,7 +35,7 @@ class ProductoController extends Controller
             'name' => 'required|max:100',
             'description' => 'required|max:100',
             'price' => 'required|numeric',
-            'oldprice' => 'numeric',
+            'oldprice' => '',
             'stock' => 'numeric',
             'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=1000,min_height=1000',
             'categoria_id' => 'numeric',

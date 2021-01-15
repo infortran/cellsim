@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categoria;
+use App\Models\Marca;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
@@ -62,5 +64,16 @@ class CategoriaController extends Controller
     {
         $categoria->delete();
         return redirect('/admin/categorias');
+    }
+
+    public function landing(Request $request, $categoria){
+        $cat = Categoria::where('name', $categoria)->first();
+        //dd($cat);
+        $data = [
+            'categorias' => Categoria::all(),
+            'productos' => $cat ? Producto::where('categoria_id', $cat->id)->get() : Producto::all(),
+            'marcas' => Marca::all()
+        ];
+        return view('categorias.index', $data);
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <!-- Title HOME-->
     <title>Home</title>
@@ -30,6 +30,7 @@
 
     <!-- CSS Electro Template -->
     <link rel="stylesheet" href="../../assets/css/theme.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
 </head>
 
 <body>

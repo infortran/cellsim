@@ -21,7 +21,9 @@ Route::get('/productos/{producto}', 'ProductoController@single')->name('producto
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/cuenta', 'AdminController@account');
 
-Route::get('/categorias/{categoria}', 'IndexController@categoriaSingle')->name('categoria.single');
+Route::get('/categorias/{categoria}', 'CategoriaController@landing');
+
+//Route::get('/categorias/{categoria}', 'IndexController@categoriaSingle')->name('categoria.single');
 
 Route::put('/admin/mainbanner/{banner}', 'BannerHomeController@update')->name('mainbanner.update');
 

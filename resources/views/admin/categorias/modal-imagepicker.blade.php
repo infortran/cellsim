@@ -14,10 +14,6 @@
                         <img src="{{asset($filename)}}" alt="">
                     @endforeach
                 </select>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Listo</button>
             </div>
         </div>
     </div>

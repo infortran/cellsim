@@ -16,8 +16,10 @@ $(document).ready(function(){
         $('.alert-danger').hide()
     })
 
+    $(".image-picker").val(0);
     let fileImg = $('.img-categoria').attr('src').replace(/.*(\/|\\)/, '');
     $(".image-picker").imagepicker();
+
 
     if(fileImg != 'placeholder.jpg'){
         $('.selected').removeClass('selected');
@@ -29,10 +31,9 @@ $(document).ready(function(){
         let selectedImgRoute = $('.selected img').attr('src');
         $('.img-categoria').attr('src', selectedImgRoute);
 
-
         $(".image-picker").val(fileImg);
-    }
 
+    }
 
     $("#imagePickerModal").on("hidden.bs.modal", function () {
         let selectedImgRoute = $('.selected img').attr('src');
