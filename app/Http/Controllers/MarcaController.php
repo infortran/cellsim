@@ -1,8 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Marca;
+use App\Models\Producto;
 use App\Tools;
 use Illuminate\Http\Request;
 use Image;
@@ -57,20 +57,32 @@ class MarcaController extends Controller
 
     public function edit(Marca $marca)
     {
-        //
+        return view('admin.marcas.edit', [
+            'marca' => $marca
+        ]);
     }
 
 
 
     public function update(Request $request, Marca $marca)
     {
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required|max:100',
             'text' => 'required|max:100',
-            'img' => 'required|max:100'
+            'img' => 'image|mimes:jpeg,png,jpg'
         ]);
+        if($request->img){
+            $img = $request->file('img');
+            $imageName = time().'.'.$img->extension();
+            $imgResize = Image::make($img->path());
+            $path = 'uploads/marcas';
+            Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
+            $data['img'] = $imageName;
 
-        $marca->update($request->all());
+            Tools::deleteImage($marca->img, $path, $this->resolutions_for_main_images);
+        }
+
+        $marca->update($data);
         return redirect('admin/marcas');
     }
 

@@ -33949,7 +33949,7 @@ blockquote:not(.blockquote) p {
 }
 
 @media (min-width: 1200px) {
-  .product-item:hover .product-item__inner:not(.remove-prodcut-hover) {
+  .product-item:hover .product-item__inner:not(.remove-product-hover) {
     position: absolute;
     width: 100%;
     left:0;

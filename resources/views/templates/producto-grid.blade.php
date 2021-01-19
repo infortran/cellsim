@@ -1,4 +1,4 @@
-<div class="tab-content mb-4" id="pills-tabContent" style="display: flex; justify-content: center">
+<div class="tab-content mb-4" id="pills-tabContent" style="display: flex; justify-content: center; min-height: 360px">
     <div class="tab-pane fade pt-2 show active" id="pills-one-example1" role="tabpanel" aria-labelledby="pills-one-example1-tab" data-target-group="groups" style="width: 90%">
         <ul class="row list-unstyled products-group no-gutters">
             @foreach($productos as $producto)

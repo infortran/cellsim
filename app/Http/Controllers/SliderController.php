@@ -23,6 +23,7 @@ class SliderController extends Controller
     }
     public function store(Request $request)
     {
+        $resolutions = [[1000, 1000],[600,600], [300,300], [150,150], [72,72]];
         $data = $request->validate([
             'title' => 'required|max:100',
             'subtitle' => 'required|max:100',
@@ -35,7 +36,7 @@ class SliderController extends Controller
         $imageName = time().'.'.$img->extension();
         $imgResize = Image::make($img->path());
         $path = 'uploads/sliders';
-        Tools::processImage($imgResize, $imageName, $path, false);
+        Tools::processImage($imgResize, $imageName, $path, false,$resolutions);
         $data['img'] = $imageName;
         Slider::create($data);
         return redirect('/admin');
