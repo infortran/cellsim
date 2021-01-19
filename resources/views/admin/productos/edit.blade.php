@@ -105,7 +105,6 @@
                                                                     @if(! $producto->categoria)
                                                                         <option value="{{$categoria->id}}">{{$categoria->name}}</option>
                                                                     @else
-
                                                                         <option value="{{$categoria->id}}" {{$categoria->id === $producto->categoria->id ? 'selected':''}}>{{$categoria->name}}</option>
                                                                     @endif
                                                                 @endforeach

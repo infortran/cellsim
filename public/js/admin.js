@@ -32,7 +32,6 @@ $(document).ready(function(){
         $('.img-categoria').attr('src', selectedImgRoute);
 
         $(".image-picker").val(fileImg);
-
     }
 
     $("#imagePickerModal").on("hidden.bs.modal", function () {

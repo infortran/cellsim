@@ -69,7 +69,7 @@ class MarcaController extends Controller
         $data = $request->validate([
             'name' => 'required|max:100',
             'text' => 'required|max:100',
-            'img' => 'image|mimes:jpeg,png,jpg'
+            'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=500,min_height=300'
         ]);
         if($request->img){
             $img = $request->file('img');

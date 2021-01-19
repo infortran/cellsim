@@ -38,7 +38,7 @@ class ProductoController extends Controller
             'oldprice' => '',
             'stock' => 'numeric',
             'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=1000,min_height=1000',
-            'categoria_id' => 'numericc',
+            'categoria_id' => 'numeric',
             'marca_id' => 'numeric'
         ]);
         $img = $request->file('img');

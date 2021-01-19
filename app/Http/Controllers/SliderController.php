@@ -51,20 +51,33 @@ class SliderController extends Controller
 
     public function edit(Slider $slider)
     {
-        //
+        return view('admin.sliders.edit', [
+            'slider' => $slider,
+            'productos' => Producto::all()
+        ]);
     }
 
     public function update(Request $request, Slider $slider)
     {
-        $request->validate([
+        $resolutions = [[1000, 1000],[600,600], [300,300], [150,150], [72,72]];
+        $data = $request->validate([
             'title' => 'required|max:100',
             'subtitle' => 'required|max:100',
             'text' => 'required|max:50',
-            'img' => 'required'
+            'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=600',
+            'producto_id' => 'required'
         ]);
+        if($request->img){
+            $img = $request->file('img');
+            $imageName = time().'.'.$img->extension();
+            $imgResize = Image::make($img->path());
+            $path = 'uploads/sliders';
+            Tools::processImage($imgResize, $imageName, $path, false,$resolutions);
+            $data['img'] = $imageName;
+        }
 
-        $slider->update($request->all());
-        return redirect('/admin/sliders');
+        $slider->update($data);
+        return redirect('/admin');
     }
 
 

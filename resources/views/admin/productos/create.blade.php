@@ -98,7 +98,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label>Categoría</label>
-                                                            <select name="category_id" class="form-control selectpicker" data-style="btn btn-link" id="">
+                                                            <select name="categoria_id" class="form-control selectpicker" data-style="btn btn-link" id="">
                                                                 <option value="0" selected disabled>Selecciona una categoría</option>
 
                                                                 @foreach($categorias as $categoria)
@@ -110,7 +110,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label>Marca</label>
-                                                            <select name="brand_id" class="form-control selectpicker" data-style="btn btn-link" id="">
+                                                            <select name="marca_id" class="form-control selectpicker" data-style="btn btn-link" id="">
                                                                 <option value="0" selected disabled>Selecciona una marca</option>
                                                                 @foreach($marcas as $marca)
                                                                 <option value="{{$marca->id}}">{{$marca->name}}</option>
