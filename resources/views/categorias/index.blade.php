@@ -19,4 +19,9 @@
 @include('templates.go-top')
 
 @include('templates.footer')
+
+
 @endsection
+<script>
+
+</script>

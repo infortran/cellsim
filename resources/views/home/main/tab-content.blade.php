@@ -40,7 +40,7 @@
             @foreach($ultimos as $producto)
 
             <li class="col-6 col-md-4 col-lg-3 col-xl product-item">
-                <div class="product-item__outer h-100">
+                <div class="product-item__outer h-100" style="width: 100%">
                     <div class="product-item__inner px-xl-4 p-3">
                         <div class="product-item__body pb-xl-2">
                             <div class="mb-2">
@@ -49,7 +49,6 @@
                                  <a href="{{route('categoria.single', ['categoria' => strtolower($producto->categoria->name)])}}" class="font-size-12 text-gray-5">{{$producto->categoria->name}}</a>
                                 @endif
                                 --}}
-
                             </div>
                             <h5 class="mb-1 product-item__title"><a href="{{route('producto.single', $producto->id)}}" class="text-blue font-weight-bold">{{$producto->name}}</a></h5>
                             <div class="mb-2">

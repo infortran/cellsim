@@ -6,3 +6,75 @@
 .product-item__inner{
     transition: all ease .3s;
 }
+
+.bg-img-huincha{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: top center;
+    object-fit: cover;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.title-huincha{
+    position: relative;
+    margin-right: 20px;
+    line-height: 35px;
+    width: 70%;
+    text-align: center ;
+}
+
+.info-huincha{
+    margin-left: 40%;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    line-height: 1px;
+    padding: 5px 35px;
+}
+
+@media(max-width:767px){
+    .title-huincha{
+        width: 50%;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .info-huincha{
+        padding: 5px 20px;
+    }
+
+    .txt-huincha{
+        font-size: 12px;
+    }
+
+    .txt-precio-huincha{
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 532px){
+    .title-huincha{
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+    .info-huincha{
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 416px){
+    .title-huincha{
+        line-height: 20px;
+        width: 45%;
+        font-size: 16px;
+    }
+
+    .txt-huincha{
+        font-size: 10px;
+    }
+
+    .txt-precio-huincha{
+        font-size: 20px;
+    }
+}

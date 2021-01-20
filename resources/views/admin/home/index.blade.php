@@ -1,7 +1,7 @@
 @extends('admin.templates.main')
 
 @section('content')
-    <div class="wrapper ">
+    <div class="wrapper">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
 
@@ -161,11 +161,14 @@
                             <div class="card">
                                 <div class="card-header card-header-primary" style="display:flex;">
                                     <div>
-                                        <h4 class="card-title">Datos Banner Principal</h4>
+                                        <h4 class="card-title">Datos Banner Huincha</h4>
                                     </div>
 
                                 </div>
                                 <div class="card-body">
+                                    <div>
+                                        @include('admin.home.full-banner')
+                                    </div>
                                     <form action="{{route('mainbanner.update', $mainbanner->id)}}" class="form-main-banner" method="post">
                                         @method('put')
                                         @csrf
@@ -199,6 +202,8 @@
                                             </div>
                                         </div>
                                     </form>
+
+
                                 </div>
                             </div>
                         </div>

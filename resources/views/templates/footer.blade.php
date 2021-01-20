@@ -244,7 +244,7 @@
 
 
                                 @foreach($categorias as $cat)
-                                <li><a class="list-group-item list-group-item-action" href="{{url('/').'/'.$cat->name}}">{{$cat->name}}</a></li>
+                                <li><a class="list-group-item list-group-item-action" href="{{url('/').'/categorias/'. strtolower($cat->name)}}">{{$cat->name}}</a></li>
                                 @endforeach
                             </ul>
                             <!-- End List Group -->

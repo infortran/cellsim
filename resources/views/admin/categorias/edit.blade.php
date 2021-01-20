@@ -1,7 +1,7 @@
 @extends('admin.templates.main')
 
 @section('content')
-    <div class="wrapper ">
+    <div class="wrapper categoria">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
         <form action="{{route('categorias.update', $categoria->id)}}" method="POST" class="main-panel">

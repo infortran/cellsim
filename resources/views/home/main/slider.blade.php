@@ -13,9 +13,12 @@
                         @if($sliders->count() > 0)
                         @foreach($sliders as $slider)
                         <div class="js-slide bg-img-hero-center">
+
                             <div class="row height-410-xl py-7 py-md-0 mx-0">
+
                                 <div class="d-none d-wd-block offset-1"></div>
-                                <div class="col-xl col-6 col-md-6 mt-md-8">
+
+                                <div class="col-xl col-4 col-md-4 mt-md-4">
                                     <h1 class="font-size-64 text-lh-57 font-weight-light"
                                         data-scs-animation-in="fadeInUp">
                                         {{$slider->title}} <span class="d-block font-size-55"></span>
@@ -29,7 +32,7 @@
                                          data-scs-animation-delay="300">
                                         <span class="font-size-13">{{$slider->text}}</span>
                                         <div class="font-size-50 font-weight-bold text-lh-45">
-                                            <sup class="">$</sup> {{number_format($slider->price,0,'','.')}}
+                                            <sup class="">$</sup>{{number_format($slider->price,0,'','.')}}
                                         </div>
                                     </div>
                                     <a href="{{url('/productos').'/'. $slider->producto->id}}" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
@@ -38,11 +41,13 @@
                                         Ver detalles
                                     </a>
                                 </div>
+
                                 <div class="col-xl-7 col-6 d-flex align-items-center ml-auto ml-md-0"
                                      data-scs-animation-in="zoomIn"
                                      data-scs-animation-delay="500">
                                     <img class="img-fluid" src="{{asset('uploads/sliders/600x600').'/'.$slider->img}}" alt="{{$slider->title}}">
                                 </div>
+
                             </div>
                         </div>
 

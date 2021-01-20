@@ -22,7 +22,10 @@
 
 
                 <!-- Full banner -->
-                @include('home.main.full-banner')
+                <div style="width: 100%; margin: 0 auto;">
+                    @include('home.main.full-banner')
+                </div>
+
                 <!-- End Full banner -->
             </div>
 
