@@ -1,5 +1,5 @@
 <div class="mb-8">
-    <a href="../shop/shop.html" class="d-block text-gray-90">
+    <a href="{{$mainbanner->url}}" class="d-block text-gray-90">
         <div class="bg-img-huincha pt-3" style="background-image: url('{{asset('assets/img/1400x143/img1.png')}}');";>
             <div class="space-top-2-md p-4 pt-4 pt-md-5 pt-lg-6 pt-xl-5 pb-lg-4 px-xl-14 px-lg-6" style="display: flex; justify-content: center; align-items: center">
                 <div class="flex-horizontal-center overflow-hidden">

@@ -181,22 +181,29 @@
                                                         <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-4">
                                                     <input type="text" id="input-text" class="form-control" placeholder="Texto" name="text" value="{{$mainbanner->text}}">
                                                     @error('text')
                                                         <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
+                                                <div class="col-md-2">
+                                                    <input type="text" id="input-price" class="form-control" placeholder="Precio" name="price" value="{{$mainbanner->price}}">
+                                                    @error('price')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                    @enderror
+                                                </div>
                                             </div>
 
                                             <div class="row price-row">
-                                                <div class="col-md-6">
-                                                    <input type="text" id="input-price" class="form-control" placeholder="Precio" name="price" value="{{$mainbanner->price}}">
-                                                    @error('price')
-                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                <div class="col-md-8">
+                                                    <input type="text" id="input-url" class="form-control" placeholder="URL" name="url" value="{{$mainbanner->url}}">
+                                                    @error('url')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
-                                                <div class="col-md-6">
+
+                                                <div class="col-md-4">
                                                     <button class="btn btn-primary" type="submit">Listo</button>
                                                 </div>
                                             </div>

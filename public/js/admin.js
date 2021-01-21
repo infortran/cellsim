@@ -21,6 +21,10 @@ $(document).ready(function(){
         $('.alert-danger').hide()
     })
 
+    $('#input-url').click(function(){
+        $('.alert-danger').hide()
+    })
+
 
 
     let title = $('#admin-title-huincha');

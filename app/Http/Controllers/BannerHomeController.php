@@ -33,6 +33,7 @@ class BannerHomeController extends Controller
             'title' => 'required|string|min:3|max:50',
             'text' => 'required|string|min:3|max:10',
             'price' => 'required|integer|max:100000',
+            'url' => 'required|max:100'
         ]);
 
         $banner->update($data);
