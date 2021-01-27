@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Social;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SocialController extends Controller
 {
@@ -22,12 +23,14 @@ class SocialController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:100',
             'url' => 'required|max:100',
-            'uri' => 'required|max:50'
         ]);
-        Social::create($request->all());
-        return redirect('/admin/socials');
+        $social_id = $request->get('social');
+        $social_url = $request->get('url');
+
+        //dd($request->get('social'));
+        Auth::user()->socials()->attach($social_id, ['url' => $social_url]);
+        return redirect('/admin/cuenta');
     }
 
 
@@ -43,21 +46,19 @@ class SocialController extends Controller
     }
 
 
-    public function update(Request $request, Social $social)
+    public function update(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:100',
             'url' => 'required|max:100',
-            'uri' => 'required|max:50'
         ]);
-        $social->update($request->all());
-        return redirect('/admin/socials');
+        dd($request->get('id'));
+        return redirect('/admin/cuenta');
     }
 
 
-    public function destroy(Social $social)
+    public function destroy(Request $request)
     {
-        $social->delete();
-        return redirect('/admin/socials');
+        Auth::user()->socials()->wherePivot('id', '=', $request->get('id'))->detach();
+        return redirect('/admin/cuenta');
     }
 }

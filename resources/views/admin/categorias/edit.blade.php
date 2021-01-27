@@ -45,7 +45,7 @@
                                 <div class="card-body" style="margin-top: 20px">
                                     <div class="row">
                                         <div>
-                                            <img class="img-categoria" data-toggle="modal" data-target="#imagePickerModal" src="{{asset('assets/img/100x100/' . $categoria->img)}}" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;" alt="">
+                                            <img class="img-categoria" data-toggle="modal" data-target="#imagePickerModal" src="{{asset('assets/img/100x100/categorias/' . $categoria->img)}}" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;" alt="">
                                         </div>
                                         <div class="col-md-8">
                                             <div class="row">

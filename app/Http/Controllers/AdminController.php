@@ -7,6 +7,7 @@ use App\Models\Categoria;
 use App\Models\Marca;
 use App\Models\Producto;
 use App\Models\Slider;
+use App\Models\Social;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -36,6 +37,6 @@ class AdminController extends Controller
 
     public function account()
     {
-        return view('admin.account.index');
+        return view('admin.account.index', ['socials' => Social::all()]);
     }
 }

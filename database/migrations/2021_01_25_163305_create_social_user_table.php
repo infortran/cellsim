@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBannerHomesTable extends Migration
+class CreateSocialUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateBannerHomesTable extends Migration
      */
     public function up()
     {
-        Schema::create('banner_homes', function (Blueprint $table) {
+        Schema::create('social_user', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('text');
-            $table->integer('price');
+            $table->integer('social_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->string('url');
         });
     }
@@ -29,6 +28,6 @@ class CreateBannerHomesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banner_homes');
+        Schema::dropIfExists('social_user');
     }
 }

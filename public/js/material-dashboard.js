@@ -463,6 +463,8 @@ md = {
 
       navbar_form = $('nav').find('.navbar-form').get(0).outerHTML;
 
+
+
       $sidebar_nav = $sidebar_wrapper.find(' > .nav');
 
       // insert the navbar form before the sidebar list

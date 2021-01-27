@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <select class="image-picker" name="img">
-                    @foreach (glob("assets/img/100x100/*") as $index => $filename)
+                    @foreach (glob("assets/img/100x100/categorias/*") as $index => $filename)
                         <option data-img-src="{{asset($filename)}}" value="{{basename($filename)}}"></option>
                         <img src="{{asset($filename)}}" alt="">
                     @endforeach

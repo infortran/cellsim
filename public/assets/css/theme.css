@@ -3144,6 +3144,7 @@ fieldset:disabled a.btn {
   color: #1e2022;
   background-color: var(--light-accent-color);
   border-color: var(--light-accent-color);
+  transition: all ease .3s;
 }
 
 .btn-primary:hover {

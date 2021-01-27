@@ -10,4 +10,8 @@ class Social extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function users(){
+        return $this->belongsToMany('App\Models\User')->withPivot(['url', 'id']);
+    }
 }

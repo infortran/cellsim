@@ -32,14 +32,14 @@
                             <div class="card">
                                 <div class="card-header card-header-primary">
                                     <h4 class="card-title">Categorías</h4>
-                                    <p class="card-category">0</p>
+                                    <p class="card-category">{{$categorias->count() ?? '0'}}</p>
                                 </div>
                                 <div class="card-body">
 
                                     @if($categorias->count() > 0)
                                         @foreach($categorias as $categoria)
                                             <div class="product-row">
-                                                <img style="display: block;" src="{{asset('assets/img/100x100').'/'.$categoria->img}}" alt="" class="img-fluid">
+                                                <img style="display: block;" src="{{asset('assets/img/100x100/categorias').'/'.$categoria->img}}" alt="" class="img-fluid">
                                                 <div class="name">
                                                     {{$categoria->name}}
                                                 </div>
