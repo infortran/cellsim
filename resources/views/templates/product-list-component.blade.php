@@ -27,7 +27,7 @@
             <div class="tab-content" id="Bpills-tabContent">
                 <div class="tab-pane fade pt-2 show active" id="Bpills-one-example1" role="tabpanel" aria-labelledby="Bpills-one-example1-tab">
                     <ul class="row list-unstyled products-group no-gutters mb-0">
-                        @if($plc)
+                        @if($plc->categoria)
                         @foreach($plc->categoria->productos as $producto)
                             <li class="col-6 col-md-5 col-lg-3 product-item mb-4">
                                 <div class="product-item__outer h-100" style="width: 100%">
