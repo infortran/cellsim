@@ -2,7 +2,7 @@
     <!-- Nav nav-pills -->
     <div class="position-relative text-center z-index-2">
         <div class=" d-flex justify-content-between border-bottom border-color-1 flex-lg-nowrap flex-wrap border-md-down-top-0 border-md-down-bottom-0">
-            <h3 class="section-title mb-0 pb-2 font-size-22">{{ $plc->section_title }}</h3>
+            <h3 class="section-title mb-0 pb-2 font-size-22">{{ $plc->section_title ?? ''}}</h3>
         </div>
     </div>
     <!-- End Nav Pills -->
@@ -11,13 +11,13 @@
 
                 <div class="img-section" style="background-image: url('{{ asset('assets/img/360x616/'). '/' . $plc->img_banner}}')">
                     <div class="title-img-section">
-                        <h1>{{ $plc->title_banner }}</h1>
-                        <h1>{{ $plc->subtitle_banner }}</h1>
+                        <h1>{{ $plc->title_banner ?? ''}}</h1>
+                        <h1>{{ $plc->subtitle_banner ?? ''}}</h1>
                     </div>
                     <div class="price-section">
                         <h6 class="pt-3">Por:</h6>
                         <h5>$</h5>
-                        <h1>{{number_format($plc->price_banner, 0, '', '.')}}</h1>
+                        <h1>{{$plc ? number_format($plc->price_banner, 0, '', '.'):'0'}}</h1>
                     </div>
                 </div>
 
