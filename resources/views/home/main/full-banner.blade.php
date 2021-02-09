@@ -4,7 +4,7 @@
             <div class="space-top-2-md p-4 pt-4 pt-md-5 pt-lg-6 pt-xl-5 pb-lg-4 px-xl-14 px-lg-6" style="display: flex; justify-content: center; align-items: center">
                 <div class="flex-horizontal-center overflow-hidden">
 
-                    <h1 class="text-lh-38 font-size-30 font-weight-light mb-3 flex-shrink-0 flex-md-shrink-1 title-huincha" id="admin-title-huincha" style="">{{ strtoupper($mainbanner->title) ?? ''}}</h1>
+                    <h1 class="text-lh-38 font-size-30 font-weight-light mb-3 flex-shrink-0 flex-md-shrink-1 title-huincha" id="admin-title-huincha" style="">{{ $mainbanner->title ? strtoupper($mainbanner->title) : ''}}</h1>
                     <div class="flex-content-center ml-4 flex-shrink-0">
                         <div class="bg-primary rounded-lg info-huincha">
                             <div style="margin-top: 20px;">
