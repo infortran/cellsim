@@ -31,6 +31,13 @@
                 </a>
             </li>
 
+            <li class="nav-item {{request()->path() === 'admin/diseno' || request()->is('admin/diseno/create') || request()->is('admin/diseno/*/edit')? 'active' : ''}}">
+                <a class="nav-link" href="{{url('/admin/diseno')}}">
+                    <i class="material-icons">web</i>
+                    <p>Diseño</p>
+                </a>
+            </li>
+
             <li class="nav-item {{request()->path() === 'admin/cuenta' ? 'active' : ''}}">
                 <a class="nav-link" href="{{url('/admin/cuenta')}}">
                     <i class="material-icons">person</i>

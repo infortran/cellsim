@@ -175,6 +175,111 @@ div{
     align-items: center;
 }
 
+.img-section{
+    height: 616px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    margin: 10px auto;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.img-section h1{
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #4d2600;
+}
+
+.title-img-section h1:first-child{
+    font-size: 38px;
+}
+
+.title-img-section h1:last-child{
+    font-size: 34px;
+    line-height: 0;
+    margin-top: 12px;
+}
+
+.title-img-section{
+    padding-top: 40px;
+}
+
+.price-section{
+    margin-top: 30px;
+}
+
+.price-section h6{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 33px;
+    text-align: left;
+    font-size: 18px;
+    color: #4d2600;
+}
+
+.price-section h1{
+    line-height: 0;
+    font-weight: bold;
+    font-size: 58px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+
+.price-section h5{
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    line-height: 0;
+    font-weight: bold;
+    margin-left: 33px;
+    font-size: 30px;
+    margin-bottom: 13px;
+    text-align: left;
+    color: #4d2600;
+}
+
+#title-section-lateral{
+    font-weight: 400;
+    color: #381FA3;
+    font-size: 22px;
+    text-align: left;
+}
+
+.banner-lateral-container {
+    margin: 0px auto;
+}
+
+.banner-col-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.img-banner-admin{
+    zoom:50%;
+}
+
+.switch-mobile{
+    display: none;
+}
+
+@media(min-width:768px){
+    .banner-lateral-container{
+
+    }
+}
+
+@media(max-width:768px){
+    .btn-navbar{
+        margin-left: auto;
+    }
+    .input-img-btn{
+        zoom: 92%;
+    }
+}
+
 
 @media(max-width:767px){
     .title-huincha{
@@ -194,6 +299,14 @@ div{
     .txt-precio-huincha{
         font-size: 25px;
     }
+
+    .switch-mobile{
+        display: block;
+    }
+
+    .switch-desktop{
+        display: none;
+    }
 }
 
 @media(max-width: 532px){
@@ -201,6 +314,12 @@ div{
         font-size: 20px;
         padding: 0px 10px;
     }
+
+    .img-section{
+        width: 280px;
+    }
+
+
 }
 
 @media(min-width:426px){
@@ -259,6 +378,18 @@ div{
 
     .btn-nav-mobile{
         display: inline;
+    }
+    .txt-btn-navbar{
+        display:none
+    }
+    .btn-navbar{
+        padding:5px;
+    }
+    .main-panel>.content{
+        padding:0
+    }
+    .img-banner-admin{
+        zoom:70%;
     }
 }
 

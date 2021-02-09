@@ -95,7 +95,7 @@
                                                 </div>
 
                                                 <div class="row">
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label>Categoría</label>
                                                             <select name="categoria_id" class="form-control selectpicker" data-style="btn btn-link" id="">
@@ -107,7 +107,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label>Marca</label>
                                                             <select name="marca_id" class="form-control selectpicker" data-style="btn btn-link" id="">
@@ -118,7 +118,6 @@
                                                             </select>
                                                         </div>
                                                     </div>
-
                                                 </div>
 
                                             </div>

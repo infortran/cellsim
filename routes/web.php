@@ -18,13 +18,15 @@ Route::get('/', 'IndexController@index');
 Route::get('/tienda', 'ProductoController@shop');
 Route::get('/productos/{producto}', 'ProductoController@single')->name('producto.single');
 
+Route::get('/nuestras-tiendas', 'TiendaController@nuestras_tiendas');
+
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/cuenta', 'AdminController@account');
-Route::post('/admin/cuenta/socials', 'SocialController@store')->name('social.user.store');
-Route::delete('/admin/cuenta/socials', 'SocialController@destroy')->name('social.user.destroy');
-Route::put('/admin/cuenta/socials', 'SocialController@update')->name('social.user.update');
+
 
 Route::get('/categorias/{categoria}', 'CategoriaController@landing');
+Route::get('/admin/diseno', 'DisenoController@index');
+Route::put('/admin/diseno/{plc}', 'DisenoController@update')->name('plc.update');
 
 //Route::get('/categorias/{categoria}', 'IndexController@categoriaSingle')->name('categoria.single');
 
@@ -37,6 +39,7 @@ Route::resource('/admin/categorias', 'CategoriaController');
 Route::resource('/admin/marcas', 'MarcaController');
 Route::resource('admin/sliders', 'SliderController');
 Route::resource('admin/socials', 'SocialController');
+Route::resource('admin/tienda', 'TiendaController');
 
 
 /*

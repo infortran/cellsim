@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-
+    $('.img-section').addClass('img-banner-admin')
     /*--------JS ADMIN BANNER---------*/
     let inputTitle = $('#input-title')
     let inputText = $('#input-text')
@@ -40,6 +40,34 @@ $(document).ready(function(){
 
 
 
+    /*--------JS ADMIN BANNER LATERAL---------*/
+    let inputTitleSection = $('#input-title-section')
+    let inputTitleLateral = $('#input-title-lateral')
+    let inputSubtitleLateral = $('#input-subtitle-lateral')
+    let inputPriceLateral = $('#input-price-lateral')
+
+    let titlesection = $('#title-section-lateral');
+    let titlelateral = $('#title-lateral');
+    let subtitlelateral = $('#subtitle-lateral');
+    let preciolateral = $('#precio-lateral');
+
+    inputTitleSection.keyup(function(){
+        titlesection.text(inputTitleSection.val())
+    })
+    inputTitleLateral.keyup(function(){
+        titlelateral.text(inputTitleLateral.val().toUpperCase())
+    })
+    inputSubtitleLateral.keyup(function(){
+        subtitlelateral.text(inputSubtitleLateral.val().toUpperCase())
+    })
+    inputPriceLateral.keyup(function(){
+        preciolateral.text(formatNumber(inputPriceLateral.val()))
+    })
+    /*--------JS ADMIN BANNER LATERAL---------*/
+
+
+
+
 
     /*--------------JS ADMIN CUENTA---------------*/
     $('.socialsModal').on("hidden.bs.modal", function () {
@@ -60,22 +88,6 @@ $(document).ready(function(){
         }
     })
 
-    if($('.wrapper').hasClass('cuenta')){
-        let socialsUser = $('#data-socials-user').data('socials-user')
-        let socialsUserId = [];
-
-        socialsUser.forEach(item => {
-            socialsUserId.push(item.id);
-        })
-
-        $('.open-modal').click(function(){
-            $('.card-social').each(function (){
-                if(socialsUserId.includes($(this).data('social-id'))){
-                    $(this).remove()
-                }
-            })
-        })
-    }
     /*--------------JS ADMIN CUENTA---------------*/
 
     if($('.wrapper').hasClass('categoria')){

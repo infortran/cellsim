@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div>
-                                        @include('admin.home.full-banner')
+                                        @include('home.main.full-banner')
                                     </div>
                                     <form action="{{route('mainbanner.update', $mainbanner->id)}}" class="form-main-banner" method="post">
                                         @method('put')

@@ -23,6 +23,7 @@
             <div class="content">
                 @include('admin.account.profile')
                 @include('admin.account.shop-data')
+                @include('admin.account.shops-ubications')
                 @include('admin.account.socials')
             </div>
 

@@ -1,4 +1,4 @@
-<form action="{{ route('social.user.store') }}" id="selectSocial" method="POST">
+<form action="{{ route('socials.store') }}" id="selectSocial" method="POST">
     @csrf
     <div class="modal fade socialsModal" id="socialsAddModal" tabindex="-1" aria-labelledby="socialsAddModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -13,9 +13,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="input-group">
-                                <div class="d-none">
-                                    <div id="data-socials-user" data-socials-user="{{ $socials_user = Auth::user()->socials }}"></div>
-                                </div>
+
                                 @foreach($socials as $social)
                                     <div class="col-md-4 d-flex align-items-center mb-2 card-social" data-social="{{$social->name}}" data-social-id="{{$social->id}}" id="card-social-{{$social->id}}">
                                         <div>

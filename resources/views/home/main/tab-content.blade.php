@@ -59,12 +59,12 @@
                             <div class="flex-center-between mb-1">
                                 @if($producto->oldprice)
                                     <div class="prodcut-price d-flex align-items-center position-relative">
-                                        <ins class="font-size-20 text-red text-decoration-none">$ {{number_format($producto->price, 0, '','.')}}</ins>
+                                        <ins class="font-size-20 text-red text-decoration-none">${{number_format($producto->price, 0, '','.')}}</ins>
                                         <del class="font-size-12 tex-gray-6 position-absolute bottom-100">$ {{number_format($producto->oldprice, 0, '','.')}}</del>
                                     </div>
                                 @else
                                 <div class="prodcut-price">
-                                    <div class="text-gray-100">$ {{number_format($producto->price,0,'','.')}}</div>
+                                    <div class="text-gray-100">${{number_format($producto->price,0,'','.')}}</div>
                                 </div>
                                 @endif
                                 <!--div class="d-none d-xl-block prodcut-add-cart">
@@ -75,7 +75,6 @@
                         <div class="product-item__footer">
                             <div class="border-top pt-2 flex-center-between flex-wrap">
                                 <a href="{{route('producto.single', $producto->id)}}" class="text-gray-6 font-size-13"><i class="fa fa-link mr-1 font-size-15"></i> Ver producto</a>
-
                             </div>
                         </div>
                     </div>

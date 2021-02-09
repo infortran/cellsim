@@ -11,7 +11,7 @@
                     <div class="topbar-right ml-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
-                                <a href="#" class="u-header-topbar__nav-link"><i class="ec ec-map-pointer mr-1"></i> Nuestras tiendas</a>
+                                <a href="/nuestras-tiendas" class="u-header-topbar__nav-link"><i class="ec ec-map-pointer mr-1"></i> Nuestras tiendas</a>
                             </li>
                             <!--li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
                                 <a href="../shop/track-your-order.html" class="u-header-topbar__nav-link"><i class="ec ec-transport mr-1"></i> Track Your Order</a>

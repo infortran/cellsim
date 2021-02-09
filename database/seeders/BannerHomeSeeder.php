@@ -16,7 +16,8 @@ class BannerHomeSeeder extends Seeder
         DB::table('banner_homes')->insert([
             'title' => 'Accesorios y protectores para telefonos y tablets',
             'text' => 'Desde',
-            'price' => 29990
+            'price' => 29990,
+            'url' => 'https://cellsim.cl'
         ]);
     }
 }

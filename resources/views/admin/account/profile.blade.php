@@ -44,14 +44,6 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="bmd-label-floating">Dirección</label>
-                                        <input type="text" class="form-control" disabled>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Ciudad</label>

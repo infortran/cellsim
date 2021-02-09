@@ -25,7 +25,7 @@
                                 <div class="col-md-7">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Email</label>
-                                        <input type="email" class="form-control" value="{{Auth::user()->email}}">
+                                        <input type="email" class="form-control" value="">
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@
                                 <div class="col-md-7">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Direccion</label>
-                                        <input type="text" class="form-control" value="{{Auth::user()->name}}">
+                                        <input type="text" class="form-control" value="">
                                     </div>
                                 </div>
                             </div>

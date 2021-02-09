@@ -75,7 +75,7 @@ class SliderController extends Controller
             Tools::processImage($imgResize, $imageName, $path, false,$resolutions);
             $data['img'] = $imageName;
         }
-
+        dd($request->img);
         $slider->update($data);
         return redirect('/admin');
     }

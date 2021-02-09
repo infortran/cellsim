@@ -39,7 +39,7 @@
 
             <div class="container">
                 <!-- Smartphones & Tablets -->
-                @include('home.main.smartphones')
+                @include('templates.product-list-component', $plc)
                 <!-- End Smartphones & Tablets -->
 
 

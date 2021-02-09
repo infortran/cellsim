@@ -1,4 +1,4 @@
-<form action="{{route('social.user.destroy', ['id' => $social->pivot->id])}}" method="POST" class="modal fade" id="modal-eliminar-social-{{$social->pivot->id}}" tabindex="-1" aria-labelledby="modal-eliminar-social" aria-hidden="true">
+<form action="{{route('socials.destroy', $social->id)}}" method="POST" class="modal fade" id="modal-eliminar-social-{{$social->pivot->id}}" tabindex="-1" aria-labelledby="modal-eliminar-social" aria-hidden="true">
     <div class="modal-dialog">
         @csrf
         @method('delete')

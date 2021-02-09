@@ -12,9 +12,9 @@
                     <div class="navbar-wrapper">
                         <h4>Categorías</h4>
                     </div>
-                    <a href="{{url('/admin/categorias/create')}}" class="btn btn-contrast">
+                    <a href="{{url('/admin/categorias/create')}}" class="btn btn-contrast btn-navbar">
                         <i class="material-icons">add</i>
-                        <span>Agregar Categorías</span>
+                        <span class="txt-btn-navbar">Agregar Categorías</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>

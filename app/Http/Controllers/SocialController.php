@@ -56,9 +56,9 @@ class SocialController extends Controller
     }
 
 
-    public function destroy(Request $request)
+    public function destroy($social)
     {
-        Auth::user()->socials()->wherePivot('id', '=', $request->get('id'))->detach();
+        Auth::user()->socials()->detach($social);
         return redirect('/admin/cuenta');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BannerHome;
 use App\Models\Categoria;
 use App\Models\Marca;
+use App\Models\ProductListComponent;
 use App\Models\Producto;
 use App\Models\Slider;
 use Illuminate\Http\Request;
@@ -19,7 +20,16 @@ class IndexController extends Controller
             'sliders' => Slider::all(),
             'marcas' => Marca::all(),
             'ultimos' => Producto::orderBy('id', 'desc')->limit(6)->get(),
-            'mainbanner' => BannerHome::first()
+            'mainbanner' => BannerHome::first(),
+            'productos' => Producto::all(),
+            'plc' => ProductListComponent::first()
+            /*'plc' =>
+                ['title' => 'titulo de prueba',
+                'img' => 'img-dinamic.jpg',
+                'title_banner' => 'titulo banner',
+                'subtitle_banner' => 'subtitulo',
+                'price_banner' => 60000,
+                'productos' => Producto::all()]*/
         ];
         return view('home.template', $data);
     }
@@ -28,4 +38,5 @@ class IndexController extends Controller
     {
         return view('account.account');
     }
+
 }

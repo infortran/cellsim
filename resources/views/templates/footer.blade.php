@@ -255,7 +255,7 @@
                             <!-- List Group -->
                             <ul class="list-group list-group-flush list-group-borderless mb-0 list-group-transparent mt-md-6">
                                 @foreach($marcas as $marca)
-                                <li><a class="list-group-item list-group-item-action" href="../shop/product-categories-5-column-sidebar.html">Printers & Ink</a></li>
+                                    <li><a class="list-group-item list-group-item-action" href="../shop/product-categories-5-column-sidebar.html">{{ $marca->name }}</a></li>
                                 @endforeach
                             </ul>
                             <!-- End List Group -->

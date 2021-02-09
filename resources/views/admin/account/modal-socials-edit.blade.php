@@ -1,7 +1,4 @@
-<form action="{{ route('social.user.update', ['id' => $social->pivot->id]) }}" id="selectSocial" method="POST">
-    @csrf
-    @method('put')
-    <div class="modal fade socialsModal" id="socialsEditModal" tabindex="-1" aria-labelledby="socialsEditModalLabel" aria-hidden="true">
+<form class="modal fade" id="modal-editar-social-{{$social->pivot->id}}" tabindex="-1" aria-labelledby="socialsEditModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -14,17 +11,13 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="input-group">
-                                <h1>{{$social->pivot->id}}</h1>
-                                <div class="d-none">
-                                    <div id="data-socials-user" data-socials-user="{{ $socials_user = Auth::user()->socials }}"></div>
-                                </div>
-                                @foreach($socials as $social)
-                                    <div class="col-md-4 d-flex align-items-center mb-2 card-social" data-social="{{$social->name}}" data-social-id="{{$social->id}}" id="card-social-{{$social->id}}">
+                                @foreach($socials as $_social)
+                                    <div class="col-md-4 d-flex align-items-center mb-2 card-social {{$social->id == $_social->id ? 'active' : ''}}" data-social="{{$_social->name}}" data-social-id="{{$_social->id}}" id="card-social-{{$_social->id}}">
                                         <div>
-                                            <div class="p-2 btn-{{$social->name}} icon-socials bg-icon"><i class="fa fa-{{$social->name}}"></i></div>
+                                            <div class="p-2 btn-{{$_social->name}} icon-socials bg-icon"><i class="fa fa-{{$_social->name}}"></i></div>
                                         </div>
-                                        <input type="radio" name="social" value="{{$social->id}}" id="social-{{$social->name}}" class="mr-2">
-                                        <div class="disable-select ml-3">{{ucfirst($social->name)}}</div>
+                                        <input type="radio" name="social" value="{{$_social->id}}" id="social-{{$_social->name}}" class="mr-2" {{$social->id == $_social->id ? 'checked' : ''}}>
+                                        <div class="disable-select ml-3">{{ucfirst($_social->name)}}</div>
                                     </div>
                                 @endforeach
                             </div>
@@ -46,5 +39,4 @@
                 </div>
             </div>
         </div>
-    </div>
-</form>
+    </form>

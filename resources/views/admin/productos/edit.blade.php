@@ -135,7 +135,7 @@
                                             <div class="col-md-4">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <img style="max-width: 200px; display: block; margin:0 auto" src="{{asset('uploads/productos/300x300').'/'.$producto->img}}" alt="" class="img-fluid">
+                                                        <img style="max-height: 150px; display: block; margin: 0 auto;" id="img-input-producto" src="{{asset('uploads/productos/300x300').'/'.$producto->img}}" alt="" class="img-fluid">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -147,6 +147,9 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
 
 
 

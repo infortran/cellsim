@@ -64,7 +64,7 @@
                         <div class="col-md-7 mb-md-6 mb-lg-0">
                             <div class="mb-2">
                                 <div class="border-bottom mb-3 pb-md-1 pb-3">
-                                    <a href="#" class="font-size-12 text-gray-5 mb-2 d-inline-block">{{ $producto->categoria_id != 0 ? $producto->categoria->name : '' }}</a>
+                                    <a href="#" class="font-size-12 text-gray-5 mb-2 d-inline-block">{{ $producto->categoria->name ?? '' }}</a>
                                     <h2 class="font-size-25 text-lh-1dot2">{{ $producto->name }}</h2>
                                     <div class="mb-2">
                                         {{-- <a class="d-inline-flex align-items-center small font-size-15 text-lh-1" href="#">
