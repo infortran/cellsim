@@ -2,46 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc1de6da-0752-420d-b631-bfc8fedb8b89" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/productos/1000x1000/1611077757.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/productos/150x150/1611077757.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/productos/300x300/1611077757.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/productos/600x600/1611077757.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/productos/72x72/1611077757.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/account/socials-grid.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/home/full-banner.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SliderController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SliderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Categoria.php" afterPath="$PROJECT_DIR$/app/Models/Categoria.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeders/BannerHomeSeeder.php" afterPath="$PROJECT_DIR$/database/seeders/BannerHomeSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/custom.css" afterPath="$PROJECT_DIR$/public/assets/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/css/theme.css" afterPath="$PROJECT_DIR$/public/assets/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/custom.css" afterPath="$PROJECT_DIR$/public/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/admin.js" afterPath="$PROJECT_DIR$/public/js/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/account/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/account/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/account/modal-socials-add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/account/modal-socials-add.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/account/modal-socials-delete.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/account/modal-socials-delete.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/account/modal-socials-edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/account/modal-socials-edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/account/profile.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/account/profile.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/account/shop-data.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/account/shop-data.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/account/socials.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/account/socials.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/categorias/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/categorias/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/home/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/marcas/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/marcas/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productos/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productos/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productos/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productos/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productos/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productos/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/templates/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/templates/sidebar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home/main/smartphones.blade.php" afterPath="$PROJECT_DIR$/resources/views/home/main/smartphones.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home/main/tab-content.blade.php" afterPath="$PROJECT_DIR$/resources/views/home/main/tab-content.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home/template.blade.php" afterPath="$PROJECT_DIR$/resources/views/home/template.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/single/single.blade.php" afterPath="$PROJECT_DIR$/resources/views/single/single.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/templates/footer.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/footer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/templates/header-full.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/header-full.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/templates/producto-grid.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/producto-grid.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeders/PlcSeeder.php" afterPath="$PROJECT_DIR$/database/seeders/PlcSeeder.php" />
     </list>
     <ignored path="cellsim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +24,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BannerHomeSeeder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BannerHomeSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeders/BannerHomeSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57781756">
+            <state vertical-scroll-proportion="-12.423077">
               <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlcSeeder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/seeders/PlcSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6690519">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2021_01_29_175147_create_product_list_components_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_29_175147_create_product_list_components_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,7 +100,6 @@
         <option value="$PROJECT_DIR$/resources/views/home/main/smartphones.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeders/PlcSeeder.php" />
         <option value="$PROJECT_DIR$/public/js/admin.js" />
         <option value="$PROJECT_DIR$/resources/views/home/main/banner-lateral.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Categoria.php" />
@@ -142,6 +122,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/account/modal-ubication-add.blade.php" />
         <option value="$PROJECT_DIR$/public/css/custom.css" />
         <option value="$PROJECT_DIR$/database/seeders/BannerHomeSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeders/PlcSeeder.php" />
       </list>
     </option>
   </component>
@@ -421,20 +402,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/productos/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.076923">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="48" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/productos/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6363636">
-          <caret line="147" column="50" selection-start-line="147" selection-start-column="50" selection-end-line="147" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/marcas/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6060606">
@@ -694,8 +661,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeders/BannerHomeSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57781756">
+        <state vertical-scroll-proportion="-12.423077">
           <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_29_175147_create_product_list_components_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeders/PlcSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6690519">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding />
         </state>
       </provider>
