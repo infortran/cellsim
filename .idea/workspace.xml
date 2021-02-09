@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/home/main/full-banner.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.1824687">
-              <caret line="6" column="179" selection-start-line="6" selection-start-column="179" selection-end-line="6" selection-end-column="179" />
+              <caret line="6" column="172" selection-start-line="6" selection-start-column="172" selection-end-line="6" selection-end-column="172" />
               <folding />
             </state>
           </provider>
@@ -780,7 +780,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/home/main/full-banner.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1824687">
-          <caret line="6" column="179" selection-start-line="6" selection-start-column="179" selection-end-line="6" selection-end-column="179" />
+          <caret line="6" column="172" selection-start-line="6" selection-start-column="172" selection-end-line="6" selection-end-column="172" />
           <folding />
         </state>
       </provider>
