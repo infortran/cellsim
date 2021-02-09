@@ -47,8 +47,8 @@
       <file leaf-file-name="full-banner.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home/main/full-banner.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1824687">
-              <caret line="6" column="172" selection-start-line="6" selection-start-column="172" selection-end-line="6" selection-end-column="172" />
+            <state vertical-scroll-proportion="0.3649374">
+              <caret line="12" column="191" selection-start-line="12" selection-start-column="191" selection-end-line="12" selection-end-column="191" />
               <folding />
             </state>
           </provider>
@@ -779,8 +779,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home/main/full-banner.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1824687">
-          <caret line="6" column="172" selection-start-line="6" selection-start-column="172" selection-end-line="6" selection-end-column="172" />
+        <state vertical-scroll-proportion="0.3649374">
+          <caret line="12" column="191" selection-start-line="12" selection-start-column="191" selection-end-line="12" selection-end-column="191" />
           <folding />
         </state>
       </provider>

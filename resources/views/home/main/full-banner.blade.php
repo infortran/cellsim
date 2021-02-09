@@ -10,7 +10,7 @@
                             <div style="margin-top: 20px;">
                                 <em class="font-size-14 font-weight-light txt-huincha" style="font-weight: lighter" id="admin-texto-huincha">{{ $mainbanner->text ?? ''}}</em>
                                 <div class="font-size-30 txt-precio-huincha" style="font-weight: 700 !important;">
-                                    <sup style="font-size: 60%">$</sup><p id="admin-precio-huincha" style="display: inline">{{ number_format($mainbanner->price, 0, '', '.') }}</p>
+                                    <sup style="font-size: 60%">$</sup><p id="admin-precio-huincha" style="display: inline">{{ $mainbanner ? number_format($mainbanner->price, 0, '', '.') : '0'}}</p>
                                 </div>
                             </div>
                         </div>
