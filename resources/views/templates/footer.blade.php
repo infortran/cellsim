@@ -236,7 +236,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <div-- class="row">
+                    <div class="row">
                         <div class="col-12 col-md mb-4 mb-md-0">
                             <h6 class="mb-3 font-weight-bold">Busca por categoría</h6>
                             <!-- List Group -->

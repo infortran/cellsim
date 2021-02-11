@@ -1,5 +1,4 @@
-<form action="" id="" method="POST">
-    @csrf
+<form action="{{url('/admin/tienda')}}" method="POST" enctype="multipart/form-data" class="main-panel">
     <div class="modal fade" id="ubicationModalAdd" tabindex="-1" aria-labelledby="" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -9,6 +8,16 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                @csrf
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row">
@@ -32,7 +41,7 @@
                                     <div class="col-md-3 switch-mobile">
                                         <div class="d-flex align-items-center flex-column">
                                             <label class="switch" style="zoom: 70%">
-                                                <input name="enabled" type="checkbox" checked>
+                                                <input name="status" type="checkbox">
                                                 <span class="slider round"></span>
                                             </label>
                                             <div>Abierto</div>
@@ -42,14 +51,14 @@
                                     <div class="col-md-9">
                                         <div class="form-group">
                                             <label class="bmd-label-floating">Titulo</label>
-                                            <input name="name" type="text" class="form-control" value="{{old('name')}}">
+                                            <input name="title" type="text" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 switch-desktop">
                                         <div class="d-flex align-items-center flex-column">
                                             <label class="switch" style="zoom: 70%">
-                                                <input name="enabled" type="checkbox" checked>
+                                                <input name="status" type="checkbox">
                                                 <span class="slider round"></span>
                                             </label>
                                             <div>Abierto</div>
@@ -60,7 +69,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="bmd-label-floating">Direccion</label>
-                                            <input name="name" type="text" class="form-control" value="{{old('name')}}">
+                                            <input name="direction" type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -68,13 +77,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="bmd-label-floating">Ciudad</label>
-                                            <input name="name" type="text" class="form-control" value="{{old('name')}}">
+                                            <input name="city" type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="bmd-label-floating">Pais</label>
-                                            <input name="name" type="text" class="form-control" value="{{old('name')}}">
+                                            <input name="country" type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -82,13 +91,13 @@
                                     <div class="col-md-5">
                                         <div class="form-group">
                                             <label class="bmd-label-floating">Telefono</label>
-                                            <input name="name" type="text" class="form-control" value="{{old('name')}}">
+                                            <input name="phone" type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-7">
                                         <div class="form-group">
                                             <label class="bmd-label-floating">Horario</label>
-                                            <input name="name" type="text" class="form-control" value="{{old('name')}}">
+                                            <input name="schedule" type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>

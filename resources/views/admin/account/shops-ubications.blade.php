@@ -11,10 +11,11 @@
                         </button>
                     </div>
                     <div class="card-body">
+                        @foreach($tiendas as $tienda)
                         <div class="product-row">
-                            <img style="display: block;" src="" alt="" class="img-fluid">
+                            <img style="display: block;" src="{{ asset('uploads/tiendas/72x72' . '/' . $tienda->img) }}" alt="" class="img-fluid">
                             <div class="name">
-
+                                {{ $tienda->title }}
                             </div>
                             <div class="btn-container">
                                 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -35,7 +36,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        @endforeach
                             <!--div class="no-products">
                                 <div class="icon-container">
                                     <div class="icon"></div>

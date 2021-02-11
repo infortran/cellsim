@@ -15,7 +15,14 @@ class CreateTiendasTable extends Migration
     {
         Schema::create('tiendas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('title');
+            $table->boolean('status');
+            $table->string('direction');
+            $table->string('city');
+            $table->string('country');
+            $table->string('phone');
+            $table->string('schedule');
+            $table->string('img');
         });
     }
 

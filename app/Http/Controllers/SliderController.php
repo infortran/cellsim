@@ -23,13 +23,13 @@ class SliderController extends Controller
     }
     public function store(Request $request)
     {
-        $resolutions = [[1000, 1000],[600,600], [300,300], [150,150], [72,72]];
+        $resolutions = [[600,600], [300,300], [150,150], [72,72]];
         $data = $request->validate([
             'title' => 'required|max:100',
             'subtitle' => 'required|max:100',
             'text' => 'required|max:50',
             'price' => 'required|numeric',
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=800,min_height=600',
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=600,min_height=600',
             'producto_id' => 'required'
         ]);
         $img = $request->file('img');
@@ -75,7 +75,7 @@ class SliderController extends Controller
             Tools::processImage($imgResize, $imageName, $path, false,$resolutions);
             $data['img'] = $imageName;
         }
-        dd($request->img);
+        //dd($request->img);
         $slider->update($data);
         return redirect('/admin');
     }
