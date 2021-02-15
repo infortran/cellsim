@@ -53,7 +53,7 @@
                             <h5 class="mb-1 product-item__title"><a href="{{route('producto.single', $producto->id)}}" class="text-blue font-weight-bold">{{$producto->name}}</a></h5>
                             <div class="mb-2">
                                 <a href="{{route('producto.single', $producto->id)}}" class="d-block text-center">
-                                    <img class="img-fluid" src="{{asset('uploads/productos/150x150').'/'.$producto->img}}" alt="{{$producto->name}}">
+                                    <img class="img-fluid" src="{{asset('uploads/productos/150X150').'/'.$producto->img}}" alt="{{$producto->name}}">
                                 </a>
                             </div>
                             <div class="flex-center-between mb-1">

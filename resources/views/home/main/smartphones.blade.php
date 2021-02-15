@@ -23,7 +23,7 @@
                                         <div class="mb-2"><a href="" class="font-size-12 text-gray-5"></a></div>
                                         <h5 class="mb-1 product-item__title"><a href="{{route('producto.single', $producto->id)}}" class="text-blue font-weight-bold">{{$producto->name}}</a></h5>
                                         <div class="mb-2">
-                                            <a href="{{route('producto.single', $producto->id)}}" class="d-block text-center"><img class="img-fluid" src="{{ asset('uploads/productos/150x150/'.$producto->img) }}" alt="Image Description"></a>
+                                            <a href="{{route('producto.single', $producto->id)}}" class="d-block text-center"><img class="img-fluid" src="{{ asset('uploads/productos/150X150/'.$producto->img) }}" alt="Image Description"></a>
                                         </div>
                                         <div class="flex-center-between mb-1">
                                             @if($producto->oldprice)

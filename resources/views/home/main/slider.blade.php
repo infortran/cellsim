@@ -45,7 +45,7 @@
                                 <div class="col-xl-7 col-6 d-flex align-items-center ml-auto ml-md-0"
                                      data-scs-animation-in="zoomIn"
                                      data-scs-animation-delay="500">
-                                    <img class="img-fluid" src="{{asset('uploads/sliders/600x600').'/'.$slider->img}}" alt="{{$slider->title}}">
+                                    <img class="img-fluid" src="{{asset('uploads/sliders/600X600').'/'.$slider->img}}" alt="{{$slider->title}}">
                                 </div>
 
                             </div>

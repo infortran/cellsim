@@ -39,7 +39,7 @@
                                     @if($categorias->count() > 0)
                                         @foreach($categorias as $categoria)
                                             <div class="product-row">
-                                                <img style="display: block;" src="{{asset('assets/img/100x100/categorias').'/'.$categoria->img}}" alt="" class="img-fluid">
+                                                <img style="display: block;" src="{{asset('assets/img/100X100/categorias').'/'.$categoria->img}}" alt="" class="img-fluid">
                                                 <div class="name">
                                                     {{$categoria->name}}
                                                 </div>

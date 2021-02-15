@@ -72,7 +72,7 @@
                                         <div class="col-md-4">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <img style="max-height: 150px; display: block; margin: 0 auto;" id="img-input-producto" src="{{asset('uploads/marcas/500x300' . '/' . $marca->img)}}" alt="" class="img-fluid">
+                                                    <img style="max-height: 150px; display: block; margin: 0 auto;" id="img-input-producto" src="{{asset('uploads/marcas/500X300' . '/' . $marca->img)}}" alt="" class="img-fluid">
                                                 </div>
                                             </div>
                                             <div class="row">

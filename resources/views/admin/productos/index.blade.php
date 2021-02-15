@@ -38,7 +38,7 @@
                                     @foreach($productos as $producto)
                                         <div class="product-row">
                                             <div class="img-container">
-                                                <img src="{{asset('uploads/productos/72x72').'/'. $producto->img}}" alt="">
+                                                <img src="{{asset('uploads/productos/72X72').'/'. $producto->img}}" alt="">
                                             </div>
                                             <div class="name">
                                                 {{$producto->name}}

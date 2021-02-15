@@ -13,7 +13,7 @@
                     <div class="card-body">
                         @foreach($tiendas as $tienda)
                         <div class="product-row">
-                            <img style="display: block;" src="{{ asset('uploads/tiendas/72x72' . '/' . $tienda->img) }}" alt="" class="img-fluid">
+                            <img style="display: block;" src="{{ asset('uploads/tiendas/72X72' . '/' . $tienda->img) }}" alt="" class="img-fluid">
                             <div class="name">
                                 {{ $tienda->title }}
                             </div>
