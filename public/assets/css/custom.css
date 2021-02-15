@@ -95,6 +95,47 @@
     color: #4d2600;
 }
 
+.card-tienda{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.card-tienda .img-tienda{
+    position: relative;
+    width: 300px;
+    height: 260px;
+    background-repeat: no-repeat;
+}
+
+.card-tienda .status{
+    position: absolute;
+    bottom: 0;
+    background: #f5ae19;
+    padding: 10px 0;
+    width: 60%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.card-tienda .tienda-informacion{
+    margin-left: 60px;
+    margin-top: 0;
+}
+
+.card-tienda .tienda-informacion h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 @media(max-width:767px){
     .title-huincha{
         width: 50%;
@@ -113,6 +154,37 @@
     .txt-precio-huincha{
         font-size: 25px;
     }
+}
+
+@media(max-width: 766px){
+    .card-tienda{
+        height: 580px;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .card-tienda .tienda-informacion{
+        margin-left: 20px;
+    }
+}
+
+@media(max-width: 670px){
+    .card-tienda{
+        height: 580px;
+    }
+    .card-tienda .tienda-informacion{
+        margin-left: 10px;
+    }
+}
+
+@media(max-width: 647px){
+
+    .card-tienda .tienda-informacion{
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 566px){
+
 }
 
 @media(max-width: 532px){
@@ -138,5 +210,13 @@
 
     .txt-precio-huincha{
         font-size: 20px;
+    }
+    .card-tienda .img-tienda{
+        zoom: 90%;
+    }
+}
+
+@media(max-width: 425px){
+    .card-tienda{
     }
 }
