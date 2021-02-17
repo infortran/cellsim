@@ -94,6 +94,14 @@ $(document).ready(function(){
         console.log($(this).val())
     })
 
+    $('.btn-eliminar-tienda').click(function(){
+        let tienda_id = $(this).data('id')
+        let tienda_title = $(this).data('title')
+        let url = 'tienda/'+tienda_id
+        $('#modal-eliminar-tienda').attr('action', url)
+        document.getElementById('title-modal-delete').innerHTML = tienda_title
+    })
+
     if($('.wrapper').hasClass('categoria')){
         pickerImageCategoria()
     }

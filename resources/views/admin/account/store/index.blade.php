@@ -19,20 +19,14 @@
                             </div>
                             <div class="btn-container">
                                 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                                    <a href="/admin/tienda/{{ $tienda->id }}/edit" class="btn btn-secondary">
+                                    <a href="{{ route('tienda.edit', $tienda->id) }}" class="btn btn-secondary">
                                         <i class="material-icons">edit</i>
                                         Editar
                                     </a>
 
-                                    <div class="btn-group" role="group">
-                                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                            <a class="dropdown-item" href="" data-toggle="modal">Eliminar</a>
-
-                                        </div>
-                                    </div>
+                                    <a class="btn btn-primary px-3 btn-eliminar-tienda" data-toggle="modal" data-target="#modal-eliminar-tienda" data-id="{{ $tienda->id }}" data-title="{{ $tienda->title }}">
+                                        <i class="material-icons" style="color: #ffffff">delete</i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -56,3 +50,5 @@
         </div>
     </div>
 </div>
+
+@include('admin.account.store.modal-delete')

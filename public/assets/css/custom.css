@@ -136,6 +136,10 @@
     margin-bottom: 10px;
 }
 
+.tienda-cerrada{
+    filter: grayscale(100%);
+}
+
 @media(max-width:767px){
     .title-huincha{
         width: 50%;

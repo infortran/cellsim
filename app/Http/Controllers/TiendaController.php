@@ -137,6 +137,8 @@ class TiendaController extends Controller
      */
     public function destroy(Tienda $tienda)
     {
-        //
+        Tools::deleteImage($tienda->img, $this->path, $this->resolutions);
+        $tienda->delete();
+        return redirect('admin/cuenta');
     }
 }

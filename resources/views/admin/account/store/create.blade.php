@@ -4,7 +4,7 @@
     <div class="wrapper ">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
-        <form action="{{route('tienda.create')}}" method="POST" enctype="multipart/form-data"  class="main-panel">
+        <form action="{{route('tienda.store')}}" method="POST" enctype="multipart/form-data"  class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                 <div class="container-fluid">

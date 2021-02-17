@@ -2,7 +2,7 @@
     <div style="display: flex; align-items: center">
         <div class="card-tienda">
             <div style="height: 190px">
-                <div class="img-tienda" style="background-image: url('{{ asset('uploads/tiendas/300X300'.'/'.$tienda->img) }}');">
+                <div class="img-tienda {{ $tienda->status === 0 ? 'tienda-cerrada' : '' }}" style="background-image: url('{{ asset('uploads/tiendas/300X300'.'/'.$tienda->img) }}');">
                     <div class="status">
                         Tienda {{ $tienda->status === 1 ? 'abierta' : 'cerrada'}}
                     </div>
