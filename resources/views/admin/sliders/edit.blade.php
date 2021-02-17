@@ -91,7 +91,7 @@
                                             <div class="col-md-4">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <img id="img-input-producto" src="{{asset('uploads/sliders/1000X1000' . '/' . $slider->img)}}" alt="" class="img-fluid">
+                                                        <img id="img-input-producto" src="{{asset('uploads/sliders/600X600' . '/' . $slider->img)}}" alt="" class="img-fluid">
                                                     </div>
                                                 </div>
                                                 <div class="row">

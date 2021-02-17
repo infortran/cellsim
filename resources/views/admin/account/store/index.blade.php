@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header card-header-primary d-flex justify-content-between align-items-center">
                         <h4 class="card-title">Ubicacion de las tiendas</h4>
-                        <a href="{{ url('/admin/tienda/create') }}" class="btn btn-contrast" style="cursor: pointer">
+                        <a href="{{ route('tienda.create') }}" class="btn btn-contrast" style="cursor: pointer">
                             <i class="material-icons">add</i>
                             <span>Agregar ubicacion</span>
                         </a>
@@ -24,7 +24,7 @@
                                         Editar
                                     </a>
 
-                                    <a class="btn btn-primary px-3 btn-eliminar-tienda" data-toggle="modal" data-target="#modal-eliminar-tienda" data-id="{{ $tienda->id }}" data-title="{{ $tienda->title }}">
+                                    <a class="btn btn-primary px-3 btn-eliminar-tienda" style="cursor: pointer" data-toggle="modal" data-target="#modal-eliminar-tienda" data-id="{{ $tienda->id }}" data-title="{{ $tienda->title }}">
                                         <i class="material-icons" style="color: #ffffff">delete</i>
                                     </a>
                                 </div>

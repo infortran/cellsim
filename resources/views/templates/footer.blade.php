@@ -172,11 +172,21 @@
                 </div>
                 <div class="col-lg-5">
                     <!-- Subscribe Form -->
-                    <form class="js-validate js-form-message">
+                    <form action="{{ route('cliente.store') }}" method="POST" class="js-validate js-form-message">
+                        @csrf
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <label class="sr-only" for="subscribeSrEmail">Tu correo</label>
                         <div class="input-group input-group-pill">
                             <input type="email" class="form-control border-0 height-40" name="email" id="subscribeSrEmail" placeholder="Tu correo" aria-label="Correo" aria-describedby="subscribeButton" required
-                                   data-msg="Please enter a valid email address.">
+                                   data-msg="Por favor ingrese una dirección de correo valido.">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-dark btn-sm-wide height-40 py-2" id="subscribeButton">Suscribirme</button>
                             </div>

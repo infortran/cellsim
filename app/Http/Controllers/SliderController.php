@@ -10,6 +10,8 @@ use Image;
 
 class SliderController extends Controller
 {
+    private $resolutions = [[600,600], [300,300], [150,150], [72,72]];
+    private $path = 'uploads/sliders';
 
     public function index()
     {
@@ -23,7 +25,7 @@ class SliderController extends Controller
     }
     public function store(Request $request)
     {
-        $resolutions = [[600,600], [300,300], [150,150], [72,72]];
+
         $data = $request->validate([
             'title' => 'required|max:100',
             'subtitle' => 'required|max:100',
@@ -36,7 +38,7 @@ class SliderController extends Controller
         $imageName = time().'.'.$img->extension();
         $imgResize = Image::make($img->path());
         $path = 'uploads/sliders';
-        Tools::processImage($imgResize, $imageName, $path, false,$resolutions);
+        Tools::processImage($imgResize, $imageName, $path, false, $this->resolutions);
         $data['img'] = $imageName;
         Slider::create($data);
         return redirect('/admin');
@@ -59,7 +61,6 @@ class SliderController extends Controller
 
     public function update(Request $request, Slider $slider)
     {
-        $resolutions = [[1000, 1000],[600,600], [300,300], [150,150], [72,72]];
         $data = $request->validate([
             'title' => 'required|max:100',
             'subtitle' => 'required|max:100',
@@ -71,9 +72,9 @@ class SliderController extends Controller
             $img = $request->file('img');
             $imageName = time().'.'.$img->extension();
             $imgResize = Image::make($img->path());
-            $path = 'uploads/sliders';
-            Tools::processImage($imgResize, $imageName, $path, false,$resolutions);
+            Tools::processImage($imgResize, $imageName, $this->path, false, $this->resolutions);
             $data['img'] = $imageName;
+            Tools::deleteImage($slider->img, $this->path, $this->resolutions);
         }
         //dd($request->img);
         $slider->update($data);
@@ -83,6 +84,7 @@ class SliderController extends Controller
 
     public function destroy(Slider $slider)
     {
+        Tools::deleteImage($slider->img, $this->path, $this->resolutions);
         $slider->delete();
         return redirect('/admin');
     }
