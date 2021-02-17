@@ -11,7 +11,8 @@ use Image;
 
 class TiendaController extends Controller
 {
-    private $resolutions_for_main_images = [[600,600], [300,300], [150,150], [72,72]];
+    private $resolutions = [[600,600], [300,300], [150,150], [72,72]];
+    private $path = 'uploads/tiendas';
 
     public function nuestras_tiendas(){
         $data = [
@@ -39,7 +40,7 @@ class TiendaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.account.store.create');
     }
 
     /**
@@ -52,7 +53,6 @@ class TiendaController extends Controller
     {
         $data = $request->validate([
             'title' => 'required|max:100',
-            'status' => '',
             'direction' => 'required|max:100',
             'city' => 'required|max:50',
             'country' => 'required|max:50',
@@ -64,8 +64,8 @@ class TiendaController extends Controller
         $img = $request->file('img');
         $imageName = time().'.'.$img->extension();
         $imgResize = Image::make($img->path());
-        $path = 'uploads/tiendas';
-        Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
+
+        Tools::processImage($imgResize, $imageName, $this->path, true, $this->resolutions);
         $data['img'] = $imageName;
 
         $data['status'] = $request->status === 'on' ? true : false;
@@ -92,7 +92,7 @@ class TiendaController extends Controller
      */
     public function edit(Tienda $tienda)
     {
-        //
+        return view('admin.account.store.edit', ['tienda' => $tienda]);
     }
 
     /**
@@ -104,7 +104,29 @@ class TiendaController extends Controller
      */
     public function update(Request $request, Tienda $tienda)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|max:100',
+            'status' => '',
+            'direction' => 'required|max:100',
+            'city' => 'required|max:50',
+            'country' => 'required|max:50',
+            'phone' => 'required|max:30',
+            'schedule' => 'required|max:60',
+            'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=600,min_height=600'
+        ]);
+        if($request->img){
+            $img = $request->file('img');
+            $imageName = time().'.'.$img->extension();
+            $imgResize = Image::make($img->path());
+
+            Tools::processImage($imgResize, $imageName, $this->path, true, $this->resolutions);
+            $data['img'] = $imageName;
+            Tools::deleteImage($tienda->img, $this->path, $this->resolutions);
+        }
+        $data['status'] = $request->status === 'on' ? true : false;
+
+        $tienda->update($data);
+        return redirect('admin/cuenta');
     }
 
     /**

@@ -22,7 +22,7 @@
             </nav>
             <!-- End Navbar -->
             <div class="content">
-                <form action="{{ route('plc.update', $plc->id) }}" class="container-fluid" method="POST" enctype="multipart/form-data">
+                <form action="{{ $plc ? route('plc.update', $plc->id) : '' }}" class="container-fluid" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('put')
                     <div class="row">
@@ -63,18 +63,18 @@
                                         <div class="col-lg-7 col-xl-8 mt-2">
                                             <div class="row ">
                                                 <div class="col-md-6 mb-3">
-                                                    <input class="form-control" type="text" id="input-title-section" placeholder="Titulo de la seccion" name="title_section" value="{{$plc->title_section}}">
+                                                    <input class="form-control" type="text" id="input-title-section" placeholder="Titulo de la seccion" name="title_section" value="{{$plc->title_section ?? ''}}">
                                                 </div>
                                                 <div class="col-md-6 mb-3">
-                                                    <input class="form-control" type="text" id="input-title-lateral" placeholder="Titulo del banner" name="title_banner" value="{{$plc->title_banner}}">
+                                                    <input class="form-control" type="text" id="input-title-lateral" placeholder="Titulo del banner" name="title_banner" value="{{$plc->title_banner ?? ''}}">
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 mb-3">
-                                                    <input class="form-control" type="text" id="input-subtitle-lateral" placeholder="Subtitulo del banner" name="subtitle_banner" value="{{$plc->subtitle_banner}}">
+                                                    <input class="form-control" type="text" id="input-subtitle-lateral" placeholder="Subtitulo del banner" name="subtitle_banner" value="{{$plc->subtitle_banner ?? ''}}">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input class="form-control" type="number" id="input-price-lateral" placeholder="Precio del banner" name="price_banner" value="{{$plc->price_banner}}">
+                                                    <input class="form-control" type="number" id="input-price-lateral" placeholder="Precio del banner" name="price_banner" value="{{$plc->price_banner ?? ''}}">
                                                 </div>
                                             </div>
                                             <div class="row mt-4">
@@ -93,7 +93,7 @@
                                                 <div class="col-12 col-md-3">
                                                     <div class="form-group">
                                                         <label>Limite</label>
-                                                        <input name="max_products" class="form-control mt-5" type="number" min="0" max="10" value="{{$plc->max_products}}">
+                                                        <input name="max_products" class="form-control mt-5" type="number" min="0" max="10" value="{{$plc->max_products ?? 0}}">
                                                     </div>
                                                 </div>
                                             </div>

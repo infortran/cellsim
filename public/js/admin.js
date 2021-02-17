@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     $('.img-section').addClass('img-banner-admin')
-    /*--------JS ADMIN BANNER---------*/
+
+    /*--------<JS ADMIN BANNER>---------*/
     let inputTitle = $('#input-title')
     let inputText = $('#input-text')
     let inputPrice = $('#input-price')
@@ -35,12 +36,9 @@ $(document).ready(function(){
     inputPrice.keyup(function(){
         precio.text(formatNumber(inputPrice.val()))
     })
-    /*--------JS ADMIN BANNER---------*/
+    /*--------</JS ADMIN BANNER>---------*/
 
-
-
-
-    /*--------JS ADMIN BANNER LATERAL---------*/
+    /*--------<JS ADMIN BANNER LATERAL>---------*/
     let inputTitleSection = $('#input-title-section')
     let inputTitleLateral = $('#input-title-lateral')
     let inputSubtitleLateral = $('#input-subtitle-lateral')
@@ -63,13 +61,9 @@ $(document).ready(function(){
     inputPriceLateral.keyup(function(){
         preciolateral.text(formatNumber(inputPriceLateral.val()))
     })
-    /*--------JS ADMIN BANNER LATERAL---------*/
+    /*--------</JS ADMIN BANNER LATERAL>---------*/
 
-
-
-
-
-    /*--------------JS ADMIN CUENTA---------------*/
+    /*--------------<JS ADMIN SOCIAL>---------------*/
     $('.socialsModal').on("hidden.bs.modal", function () {
         $('.card-social').removeClass('active')
         $('.url-text').html("")
@@ -87,8 +81,18 @@ $(document).ready(function(){
             $('.url-text').html(social+".com"+"/")
         }
     })
+    /*--------------</JS ADMIN SOCIAL>---------------*/
 
-    /*--------------JS ADMIN CUENTA---------------*/
+    $('.switch-input').click(function(){
+        if($(this).prop('checked')){
+            $(this).attr('checked', true)
+            $(this).val('on')
+        }else{
+            $(this).attr('checked', false)
+            $(this).val('off')
+        }
+        console.log($(this).val())
+    })
 
     if($('.wrapper').hasClass('categoria')){
         pickerImageCategoria()

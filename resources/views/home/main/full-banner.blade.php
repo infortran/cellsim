@@ -5,7 +5,7 @@
                 <div class="flex-horizontal-center overflow-hidden">
 
                     <h1 class="text-lh-38 font-size-30 font-weight-light mb-3 flex-shrink-0 flex-md-shrink-1 title-huincha" id="admin-title-huincha" style="">{{ $mainbanner ? strtoupper($mainbanner->title) : ''}}</h1>
-                    <div class="flex-content-center ml-4 flex-shrink-0">
+                    <div class="flex-content-center ml-4 flex-shrink-0 huincha-price">
                         <div class="bg-primary rounded-lg info-huincha">
                             <div style="margin-top: 20px;">
                                 <em class="font-size-14 font-weight-light txt-huincha" style="font-weight: lighter" id="admin-texto-huincha">{{ $mainbanner->text ?? ''}}</em>

@@ -11,7 +11,8 @@ use Image;
 
 class ProductoController extends Controller
 {
-    private $resolutions_for_main_images = [[1000, 1000],[600,600], [300,300], [150,150], [72,72]];
+    private $resolutions = [[600,600], [300,300], [150,150], [72,72]];
+    private $path = 'uploads/productos';
     //FRONTEND HOME PRODUCTS
     public function shop()
     {
@@ -37,17 +38,15 @@ class ProductoController extends Controller
             'price' => 'required|numeric',
             'oldprice' => '',
             'stock' => 'numeric',
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=1000,min_height=1000',
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=600,min_height=600',
             'categoria_id' => 'numeric',
             'marca_id' => 'numeric'
         ]);
         $img = $request->file('img');
         $imageName = time().'.'.$img->extension();
         $imgResize = Image::make($img->path());
-        $path = 'uploads/productos';
-        Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
+        Tools::processImage($imgResize, $imageName, $this->path, true, $this->resolutions);
         $data['img'] = $imageName;
-
         $data['enabled'] = $request->enabled === 'on' ? true : false;
         Producto::create($data);
 
@@ -93,7 +92,7 @@ class ProductoController extends Controller
             'price' => 'required|numeric',
             'oldprice' => '',
             'stock' => 'numeric',
-            'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=1000,min_height=1000',
+            'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=600,min_height=600',
             'categoria_id' => '',
             'marca_id' => ''
         ]);
@@ -101,13 +100,11 @@ class ProductoController extends Controller
             $img = $request->file('img');
             $imageName = time().'.'.$img->extension();
             $imgResize = Image::make($img->path());
-            $path = 'uploads/productos';
-            Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
+
+            Tools::processImage($imgResize, $imageName, $this->path, true, $this->resolutions);
             $data['img'] = $imageName;
-
-            Tools::deleteImage($producto->img, $path, $this->resolutions_for_main_images);
+            Tools::deleteImage($producto->img, $this->path, $this->resolutions);
         }
-
         $producto->update($data);
         return redirect('admin/productos');
     }
@@ -115,6 +112,7 @@ class ProductoController extends Controller
 
     public function destroy(Producto $producto)
     {
+        Tools::deleteImage($producto->img, $this->path, $this->resolutions);
         $producto->delete();
         return redirect('admin/productos');
     }

@@ -23,8 +23,8 @@
             <div class="content">
                 @include('admin.account.profile')
                 @include('admin.account.shop-data')
-                @include('admin.account.socials')
-                @include('admin.account.shops-ubications')
+                @include('admin.account.socials.index')
+                @include('admin.account.store.index')
             </div>
 
             <!--Footer Goes Here-->

@@ -6,7 +6,7 @@
         <!-- ========== MAIN CONTENT ========== -->
         <main id="content" role="main">
             @include('templates.breadcrumb')
-            @include('nuestras-tiendas.shops-ubications')
+            @include('nuestras-tiendas.store-ubications')
         </main>
         <!-- ========== END MAIN CONTENT ========== -->
 

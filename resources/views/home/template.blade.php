@@ -39,7 +39,9 @@
 
             <div class="container">
                 <!-- Smartphones & Tablets -->
-                @include('templates.product-list-component', $plc)
+                @if($plc)
+                    @include('templates.product-list-component', $plc)
+                @endif
                 <!-- End Smartphones & Tablets -->
 
 
