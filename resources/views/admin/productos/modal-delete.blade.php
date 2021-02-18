@@ -1,4 +1,4 @@
-<form action="{{route('productos.destroy', $producto->id)}}" method="POST" class="modal fade" id="modal-eliminar-producto-{{$producto->id}}" tabindex="-1" aria-labelledby="modal-eliminar-producto" aria-hidden="true">
+<form action="{{route('productos.destroy', $producto->slug)}}" method="POST" class="modal fade" id="modal-eliminar-producto-{{$producto->id}}" tabindex="-1" aria-labelledby="modal-eliminar-producto" aria-hidden="true">
     <div class="modal-dialog">
         @csrf
         @method('delete')

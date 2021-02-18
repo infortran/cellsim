@@ -50,9 +50,9 @@
                                 @endif
                                 --}}
                             </div>
-                            <h5 class="mb-1 product-item__title"><a href="{{route('producto.single', $producto->id)}}" class="text-blue font-weight-bold">{{$producto->name}}</a></h5>
+                            <h5 class="mb-1 product-item__title"><a href="{{route('producto.single', $producto->slug)}}" class="text-blue font-weight-bold">{{$producto->name}}</a></h5>
                             <div class="mb-2">
-                                <a href="{{route('producto.single', $producto->id)}}" class="d-block text-center">
+                                <a href="{{route('producto.single', $producto->slug)}}" class="d-block text-center">
                                     <img class="img-fluid" src="{{asset('uploads/productos/150X150').'/'.$producto->img}}" alt="{{$producto->name}}">
                                 </a>
                             </div>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="product-item__footer">
                             <div class="border-top pt-2 flex-center-between flex-wrap">
-                                <a href="{{route('producto.single', $producto->id)}}" class="text-gray-6 font-size-13"><i class="fa fa-link mr-1 font-size-15"></i> Ver producto</a>
+                                <a href="{{route('producto.single', $producto->slug)}}" class="text-gray-6 font-size-13"><i class="fa fa-link mr-1 font-size-15"></i> Ver producto</a>
                             </div>
                         </div>
                     </div>

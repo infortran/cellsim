@@ -49,13 +49,18 @@
                                         </div>
                                         <div class="col-md-8">
                                             <div class="row">
-                                                <div class="col-md-10">
+                                                <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">Nombre</label>
                                                         <input name="name" type="text" class="form-control" value="{{$categoria->name}}">
                                                     </div>
                                                 </div>
-
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="bmd-label-floating">URL amigable (Obligatorio)</label>
+                                                        <input name="slug" type="text" class="form-control" value="{{old('slug')}}">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12">

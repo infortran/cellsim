@@ -40,7 +40,8 @@ class ProductoController extends Controller
             'stock' => 'numeric',
             'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=600,min_height=600',
             'categoria_id' => 'numeric',
-            'marca_id' => 'numeric'
+            'marca_id' => 'numeric',
+            'slug' => 'required|string|unique:productos'
         ]);
         $img = $request->file('img');
         $imageName = time().'.'.$img->extension();
@@ -66,6 +67,7 @@ class ProductoController extends Controller
 
     public function single(Producto $producto)
     {
+        //$producto = Producto::where('slug', $slug)->first();
         $data = [
             'categorias' => Categoria::all(),
             'marcas' => Marca::all(),
@@ -80,7 +82,8 @@ class ProductoController extends Controller
         return view('admin.productos.edit', [
             'producto' => $producto,
             'categorias' => Categoria::all(),
-            'marcas' => Marca::all()]);
+            'marcas' => Marca::all()
+        ]);
     }
 
 
@@ -94,7 +97,8 @@ class ProductoController extends Controller
             'stock' => 'numeric',
             'img' => 'image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=600,min_height=600',
             'categoria_id' => '',
-            'marca_id' => ''
+            'marca_id' => '',
+            'slug' => 'required|string'
         ]);
         if($request->img){
             $img = $request->file('img');

@@ -24,6 +24,7 @@ class CreateProductosTable extends Migration
             $table->boolean('enabled')->default(false);
             $table->integer('stock')->default(0);
             $table->string('img')->default('image.png');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

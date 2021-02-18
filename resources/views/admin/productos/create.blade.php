@@ -95,6 +95,15 @@
                                                 </div>
 
                                                 <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="bmd-label-floating">URL amigable (Obligatorio)</label>
+                                                            <input name="slug" type="text" class="form-control" value="{{old('slug')}}">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label>Categoría</label>

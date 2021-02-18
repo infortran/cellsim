@@ -4,7 +4,7 @@
     <div class="wrapper ">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
-        <form action="{{route('productos.update', $producto->id)}}" method="POST" enctype="multipart/form-data" class="main-panel">
+        <form action="{{route('productos.update', $producto->slug)}}" method="POST" enctype="multipart/form-data" class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
                 <div class="container-fluid">
@@ -91,6 +91,15 @@
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">Precio Anterior <em>(opcional)</em></label>
                                                             <input name="oldprice" type="number" class="form-control"  value="{{$producto->oldprice}}">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="bmd-label-floating">URL amigable (Obligatorio)</label>
+                                                            <input name="slug" type="text" class="form-control" value="{{$producto->slug}}">
                                                         </div>
                                                     </div>
                                                 </div>

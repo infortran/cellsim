@@ -11,6 +11,11 @@ class Categoria extends Model
 
     protected $guarded = [];
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function productos(){
         return $this->hasMany('App\Models\Producto');
     }

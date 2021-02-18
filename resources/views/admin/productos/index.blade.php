@@ -45,7 +45,7 @@
                                             </div>
                                             <div class="btn-container">
                                                 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                                                    <a href="{{route('productos.edit', $producto->id)}}" class="btn btn-secondary">
+                                                    <a href="{{route('productos.edit', $producto->slug)}}" class="btn btn-secondary">
                                                         <i class="material-icons">edit</i>
                                                         Editar
                                                     </a>
@@ -74,7 +74,7 @@
                                         </div>
                                         <div class="title">No hay productos</div>
                                         <div class="text">Puedes agregar productos pulsando</div>
-                                        <a href="{{url('/admin/productos/create')}}" class="btn btn-primary">
+                                        <a href="{{route('productos.create')}}" class="btn btn-primary">
                                             <i class="material-icons">add</i>
                                             <span>Agregar Productos</span>
                                         </a>
