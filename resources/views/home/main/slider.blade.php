@@ -35,7 +35,7 @@
                                             <sup class="">$</sup>{{number_format($slider->price,0,'','.')}}
                                         </div>
                                     </div>
-                                    <a href="{{url('/productos').'/'. $slider->producto->id}}" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
+                                    <a href="{{url('/productos').'/'. $slider->producto->slug}}" class="btn btn-primary transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
                                        data-scs-animation-in="fadeInUp"
                                        data-scs-animation-delay="400">
                                         Ver detalles
