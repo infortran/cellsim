@@ -108,7 +108,7 @@
                                                 @foreach($sliders as $slider)
                                             <div class="product-row">
                                                 <div class="img-container">
-                                                    <img src="{{asset('uploads/sliders/72x72').'/'.$slider->img}}" alt="{{$slider->title}}">
+                                                    <img src="{{asset('uploads/sliders/72X72').'/'.$slider->img}}" alt="{{$slider->title}}">
                                                 </div>
                                                 <div class="name">
                                                     {{$slider->title}}
