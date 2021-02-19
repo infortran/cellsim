@@ -4,7 +4,7 @@
     <div class="wrapper categoria">
         <!--Sidebar Goes Here-->
         @include('admin.templates.sidebar')
-        <form action="{{route('categorias.update', $categoria->id)}}" method="POST" class="main-panel">
+        <form action="{{route('categorias.update', $categoria->slug)}}" method="POST" class="main-panel">
             @method('put')
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
@@ -58,7 +58,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">URL amigable (Obligatorio)</label>
-                                                        <input name="slug" type="text" class="form-control" value="{{old('slug')}}">
+                                                        <input name="slug" type="text" class="form-control" value="{{$categoria->slug}}">
                                                     </div>
                                                 </div>
                                             </div>

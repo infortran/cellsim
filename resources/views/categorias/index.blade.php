@@ -22,6 +22,3 @@
 
 
 @endsection
-<script>
-
-</script>

@@ -39,4 +39,14 @@ class IndexController extends Controller
         return view('account.account');
     }
 
+    public function busqueda(Request $request){
+        dd($request);
+        $data = [
+            'categorias' => Categoria::all(),
+            'productos' => Producto::all(),
+            'marcas' => Marca::all()
+        ];
+        return view('busqueda.index', $data);
+    }
+
 }

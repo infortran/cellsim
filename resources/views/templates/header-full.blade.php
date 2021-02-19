@@ -580,7 +580,7 @@
                                                         <li class="nav-item u-header__nav-item"
                                                             data-event="hover"
                                                             data-position="left">
-                                                            <a href="{{url('categorias/').'/'.strtolower($categoria->name)}}" class="nav-link u-header__nav-link font-weight-bold">{{$categoria->name}}</a>
+                                                            <a href="{{url('categorias/').'/'.strtolower($categoria->slug)}}" class="nav-link u-header__nav-link font-weight-bold">{{$categoria->name}}</a>
                                                         </li>
                                                         @endforeach
 
@@ -925,10 +925,10 @@
                     <!-- Search bar -->
                     <div class="col align-self-center">
                         <!-- Search-Form -->
-                        <form class="js-focus-state">
+                        <form action="" class="js-focus-state">
                             <label class="sr-only" for="searchProduct">Search</label>
                             <div class="input-group">
-                                <input type="email" class="form-control py-2 pl-5 font-size-15 border-0 height-40 rounded-left-pill" name="email" id="searchProduct" placeholder="Buscar productos" aria-label="Busca productos" aria-describedby="searchProduct1" required>
+                                <input type="search" class="form-control py-2 pl-5 font-size-15 border-0 height-40 rounded-left-pill" name="busqueda" id="searchProduct" placeholder="Buscar productos" aria-label="Busca productos" aria-describedby="searchProduct1" required>
                                 <div class="input-group-append">
                                     <!-- Select -->
                                     <!--select class="js-select selectpicker dropdown-select custom-search-categories-select"
@@ -939,7 +939,7 @@
                                         <option value="four">Four</option>
                                     </select>
                                     <!-- End Select -->
-                                    <button class="btn btn-dark height-40 py-2 px-3 rounded-right-pill" type="button" id="searchProduct1">
+                                    <button class="btn btn-dark height-40 py-2 px-3 rounded-right-pill" type="submit" id="searchProduct1">
                                         <span class="ec ec-search font-size-24"></span>
                                     </button>
                                 </div>

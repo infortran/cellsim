@@ -85,7 +85,7 @@
                                                         <select name="categoria_id" class="form-control selectpicker" data-style="btn btn-link" id="">
                                                             <option value="0" selected disabled>Selecciona una categoria</option>
                                                             @foreach($categorias as $categoria)
-                                                                <option value="{{$categoria->id}}" {{$plc->categoria->id === $categoria->id ? 'selected' : '' }}>{{$categoria->name}}</option>
+                                                                <option value="{{$categoria->id}}" {{ $plc ? $plc->categoria->id === $categoria->id ? 'selected' : '' : '' }} {{--$plc->categoria->id === $categoria->id ? 'selected' : '' --}}>{{$categoria->name}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>

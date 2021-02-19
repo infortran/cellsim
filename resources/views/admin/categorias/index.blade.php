@@ -45,7 +45,7 @@
                                                 </div>
                                                 <div class="btn-container">
                                                     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                                                        <a href="{{route('categorias.edit', $categoria->id)}}" class="btn btn-secondary">
+                                                        <a href="{{route('categorias.edit', $categoria->slug)}}" class="btn btn-secondary">
                                                             <i class="material-icons">edit</i>
                                                             Editar
                                                         </a>

@@ -88,16 +88,16 @@
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <button style="margin-left: auto; margin-right: 20px; margin-top: 20px" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    <div class="modal-body">
-                                        <img class="img-fluid" src="{{ asset('uploads/productos/1000x1000') . '/' . $producto->img}}" alt="Image Description">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <button style="margin-left: auto; margin-right: 20px; margin-top: 20px" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <div class="modal-body" style="display: flex; justify-content: center; align-items: center">
+                                                <img class="img-fluid" src="{{ asset('uploads/productos/600x600') . '/' . $producto->img}}" alt="Image Description">
+                                            </div>
+                                        </div>
                                     </div>
-                                    </div>
-                                </div>
                                 </div>
                                 {{-- <div class="flex-horizontal-center flex-wrap mb-4">
                                     <a href="#" class="text-gray-6 font-size-13 mr-2"><i class="ec ec-favorites mr-1 font-size-15"></i> Wishlist</a>

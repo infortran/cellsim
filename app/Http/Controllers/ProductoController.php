@@ -34,7 +34,7 @@ class ProductoController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|max:100',
-            'description' => 'required|max:100',
+            'description' => 'required|max:365',
             'price' => 'required|numeric',
             'oldprice' => '',
             'stock' => 'numeric',
@@ -91,7 +91,7 @@ class ProductoController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|max:100',
-            'description' => 'required|max:100',
+            'description' => 'required|max:365',
             'price' => 'required|numeric',
             'oldprice' => '',
             'stock' => 'numeric',
