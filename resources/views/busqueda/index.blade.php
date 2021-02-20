@@ -8,7 +8,7 @@
 <main id="content" role="main">
 
     @include('templates.breadcrumb')
-    <h1 style="text-align: center">Categorias</h1>
+    <h1 style="text-align: center">Resultado de la búsqueda</h1>
 
 
     @include('templates.producto-grid')

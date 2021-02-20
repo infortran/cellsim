@@ -493,7 +493,7 @@
                     <div class="d-xl-none col col-xl-auto text-right text-xl-left pl-0 pl-xl-3 position-static">
                         <div class="d-inline-flex">
                             <ul class="d-flex list-unstyled mb-0 align-items-center">
-                                <!-- Search -->
+                                <!-- Search MOBILE -->
                                 <li class="col d-xl-none px-2 px-sm-3 position-static">
                                     <a id="searchClassicInvoker" class="font-size-22 text-gray-90 text-lh-1 btn-text-secondary" href="javascript:;" role="button"
                                        data-toggle="tooltip"
@@ -514,16 +514,16 @@
 
                                     <!-- Input -->
                                     <div id="searchClassic" class="dropdown-menu dropdown-unfold dropdown-menu-right left-0 mx-2" aria-labelledby="searchClassicInvoker">
-                                        <form class="js-focus-state input-group px-3">
-                                            <input class="form-control" type="search" placeholder="Search Product">
+                                        <form action="{{ url('/search') }}" class="js-focus-state input-group px-3">
+                                            <input class="form-control" type="search" placeholder="Buscar Productos" name="query">
                                             <div class="input-group-append">
-                                                <button class="btn btn-primary px-3" type="button"><i class="font-size-18 ec ec-search"></i></button>
+                                                <button class="btn btn-primary px-3" type="submit"><i class="font-size-18 ec ec-search"></i></button>
                                             </div>
                                         </form>
                                     </div>
                                     <!-- End Input -->
                                 </li>
-                                <!-- End Search -->
+                                <!-- End Search MOBILE -->
                                 <li class="col d-none d-xl-block"><a href="../shop/compare.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Compare"><i class="font-size-22 ec ec-compare"></i></a></li>
                                 <li class="col d-none d-xl-block"><a href="../shop/wishlist.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Favorites"><i class="font-size-22 ec ec-favorites"></i></a></li>
                                 <!--li class="col d-xl-none px-2 px-sm-3"><a href="../shop/my-account.html" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="My Account"><i class="font-size-22 ec ec-user"></i></a></li-->
@@ -924,11 +924,11 @@
                     <!-- End Vertical Menu -->
                     <!-- Search bar -->
                     <div class="col align-self-center">
-                        <!-- Search-Form -->
-                        <form action="" class="js-focus-state">
+                        <!-- Search-Form BUSQUEDA DESKTOP -->
+                        <form action="{{ url('/search') }}" class="js-focus-state">
                             <label class="sr-only" for="searchProduct">Search</label>
                             <div class="input-group">
-                                <input type="search" class="form-control py-2 pl-5 font-size-15 border-0 height-40 rounded-left-pill" name="busqueda" id="searchProduct" placeholder="Buscar productos" aria-label="Busca productos" aria-describedby="searchProduct1" required>
+                                <input type="search" class="form-control py-2 pl-5 font-size-15 border-0 height-40 rounded-left-pill" name="query" id="searchProduct" placeholder="Buscar productos" aria-label="Busca productos" aria-describedby="searchProduct1" required>
                                 <div class="input-group-append">
                                     <!-- Select -->
                                     <!--select class="js-select selectpicker dropdown-select custom-search-categories-select"

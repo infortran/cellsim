@@ -39,13 +39,16 @@ class IndexController extends Controller
         return view('account.account');
     }
 
-    public function busqueda(Request $request){
-        dd($request);
+    public function search(Request $request){
+        //dd(request('query'));
         $data = [
             'categorias' => Categoria::all(),
             'productos' => Producto::all(),
-            'marcas' => Marca::all()
+            'marcas' => Marca::all(),
+            'query_result' => Producto::where('name', 'LIKE', '%' . request('query') . '%')->
+                orWhere('text', 'LIKE', '%' . request('query') . '%')->orderBy('created_at', 'ASC')->paginate(9)
         ];
+        //dd($data['query_result']);
         return view('busqueda.index', $data);
     }
 

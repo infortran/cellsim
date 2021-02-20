@@ -23,7 +23,7 @@ Route::get('/nuestras-tiendas', 'TiendaController@nuestras_tiendas');
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/cuenta', 'AdminController@account');
 
-Route::get('/busqueda', 'IndexController@busqueda');
+Route::get('/search', 'IndexController@search');
 
 Route::post('/cliente/store', 'ClienteController@store')->name('cliente.store');
 
