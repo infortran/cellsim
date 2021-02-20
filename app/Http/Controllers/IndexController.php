@@ -46,7 +46,7 @@ class IndexController extends Controller
             'productos' => Producto::all(),
             'marcas' => Marca::all(),
             'query_result' => Producto::where('name', 'LIKE', '%' . request('query') . '%')->
-                orWhere('text', 'LIKE', '%' . request('query') . '%')->orderBy('created_at', 'ASC')->paginate(9)
+                orWhere('description', 'LIKE', '%' . request('query') . '%')->orderBy('created_at', 'ASC')->paginate(9)
         ];
         //dd($data['query_result']);
         return view('busqueda.index', $data);
