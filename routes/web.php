@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'IndexController@index');
 
 Route::get('/tienda', 'ProductoController@shop');
+Route::get('/productos', 'ProductoController@landing');
 Route::get('/productos/{producto}', 'ProductoController@single')->name('producto.single');
 
 Route::get('/nuestras-tiendas', 'TiendaController@nuestras_tiendas');

@@ -22,7 +22,7 @@
                     data-event="hover"
                     data-animation-in="slideInUp"
                     data-animation-out="fadeOut">
-                    <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="{{url('/tienda')}}" aria-haspopup="true" aria-expanded="false">Tienda</a>
+                    <a id="pagesMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggl" href="{{url('/nuestras-tiendas')}}" aria-haspopup="true" aria-expanded="false">Nuestras Tiendas</a>
 
                     <!-- Home - Mega Menu ->
 

@@ -65,6 +65,15 @@ class ProductoController extends Controller
         return view('admin.productos.single', $data);
     }
 
+    public function landing(){
+        $data = [
+            'categorias' => Categoria::all(),
+            'marcas' => Marca::all(),
+            'productos' => Producto::paginate(9)
+        ];
+        return view('shop.shop', $data);
+    }
+
     public function single(Producto $producto)
     {
         //$producto = Producto::where('slug', $slug)->first();

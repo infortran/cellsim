@@ -69,12 +69,12 @@ class CategoriaController extends Controller
     }
 
     public function landing(Request $request, $categoria){
-        dd($categoria);
+        //dd($categoria);
         $cat = Categoria::where('slug', $categoria)->first();
         //dd($cat);
         $data = [
             'categorias' => Categoria::all(),
-            'productos' => $cat ? Producto::where('categoria_id', $cat->id)->get() : Producto::all(),
+            'query_result' => $cat ? Producto::where('categoria_id', $cat->id)->get() : Producto::all(),
             'marcas' => Marca::all()
         ];
         return view('categorias.index', $data);
