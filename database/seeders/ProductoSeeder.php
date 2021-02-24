@@ -25,7 +25,8 @@ class ProductoSeeder extends Seeder
                 'oldprice' => 15000,
                 'enabled' => true,
                 'stock' => 20,
-                'img' => '1608002760.png'
+                'img' => '1608002760.png',
+                'slug' => 'producto-ejemplo-1'
             ],
             [
                 'categoria_id' => 0,
@@ -36,7 +37,8 @@ class ProductoSeeder extends Seeder
                 'oldprice' => 15000,
                 'enabled' => true,
                 'stock' => 20,
-                'img' => '1608002760.png'
+                'img' => '1608002760.png',
+                'slug' => 'producto-ejemplo-2'
             ],
             [
                 'categoria_id' => 0,
@@ -47,7 +49,8 @@ class ProductoSeeder extends Seeder
                 'oldprice' => 15000,
                 'enabled' => true,
                 'stock' => 20,
-                'img' => '1608002760.png'
+                'img' => '1608002760.png',
+                'slug' => 'producto-ejemplo-3'
             ],
             [
                 'categoria_id' => 0,
@@ -58,7 +61,8 @@ class ProductoSeeder extends Seeder
                 'oldprice' => 15000,
                 'enabled' => true,
                 'stock' => 20,
-                'img' => '1608002760.png'
+                'img' => '1608002760.png',
+                'slug' => 'producto-ejemplo-4'
             ],
             [
                 'categoria_id' => 0,
@@ -69,7 +73,8 @@ class ProductoSeeder extends Seeder
                 'oldprice' => 15000,
                 'enabled' => true,
                 'stock' => 20,
-                'img' => '1608002760.png'
+                'img' => '1608002760.png',
+                'slug' => 'producto-ejemplo-5'
             ],
             [
                 'categoria_id' => 0,
@@ -80,7 +85,8 @@ class ProductoSeeder extends Seeder
                 'oldprice' => 15000,
                 'enabled' => true,
                 'stock' => 20,
-                'img' => '1608002760.png'
+                'img' => '1608002760.png',
+                'slug' => 'producto-ejemplo-6'
             ],[
                 'categoria_id' => 0,
                 'marca_id' => 0,
@@ -90,7 +96,8 @@ class ProductoSeeder extends Seeder
                 'oldprice' => 15000,
                 'enabled' => true,
                 'stock' => 20,
-                'img' => '1608002760.png'
+                'img' => '1608002760.png',
+                'slug' => 'producto-ejemplo-7'
             ]]);
     }
 }
