@@ -14,7 +14,7 @@ class PlcSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('product_list_components')->insert([
+        DB::table('product_components')->insert([
             'categoria_id' => 1,
             'title_section' => 'Titulo',
             'title_banner' => 'Banner',
