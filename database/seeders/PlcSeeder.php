@@ -20,7 +20,7 @@ class PlcSeeder extends Seeder
             'title_banner' => 'Banner',
             'subtitle_banner' => 'Subtitulo banner',
             'price_banner' => 19990,
-            'img_banner' => 'image.png',
+            'img' => 'img-dinamic.jpg',
             'max_products' => 5
         ]);
     }
