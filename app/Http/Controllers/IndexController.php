@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BannerHome;
 use App\Models\Categoria;
 use App\Models\Marca;
-use App\Models\ProductListComponent;
+use App\Models\ProductComponent;
 use App\Models\Producto;
 use App\Models\Slider;
 use Illuminate\Http\Request;
@@ -22,7 +22,7 @@ class IndexController extends Controller
             'ultimos' => Producto::orderBy('id', 'desc')->limit(6)->get(),
             'mainbanner' => BannerHome::first(),
             'productos' => Producto::all(),
-            'plc' => ProductListComponent::first()
+            'plc' => ProductComponent::all()
             /*'plc' =>
                 ['title' => 'titulo de prueba',
                 'img' => 'img-dinamic.jpg',
