@@ -29,8 +29,6 @@ Route::get('/search', 'IndexController@search');
 Route::post('/cliente/store', 'ClienteController@store')->name('cliente.store');
 
 Route::get('/categorias/{categoria}', 'CategoriaController@landing');
-Route::get('/admin/diseno', 'DisenoController@index');
-Route::put('/admin/diseno/{plc}', 'DisenoController@update')->name('plc.update');
 
 //Route::get('/categorias/{categoria}', 'IndexController@categoriaSingle')->name('categoria.single');
 
@@ -44,6 +42,8 @@ Route::resource('/admin/marcas', 'MarcaController');
 Route::resource('admin/sliders', 'SliderController');
 Route::resource('admin/socials', 'SocialController');
 Route::resource('admin/tienda', 'TiendaController');
+Route::resource('admin/diseno', 'DisenoController');
+Route::resource('admin/diseno/plc', 'ProductComponentController');
 
 
 /*

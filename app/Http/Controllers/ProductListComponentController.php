@@ -69,7 +69,7 @@ class ProductListComponentController extends Controller
      */
     public function update(Request $request, ProductListComponent $productListComponent)
     {
-        //
+
     }
 
     /**

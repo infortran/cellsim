@@ -247,10 +247,17 @@ div{
     text-align: left;
 }
 
-.banner-lateral-container {
-    margin: 0px auto;
+.banner-lateral-container{
+    width: 300px;
+    height: 616px;
+    zoom: 40%;
 }
 
+.banner-lateral-container img{
+    margin: 0px auto;
+    height: 100%;
+    object-fit: cover;
+}
 .banner-col-productos{
     display: flex;
     flex-direction: column;

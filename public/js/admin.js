@@ -102,6 +102,14 @@ $(document).ready(function(){
         document.getElementById('title-modal-delete').innerHTML = tienda_title
     })
 
+    $('.btn-eliminar-plc').click(function(){
+        let plc_id = $(this).data('id')
+        let plc_title = $(this).data('title')
+        let url = 'diseno/plc/'+plc_id
+        $('#modal-eliminar-plc').attr('action', url)
+        document.getElementById('banner-title-modal').innerHTML = plc_title
+    })
+
     if($('.wrapper').hasClass('categoria')){
         pickerImageCategoria()
     }
