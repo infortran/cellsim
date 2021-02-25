@@ -23,7 +23,7 @@
                                 <div class="js-slide">
 
 
-                                    <img style="cursor: pointer" data-toggle="modal" data-target="#imgModal" class="img-fluid" src="{{ asset('uploads/productos/600x600') . '/' . $producto->img}}" alt="Image Description">
+                                    <img style="cursor: pointer" data-toggle="modal" data-target="#imgModal" class="img-fluid" src="{{ asset('uploads/productos/600X600') . '/' . $producto->img}}" alt="Image Description">
                                 </div>
                                 {{-- <div class="js-slide">
                                     <img class="img-fluid" src="../../assets/img/720X660/img2.jpg" alt="Image Description">
@@ -80,7 +80,7 @@
                                     </div>
                                     <div class="d-md-flex align-items-center">
                                         @if ($producto->marca)
-                                        <a href="#" class="max-width-150 ml-n2 mb-2 mb-md-0 d-block"><img class="img-fluid" src="{{ asset('uploads/marcas/500x300') . '/' . $producto->marca->img }}" alt="Image Description"></a>
+                                        <a href="#" class="max-width-150 ml-n2 mb-2 mb-md-0 d-block"><img class="img-fluid" src="{{ asset('uploads/marcas/500X300') . '/' . $producto->marca->img }}" alt="Image Description"></a>
                                         @endif
                                         <div class="ml-md-3 text-gray-9 font-size-14">Stock: <span class="text-green font-weight-bold">{{ $producto->stock }}</span></div>
                                     </div>
@@ -94,7 +94,7 @@
                                             <span aria-hidden="true">&times;</span>
                                             </button>
                                             <div class="modal-body" style="display: flex; justify-content: center; align-items: center">
-                                                <img class="img-fluid" src="{{ asset('uploads/productos/600x600') . '/' . $producto->img}}" alt="Image Description">
+                                                <img class="img-fluid" src="{{ asset('uploads/productos/600X600') . '/' . $producto->img}}" alt="Image Description">
                                             </div>
                                         </div>
                                     </div>
