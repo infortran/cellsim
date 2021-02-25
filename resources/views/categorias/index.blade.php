@@ -10,9 +10,9 @@
             @include('templates.breadcrumb')
 
 
-            @include('home.main.categories-this-week')
-            @include('templates.producto-grid')
 
+            @include('templates.producto-grid')
+            @include('home.main.categories-this-week')
         </main>
         <!-- ========== END MAIN CONTENT ========== -->
 
