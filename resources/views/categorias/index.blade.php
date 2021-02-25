@@ -8,9 +8,9 @@
         <main id="content" role="main">
 
             @include('templates.breadcrumb')
-            <h1 style="text-align: center">Categorias</h1>
 
 
+            @include('home.main.categories-this-week')
             @include('templates.producto-grid')
 
         </main>

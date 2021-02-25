@@ -32,7 +32,9 @@
                                 <div class="product-item__outer h-100" style="width: 100%">
                                     <div class="product-item__inner bg-white p-3">
                                         <div class="product-item__body pb-xl-2">
-                                            <div class="mb-2"><a href="" class="font-size-12 text-gray-5"></a></div>
+                                            @if($producto->categoria)
+                                                <h6 class="font-size-12 text-gray-5 mb-2 d-inline-block">{{$producto->categoria->name}}</h6>
+                                            @endif
                                             <h5 class="mb-1 product-item__title"><a href="{{route('producto.single', $producto->slug)}}" class="text-blue font-weight-bold">{{$producto->name}}</a></h5>
                                             <div class="mb-2">
                                                 <a href="{{route('producto.single', $producto->slug)}}" class="d-block text-center"><img class="img-fluid" src="{{ asset('uploads/productos/150X150/'.$producto->img) }}" alt="Image Description"></a>
@@ -41,7 +43,7 @@
                                                 @if($producto->oldprice)
                                                     <div class="prodcut-price d-flex align-items-center position-relative">
                                                         <ins class="font-size-20 text-red text-decoration-none">${{number_format($producto->price, 0, '','.')}}</ins>
-                                                        <del class="font-size-12 tex-gray-6 position-absolute bottom-100">$ {{number_format($producto->oldprice, 0, '','.')}}</del>
+                                                        <del class="font-size-12 text-gray-6 ml-1 mt-1">$ {{number_format($producto->oldprice, 0, '','.')}}</del>
                                                     </div>
                                                 @else
                                                     <div class="prodcut-price">
