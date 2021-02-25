@@ -1,4 +1,4 @@
-<form action="{{route('categorias.destroy', $categoria->id)}}" method="POST" class="modal fade" id="modal-eliminar-categoria-{{$categoria->id}}" tabindex="-1" aria-labelledby="modal-eliminar-categoria" aria-hidden="true">
+<form action="{{route('categorias.destroy', $categoria->slug)}}" method="POST" class="modal fade" id="modal-eliminar-categoria-{{$categoria->id}}" tabindex="-1" aria-labelledby="modal-eliminar-categoria" aria-hidden="true">
     <div class="modal-dialog">
         @csrf
         @method('delete')

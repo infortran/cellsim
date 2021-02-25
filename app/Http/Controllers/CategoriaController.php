@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
 {
-
     public function index()
     {
         $data = ['categorias' => Categoria::all()];
