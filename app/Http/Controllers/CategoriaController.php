@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function index()
     {
@@ -67,7 +63,14 @@ class CategoriaController extends Controller
         $categoria->delete();
         return redirect('/admin/categorias');
     }
-
+    public function categorias(){
+        $data = [
+            'categorias' => Categoria::all(),
+            'query_result' => Producto::all(),
+            'marcas' => Marca::all()
+        ];
+        return view('categorias.index', $data);
+    }
     public function landing(Request $request, $categoria){
         //dd($categoria);
         $cat = Categoria::where('slug', $categoria)->first();

@@ -28,7 +28,7 @@ Route::get('/search', 'IndexController@search');
 
 Route::post('/cliente/store', 'ClienteController@store')->name('cliente.store');
 
-Route::get('/categorias/{categoria}', 'CategoriaController@landing');
+
 
 //Route::get('/categorias/{categoria}', 'IndexController@categoriaSingle')->name('categoria.single');
 
@@ -37,7 +37,7 @@ Route::put('/admin/mainbanner/{banner}', 'BannerHomeController@update')->name('m
 
 
 Route::resource('/admin/productos', 'ProductoController')->middleware('auth');
-Route::resource('/admin/categorias', 'CategoriaController');
+Route::resource('/admin/categorias', 'CategoriaController')->middleware('auth');
 Route::resource('/admin/marcas', 'MarcaController');
 Route::resource('admin/sliders', 'SliderController');
 Route::resource('admin/socials', 'SocialController');
@@ -45,7 +45,8 @@ Route::resource('admin/tienda', 'TiendaController');
 Route::resource('admin/diseno', 'DisenoController');
 Route::resource('admin/diseno/plc', 'ProductComponentController');
 
-
+Route::get('/categorias', 'CategoriaController@categorias');
+Route::get('/categorias/{categoria}', 'CategoriaController@landing');
 /*
 Route::get('/cart', function () {
     return view('cart.cart', ['rangeSlider' => true]);
