@@ -11,8 +11,8 @@
 
 
 
-            @include('templates.producto-grid')
             @include('home.main.categories-this-week')
+            @include('templates.producto-grid')
         </main>
         <!-- ========== END MAIN CONTENT ========== -->
 
