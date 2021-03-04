@@ -99,7 +99,7 @@ $(document).ready(function(){
         let tienda_title = $(this).data('title')
         let url = 'tienda/'+tienda_id
         $('#modal-eliminar-tienda').attr('action', url)
-        document.getElementById('title-modal-delete').innerHTML = tienda_title
+        document.getElementById('title-modal-tienda').innerHTML = tienda_title
     })
 
     $('.btn-eliminar-plc').click(function(){
@@ -107,7 +107,15 @@ $(document).ready(function(){
         let plc_title = $(this).data('title')
         let url = 'diseno/plc/'+plc_id
         $('#modal-eliminar-plc').attr('action', url)
-        document.getElementById('banner-title-modal').innerHTML = plc_title
+        document.getElementById('title-modal-plc').innerHTML = plc_title
+    })
+
+    $('.btn-eliminar-marca').click(function(){
+        let marca_id = $(this).data('id')
+        let marca_title = $(this).data('title')
+        let url = 'marcas/'+marca_id
+        $('#modal-eliminar-marca').attr('action', url)
+        document.getElementById('title-modal-marca').innerHTML = marca_title
     })
 
     if($('.wrapper').hasClass('categoria')){

@@ -9,7 +9,8 @@ use Image;
 
 class MarcaController extends Controller
 {
-    private $resolutions_for_main_images = [[500,300]];
+    private $resolutions = [[500,300]];
+    private $path = 'uploads/marcas';
 
     public function __construct()
     {
@@ -36,12 +37,10 @@ class MarcaController extends Controller
             'text' => 'required|max:100',
             'img' => 'required|image|mimes:jpeg,png,jpg|max:2048|dimensions:min_width=500,min_height=300'
         ]);
-
         $img = $request->file('img');
         $imageName = time().'.'.$img->extension();
         $imgResize = Image::make($img->path());
-        $path = 'uploads/marcas';
-        Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
+        Tools::processImage($imgResize, $imageName, $this->path, true, $this->resolutions);
         $data['img'] = $imageName;
 
         Marca::create($data);
@@ -75,11 +74,10 @@ class MarcaController extends Controller
             $img = $request->file('img');
             $imageName = time().'.'.$img->extension();
             $imgResize = Image::make($img->path());
-            $path = 'uploads/marcas';
-            Tools::processImage($imgResize, $imageName, $path, true, $this->resolutions_for_main_images);
-            $data['img'] = $imageName;
 
-            Tools::deleteImage($marca->img, $path, $this->resolutions_for_main_images);
+            Tools::processImage($imgResize, $imageName, $this->path, true, $this->resolutions);
+            $data['img'] = $imageName;
+            Tools::deleteImage($marca->img, $this->path, $this->resolutions);
         }
 
         $marca->update($data);
@@ -89,6 +87,7 @@ class MarcaController extends Controller
 
     public function destroy(Marca $marca)
     {
+        Tools::deleteImage($marca->img, $this->path, $this->resolutions);
         $marca->delete();
         return redirect('admin/marcas');
     }

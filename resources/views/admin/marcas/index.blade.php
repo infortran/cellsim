@@ -51,15 +51,9 @@
                                                             Editar
                                                         </a>
 
-                                                        <div class="btn-group" role="group">
-                                                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                                                            </button>
-                                                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                                                <a class="dropdown-item" href="#">Eliminar</a>
-                                                                <a class="dropdown-item" href="#">Desactivar</a>
-                                                            </div>
-                                                        </div>
+                                                        <a class="btn btn-primary px-3 btn-eliminar-marca" style="cursor: pointer" data-toggle="modal" data-target="#modal-eliminar-marca" data-id="{{ $marca->id }}" data-title="{{ $marca->name }}">
+                                                            <i class="material-icons" style="color: #ffffff">delete</i>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -89,6 +83,6 @@
             @include('admin.templates.footer')
         </div>
     </div>
-
+    @include('admin.marcas.modal-delete')
 
 @endsection

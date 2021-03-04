@@ -1,4 +1,4 @@
-<form action="{{ route('plc.destroy', $_plc->id ?? '') ?? '' }}" method="POST" class="modal fade" id="modal-eliminar-plc" tabindex="-1" aria-labelledby="" aria-hidden="true">
+<form action="" method="POST" class="modal fade" id="modal-eliminar-plc" tabindex="-1" aria-labelledby="" aria-hidden="true">
     <div class="modal-dialog">
         @csrf
         @method('delete')
@@ -11,7 +11,7 @@
             </div>
             <div class="modal-body">
                 <h5>Estas seguro que quieres eliminar esta colección?</h5>
-                <em><strong id="banner-title-modal"></strong></em>
+                <em><strong id="title-modal-plc"></strong></em>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

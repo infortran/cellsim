@@ -219,7 +219,7 @@
                             </div>
                             <div class="col pl-3">
                                 <div class="font-size-13 font-weight-light">Tienes preguntas? Llámanos!</div>
-                                <a href="" class="font-size-20 text-gray-90">(56) 9 1234 5678 </a>
+                                <p href="" class="font-size-20 text-gray-90">+56 9 </p>
                                 <!--a href="tel:+0600874548" class="font-size-20 text-gray-90">(0600) 874 548</a-->
                             </div>
                         </div>
