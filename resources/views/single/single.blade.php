@@ -168,10 +168,15 @@
                 </div>
                 <!-- End Single Product Body -->
                 <!-- Single Product Tab -->
-                @include('single.single-tab')
+                {{--
+                    @include('single.single-tab')
+                --}}
+
                 <!-- End Single Product Tab -->
                 <!-- Related products -->
-                @include('single.related-products')
+                {{--
+                    @include('single.related-products')
+                --}}
                 <!-- End Related products -->
                 <!-- Brand Carousel -->
                 @include('templates.brand-carousel')
