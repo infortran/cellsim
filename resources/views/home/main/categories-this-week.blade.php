@@ -7,7 +7,7 @@
             @foreach($categorias as $categoria)
             <div class="col-md-4 col-lg-3 col-xl-4 col-xl-2gdot4 mb-3 flex-shrink-0 flex-md-shrink-1">
                 <div class="bg-white overflow-hidden shadow-on-hover h-100 d-flex align-items-center" style="transition: all ease .3s; padding: 15px 15px">
-                    <a href="/categorias/{{ strtolower($categoria->name) }}" class="d-block pr-2 pr-wd-6">
+                    <a href="/categorias/{{ strtolower($categoria->slug) }}" class="d-block pr-2 pr-wd-6">
                         <div class="media align-items-center">
                             <div class="pt-2">
                                 <img class="img-fluid transform-rotate-15" style="zoom: 70%;" src="../../assets/img/100X100/categorias/{{$categoria->img}}" alt="Image Description">

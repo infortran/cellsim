@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('templates.header-full')
+    @include('templates.header.index')
 
         <!-- ========== MAIN CONTENT ========== -->
         <main id="content" role="main">

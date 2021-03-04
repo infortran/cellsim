@@ -1,7 +1,7 @@
 @extends('templates.app')
     @section('content')
         <!-- ========== HEADER ========== -->
-        @include('templates.header-full')
+        @include('templates.header.index')
         <!-- ========== END HEADER ========== -->
 
         <!-- ========== MAIN CONTENT ========== -->
