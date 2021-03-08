@@ -37,8 +37,7 @@ class SliderController extends Controller
         $img = $request->file('img');
         $imageName = time().'.'.$img->extension();
         $imgResize = Image::make($img->path());
-        $path = 'uploads/sliders';
-        Tools::processImage($imgResize, $imageName, $path, false, $this->resolutions);
+        Tools::processImage($imgResize, $imageName, $this->path, false, $this->resolutions);
         $data['img'] = $imageName;
         Slider::create($data);
         return redirect('/admin');
