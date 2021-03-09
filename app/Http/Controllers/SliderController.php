@@ -11,7 +11,7 @@ use Image;
 class SliderController extends Controller
 {
     private $resolutions = [[600,600], [300,300], [150,150], [72,72]];
-    private $path = '../public_html/uploads/sliders';
+    private $path = '/uploads/sliders';
 
     public function index()
     {
