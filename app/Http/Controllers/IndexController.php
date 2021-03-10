@@ -8,6 +8,7 @@ use App\Models\Marca;
 use App\Models\ProductComponent;
 use App\Models\Producto;
 use App\Models\Slider;
+use App\Models\Tienda;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,7 +23,8 @@ class IndexController extends Controller
             'ultimos' => Producto::orderBy('id', 'desc')->limit(6)->get(),
             'mainbanner' => BannerHome::first(),
             'productos' => Producto::all(),
-            'plc' => ProductComponent::all()
+            'plc' => ProductComponent::all(),
+            'tienda' => Tienda::first()
             /*'plc' =>
                 ['title' => 'titulo de prueba',
                 'img' => 'img-dinamic.jpg',
