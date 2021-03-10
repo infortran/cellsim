@@ -6,6 +6,7 @@ use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
+use App\Models\Tienda;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Categoria;
 use App\Models\Producto;
@@ -40,7 +41,8 @@ class FortifyServiceProvider extends ServiceProvider
             $data = [
                 'categorias' => Categoria::all(),
                 'marcas' => Marca::all(),
-                'producto' => Producto::all()
+                'producto' => Producto::all(),
+                'tienda' => Tienda::first()
             ];
             return view('account.account', $data);
         });

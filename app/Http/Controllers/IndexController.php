@@ -38,7 +38,8 @@ class IndexController extends Controller
 
     public function login()
     {
-        return view('account.account');
+
+        return view('account.account', ['tienda' => Tienda::first()]);
     }
 
     public function search(Request $request){
@@ -48,6 +49,7 @@ class IndexController extends Controller
             'productos' => Producto::all(),
             'marcas' => Marca::all(),
             'query' => request('query'),
+            'tienda' => Tienda::first(),
             'query_result' => Producto::where('name', 'LIKE', '%' . request('query') . '%')->
                 orWhere('description', 'LIKE', '%' . request('query') . '%')->orderBy('created_at', 'ASC')->paginate(9)
         ];

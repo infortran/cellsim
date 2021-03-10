@@ -18,7 +18,8 @@ class TiendaController extends Controller
         $data = [
             'categorias' => Categoria::all(),
             'marcas' => Marca::all(),
-            'tiendas' => Tienda::all()
+            'tiendas' => Tienda::all(),
+            'tienda' => Tienda::first()
         ];
         return view('nuestras-tiendas.index', $data);
     }

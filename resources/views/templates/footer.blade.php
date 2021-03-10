@@ -219,7 +219,7 @@
                             </div>
                             <div class="col pl-3">
                                 <div class="font-size-13 font-weight-light">Tienes preguntas? Llámanos!</div>
-                                <p href="" class="font-size-20 text-gray-90">+56 9 </p>
+                                <p href="" class="font-size-20 text-gray-90">(+56) 9 {{isset($tienda) ? $tienda->phone : ''}}</p>
                                 <!--a href="tel:+0600874548" class="font-size-20 text-gray-90">(0600) 874 548</a-->
                             </div>
                         </div>
@@ -227,7 +227,7 @@
                     <div class="mb-4">
                         <h6 class="mb-1 font-weight-bold">Dirección</h6>
                         <address class="">
-                            Caracol Los Portales, Coimas #1288, Locales
+                            {{isset($tienda) ? $tienda->direction : ''}}
                         </address>
                     </div>
                     <div class="my-4 my-md-4">

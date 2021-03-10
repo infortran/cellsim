@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use App\Models\Marca;
 use App\Models\Producto;
+use App\Models\Tienda;
 use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
@@ -66,7 +67,8 @@ class CategoriaController extends Controller
         $data = [
             'categorias' => Categoria::all(),
             'query_result' => Producto::all(),
-            'marcas' => Marca::all()
+            'marcas' => Marca::all(),
+            'tienda' => Tienda::first()
         ];
         return view('categorias.index', $data);
     }
@@ -77,7 +79,8 @@ class CategoriaController extends Controller
         $data = [
             'categorias' => Categoria::all(),
             'query_result' => $cat ? Producto::where('categoria_id', $cat->id)->get() : Producto::all(),
-            'marcas' => Marca::all()
+            'marcas' => Marca::all(),
+            'tienda' => Tienda::first()
         ];
         return view('categorias.index', $data);
     }

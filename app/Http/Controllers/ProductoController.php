@@ -69,7 +69,8 @@ class ProductoController extends Controller
         $data = [
             'categorias' => Categoria::all(),
             'marcas' => Marca::all(),
-            'productos' => Producto::paginate(9)
+            'productos' => Producto::paginate(9),
+            'tienda' => Tienda::first()
         ];
         return view('shop.shop', $data);
     }
@@ -80,7 +81,8 @@ class ProductoController extends Controller
         $data = [
             'categorias' => Categoria::all(),
             'marcas' => Marca::all(),
-            'producto' => $producto
+            'producto' => $producto,
+            'tienda' => Tienda::first()
         ];
         return view('single.single', $data);
     }
