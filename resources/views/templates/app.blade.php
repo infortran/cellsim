@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/fontawesome-all.min.css">
 
     <!-- CSS Electro Template -->
-    <link rel="stylesheet" href="../../assets/css/theme.css">
-    <link  rel="stylesheet" href="../../assets/css/custom.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/css/theme.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/css/custom.css">
 </head>
 
 <body>
