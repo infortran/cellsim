@@ -16,20 +16,20 @@
 
 
 
-    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
-    <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
-    <link rel="stylesheet" href="../../assets/vendor/ion-rangeslider/css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" href="../../assets/vendor/fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="../../assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/vendor/ion-rangeslider/css/ion.rangeSlider.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/vendor/fancybox/jquery.fancybox.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/vendor/slick-carousel/slick/slick.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
 
     <!-- Google Fonts -->
-    <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link media="none" onload="if(media!='all')media='all'" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
 
     <!-- CSS Implementing Plugins -->
-    <link media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/vendor/font-awesome/css/fontawesome-all.min.css">
 
     <!-- CSS Electro Template -->
     <link media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="../../assets/css/theme.css">
